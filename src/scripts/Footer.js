@@ -93,9 +93,9 @@ const QUICK_LINKS = [
 ]
 
 const SOCIALS = [
-  { href: "#", icon: <IconFacebook />, label: "Facebook" },
-  { href: "#", icon: <IconInstagram />, label: "Instagram" },
-  { href: "#", icon: <IconTikTok />, label: "TikTok" },
+  { href: "https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr", icon: <IconFacebook />, label: "Facebook" },
+  { href: "https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", icon: <IconInstagram />, label: "Instagram" },
+  { href: "https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq", icon: <IconTikTok />, label: "TikTok" },
   { href: "#", icon: <IconGoogle />, label: "Google My Business" },
   { href: "#", icon: <IconBBB />, label: "Better Business Bureau" },
 ]
