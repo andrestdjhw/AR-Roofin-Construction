@@ -5,6 +5,44 @@
 get_header(); ?>
 
 <?php
+/* ═══════════════════════════════════════════════════════════════
+   IMÁGENES — Pega aquí las URLs de tus medios de WordPress
+   Media Library → click imagen → copiar URL → pegar abajo
+   ════════════════════════════════════════════════════════════ */
+
+// ── S01 HERO ─────────────────────────────────────────────────
+$hero_poster_img          = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.png';   // Imagen fallback (si no hay video)
+$hero_video_mp4           = '';   // Video drone .mp4
+
+// ── S04 ABOUT ────────────────────────────────────────────────
+$about_owner_img          = '';   // Foto de Antonio en el techo
+
+// ── S05 SERVICES ─────────────────────────────────────────────
+$service_installation_img = '/wp-content/uploads/2026/06/Roof_Installation_ARRC-scaled.jpg';   // Roof Installation
+$service_repair_img       = '/wp-content/uploads/2026/06/Roof_Repair_ARRC-scaled.jpg';   // Roof Repair
+$service_emergency_img    = '/wp-content/uploads/2026/06/Emergency_Roofing_ARRC-scaled.jpg';   // Emergency Roofing
+$service_maintenance_img  = '/wp-content/uploads/2026/06/Roof_Maintenance_ARRC-scaled.jpg';   // Roof Maintenance
+
+// ── S07 PROCESS ──────────────────────────────────────────────
+$process_inspection_img   = '';   // Paso 01 — Inspección
+$process_estimate_img     = '';   // Paso 02 — Estimado
+$process_execution_img    = '';   // Paso 03 — Ejecución
+$process_walkthrough_img  = '';   // Paso 04 — Walkthrough
+
+// ── S08 PORTFOLIO ─────────────────────────────────────────────
+$portfolio_1_img          = '';   // Hood River, OR
+$portfolio_2_img          = '';   // The Dalles, OR
+$portfolio_3_img          = '';   // Dufur, OR
+$portfolio_4_img          = '';   // The Dalles, OR (comercial)
+$portfolio_5_img          = '';   // Mosier, OR
+$portfolio_6_img          = '';   // White Salmon, WA
+
+// ── BACKGROUNDS ──────────────────────────────────────────────
+$why_bg_img               = '';   // S06 Why Us — estampado/textura de fondo
+$final_cta_bg_img         = '';   // S12 Final CTA — estampado/textura de fondo
+
+/* ══════════════════════════════════════════════════════════════ */
+
 /* ─── PALETTE ────────────────────────────────────────────────────
    Midnight Slate : #0f2322
    Ember Red      : #e8253a
@@ -15,7 +53,76 @@ get_header(); ?>
 ?>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Light.woff"); ?>') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Light-Italic.woff"); ?>') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Regular.woff"); ?>') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Regular-Italic.woff"); ?>') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Medium.woff"); ?>') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Medium-Italic.woff"); ?>') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Bold.woff"); ?>') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Bold-Italic.woff"); ?>') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Black.woff"); ?>') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GT America';
+    src: url('<?php echo get_theme_file_uri("/fonts/GT-America-Expanded-Black-Italic.woff"); ?>') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+  }
 
   :root {
     --slate:   #0f2322;
@@ -30,10 +137,10 @@ get_header(); ?>
   }
 
   .ar-home * { box-sizing: border-box; }
-  .ar-home { font-family: 'DM Sans', sans-serif; color: var(--text); }
-  .ar-home h1, .ar-home h2, .ar-home h3 { font-family: 'Lora', serif; line-height: 1.15; }
+  .ar-home { font-family: 'GT America', sans-serif; color: var(--text); }
+  .ar-home h1, .ar-home h2, .ar-home h3 { font-family: 'GT America', sans-serif; font-weight: 900; line-height: 1.15; }
   .ar-home .eyebrow {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 2.5px;
@@ -54,7 +161,7 @@ get_header(); ?>
     padding: 14px 32px;
     background: var(--red);
     color: #fff;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -69,7 +176,7 @@ get_header(); ?>
     padding: 13px 32px;
     background: transparent;
     color: #fff;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 15px;
     font-weight: 600;
     text-decoration: none;
@@ -112,7 +219,30 @@ get_header(); ?>
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 120px 24px 80px;
+    padding: 100px 24px 60px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 56px;
+    align-items: stretch;
+  }
+  .ar-hero__left { display: flex; flex-direction: column; justify-content: space-between; }
+  .ar-hero__right {
+    background: rgba(10, 28, 27, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .ar-hero__right h3 {
+    font-family: 'GT America', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 20px;
   }
   .ar-hero__tag {
     display: inline-flex;
@@ -127,7 +257,7 @@ get_header(); ?>
     text-transform: uppercase;
     padding: 7px 16px;
     border-radius: 100px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
   .ar-hero__tag::before {
     content: '';
@@ -136,24 +266,24 @@ get_header(); ?>
     border-radius: 50%;
   }
   .ar-hero h1 {
-    font-family: 'Lora', serif;
-    font-size: clamp(38px, 5.5vw, 72px);
-    font-weight: 600;
+    font-family: 'GT America', sans-serif;
+    font-size: clamp(28px, 3.6vw, 52px);
+    font-weight: 900;
     color: #fff;
-    max-width: 780px;
-    margin: 0 0 24px;
-    line-height: 1.1;
+    max-width: 600px;
+    margin: 0 0 20px;
+    line-height: 1.08;
   }
   .ar-hero h1 em {
     font-style: italic;
     color: var(--mist);
   }
   .ar-hero__sub {
-    font-size: clamp(16px, 1.8vw, 19px);
-    color: rgba(255,255,255,0.80);
-    max-width: 580px;
+    font-size: clamp(14px, 1.4vw, 16px);
+    color: rgba(255,255,255,0.75);
+    max-width: 500px;
     line-height: 1.7;
-    margin: 0 0 40px;
+    margin: 0 0 28px;
     font-weight: 300;
   }
   .ar-hero__ctas {
@@ -270,7 +400,7 @@ get_header(); ?>
     box-shadow: 0 12px 40px rgba(15,35,34,0.12);
   }
   .ar-pain__num {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 52px;
     color: var(--red);
     line-height: 1;
@@ -297,7 +427,7 @@ get_header(); ?>
   }
   .ar-about__inner {
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr 400px;
     gap: 72px;
     align-items: center;
   }
@@ -322,7 +452,7 @@ get_header(); ?>
     border-bottom: 1px solid #eee;
   }
   .ar-about__stat-num {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 40px;
     color: var(--red);
     line-height: 1;
@@ -353,7 +483,7 @@ get_header(); ?>
     color: #fff;
     padding: 20px 24px;
     border-radius: 10px;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 13px;
     letter-spacing: 2px;
     line-height: 1.6;
@@ -361,7 +491,7 @@ get_header(); ?>
     box-shadow: 0 8px 24px rgba(232,37,58,0.35);
   }
   .ar-about__img-badge strong {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 36px;
     display: block;
     letter-spacing: 0;
@@ -462,6 +592,7 @@ get_header(); ?>
   .ar-why {
     background: var(--slate);
     padding: 100px 0;
+    position: relative;
   }
   .ar-why__header {
     text-align: center;
@@ -501,7 +632,7 @@ get_header(); ?>
     font-size: 17px;
     color: #fff;
     margin: 0 0 12px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-weight: 600;
   }
   .ar-why__item p {
@@ -547,7 +678,7 @@ get_header(); ?>
   .ar-process__step--reverse .ar-process__text { order: 2; }
   .ar-process__step--reverse .ar-process__visual { order: 1; }
   .ar-process__num {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 80px;
     color: var(--red);
     opacity: 0.15;
@@ -648,7 +779,7 @@ get_header(); ?>
     margin-bottom: 4px;
   }
   .ar-portfolio__card-location {
-    font-family: 'Lora', serif;
+    font-family: 'GT America', sans-serif;
     font-size: 17px;
     font-weight: 600;
   }
@@ -688,7 +819,7 @@ get_header(); ?>
     align-items: start;
   }
   .ar-areas__col h4 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -740,7 +871,7 @@ get_header(); ?>
   }
   .ar-areas__copy::before {
     content: '"';
-    font-family: 'Lora', serif;
+    font-family: 'GT America', sans-serif;
     font-size: 180px;
     color: rgba(106,154,154,0.1);
     position: absolute;
@@ -795,7 +926,7 @@ get_header(); ?>
     box-shadow: 0 12px 36px rgba(15,35,34,0.1);
   }
   .ar-reviews__quote-icon {
-    font-family: 'Lora', serif;
+    font-family: 'GT America', sans-serif;
     font-size: 64px;
     color: var(--red);
     opacity: 0.2;
@@ -853,7 +984,7 @@ get_header(); ?>
     gap: 16px;
   }
   .ar-faq__label {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 16px;
     font-weight: 600;
     color: var(--slate);
@@ -940,7 +1071,7 @@ get_header(); ?>
     padding: 40px;
   }
   .ar-final-cta__form h3 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 17px;
     font-weight: 600;
     color: #fff;
@@ -973,7 +1104,7 @@ get_header(); ?>
     border-radius: 7px;
     padding: 11px 14px;
     color: #fff;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 14px;
     outline: none;
     transition: border-color .2s;
@@ -993,7 +1124,7 @@ get_header(); ?>
     padding: 14px;
     background: var(--red);
     color: #fff;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'GT America', sans-serif;
     font-size: 15px;
     font-weight: 700;
     border: none;
@@ -1007,6 +1138,8 @@ get_header(); ?>
 
   /* ── RESPONSIVE ────────────────────────────────────────────── */
   @media (max-width: 1024px) {
+    .ar-hero__content { grid-template-columns: 1fr; gap: 36px; padding-top: 100px; }
+    .ar-hero__right { backdrop-filter: none; -webkit-backdrop-filter: none; }
     .ar-about__inner { grid-template-columns: 1fr; }
     .ar-about__img { display: none; }
     .ar-about__stats { grid-template-columns: repeat(2, 1fr); }
@@ -1040,29 +1173,80 @@ get_header(); ?>
   ═══════════════════════════════════════════════════════════ -->
   <section class="ar-hero">
     <div class="ar-hero__video-wrap">
-      <video
-        autoplay muted loop playsinline
-        poster="/wp-content/uploads/ar-hero-poster.jpg"
-      >
-        <source src="/wp-content/uploads/ar-hero-drone.mp4" type="video/mp4">
-      </video>
+      <?php
+      $hero_video = $hero_video_mp4;
+      $hero_poster = $hero_poster_img ?: '/wp-content/uploads/ar-hero-poster.jpg';
+      if ( $hero_video ) : ?>
+        <video autoplay muted loop playsinline poster="<?= esc_url($hero_poster_img ?: '/wp-content/uploads/ar-hero-poster.jpg') ?>">
+          <source src="<?= esc_url($hero_video_mp4) ?>" type="video/mp4">
+        </video>
+      <?php else : ?>
+        <img src="<?= esc_url($hero_poster_img ?: '/wp-content/uploads/ar-hero-poster.jpg') ?>" alt="AR Roofing — Oregon Roofing Experts">
+      <?php endif; ?>
     </div>
     <div class="ar-hero__overlay"></div>
     <div class="ar-hero__content">
-      <span class="ar-hero__tag">Oregon &amp; Washington Roofing Experts</span>
-      <h1>Your Roof Protects<br><em>Everything</em> Underneath It.<br>We Protect Your Roof.</h1>
-      <p class="ar-hero__sub">Family-owned roofing company serving 18 cities across Oregon and Washington. Roof installation, repair, emergency services, and maintenance. Licensed, insured, and on your roof within a week.</p>
-      <div class="ar-hero__ctas">
-        <a href="/contact" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
-          Get a Free Inspection
-        </a>
-        <a href="tel:5416450577" class="btn-ghost">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call 541-645-0577
-        </a>
+
+      <!-- Left: copy -->
+      <div class="ar-hero__left">
+        <span class="ar-hero__tag">Oregon &amp; Washington Roofing Experts</span>
+        <h1>Your Roof Protects<br><em>Everything</em> Underneath It.<br>We Protect Your Roof.</h1>
+        <p class="ar-hero__sub">Family-owned roofing company serving 18 cities across Oregon and Washington. Roof installation, repair, emergency services, and maintenance. Licensed, insured, and on your roof within a week.</p>
+        <div class="ar-hero__ctas">
+          <a href="/contact" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+            Get a Free Inspection
+          </a>
+          <a href="tel:5416450577" class="btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call 541-645-0577
+          </a>
+        </div>
+        <p class="ar-hero__phone-label">Available 24/7 for emergencies &nbsp;·&nbsp; <a href="tel:5416450577">541-645-0577</a></p>
       </div>
-      <p class="ar-hero__phone-label">Available 24/7 for emergencies &nbsp;·&nbsp; <a href="tel:5416450577">541-645-0577</a></p>
+
+      <!-- Right: form -->
+      <div class="ar-hero__right">
+        <h3>Get a Free Inspection</h3>
+        <div class="ar-form-row">
+          <div class="ar-form-field">
+            <label for="hero-name">Full Name</label>
+            <input type="text" id="hero-name" name="name" placeholder="Your name">
+          </div>
+          <div class="ar-form-field">
+            <label for="hero-phone">Phone</label>
+            <input type="tel" id="hero-phone" name="phone" placeholder="(541) 000-0000">
+          </div>
+        </div>
+        <div class="ar-form-field">
+          <label for="hero-email">Email</label>
+          <input type="email" id="hero-email" name="email" placeholder="you@email.com">
+        </div>
+        <div class="ar-form-row">
+          <div class="ar-form-field">
+            <label for="hero-service">Service Needed</label>
+            <select id="hero-service" name="service">
+              <option value="">Select a service...</option>
+              <option>Free Inspection</option>
+              <option>Roof Installation</option>
+              <option>Roof Repair</option>
+              <option>Emergency Roofing</option>
+              <option>Roof Maintenance</option>
+              <option>Commercial</option>
+            </select>
+          </div>
+          <div class="ar-form-field">
+            <label for="hero-city">City</label>
+            <input type="text" id="hero-city" name="city" placeholder="Hood River, OR">
+          </div>
+        </div>
+        <div class="ar-form-field" style="flex:1; display:flex; flex-direction:column;">
+          <label for="hero-message">Message</label>
+          <textarea id="hero-message" name="message" placeholder="Tell us about your roof..." style="flex:1; min-height:72px; resize:none;"></textarea>
+        </div>
+        <button type="button" class="ar-form-submit">Send Message →</button>
+      </div>
+
     </div>
     <div class="ar-hero__scroll">
       <div class="ar-hero__scroll-line"></div>
@@ -1170,7 +1354,13 @@ get_header(); ?>
           </a>
         </div>
         <div class="ar-about__img">
-          <img src="/wp-content/uploads/ar-about-antonio.jpg" alt="Antonio Robles — Owner, AR Roofing & Construction" loading="lazy">
+          <?php $about_img = $about_owner_img; if($about_img): ?>
+          <img src="<?= $about_img ?>" alt="Antonio Robles — Owner, AR Roofing & Construction" loading="lazy">
+          <?php else: ?>
+          <div style="width:100%;height:520px;border-radius:12px;background:linear-gradient(135deg,var(--slate),#1e3e3d);display:flex;align-items:center;justify-content:center;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <?php endif; ?>
           <div class="ar-about__img-badge">
             <strong>18+</strong>
             YEARS<br>EXPERIENCE
@@ -1196,28 +1386,28 @@ get_header(); ?>
             'title' => 'Roof Installation',
             'body'  => 'Professional installation of residential and commercial roofs using premium materials. Asphalt shingles, metal roofing, TPO, and PVC systems. Complete tear-off, deck inspection, and new installation with a final walkthrough on every project.',
             'link'  => '/services/roof-installation',
-            'img'   => '/wp-content/uploads/ar-service-installation.jpg',
+            'img'   => $service_installation_img,
             'icon'  => '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
           ],
           [
             'title' => 'Roof Repair',
             'body'  => 'Honest, efficient repair services for leaks, storm damage, missing shingles, and structural issues. We diagnose the real problem and fix what actually needs fixing — not what makes us the most money.',
             'link'  => '/services/roof-repair',
-            'img'   => '/wp-content/uploads/ar-service-repair.jpg',
+            'img'   => $service_repair_img,
             'icon'  => '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
           ],
           [
             'title' => 'Emergency Roofing',
             'body'  => 'Storm damage, fallen trees, severe leaks — we respond 24 hours a day, 7 days a week. We stop the water, secure your property, and handle the insurance documentation so you don\'t have to.',
             'link'  => '/services/emergency-roofing',
-            'img'   => '/wp-content/uploads/ar-service-emergency.jpg',
+            'img'   => $service_emergency_img,
             'icon'  => '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
           ],
           [
             'title' => 'Roof Maintenance',
             'body'  => 'Extend your roof\'s life by five to ten years with professional inspections and preventive care. We check every layer, treat moss, clean gutters, and give you a clear report of your roof\'s condition twice a year.',
             'link'  => '/services/roof-maintenance',
-            'img'   => '/wp-content/uploads/ar-service-maintenance.jpg',
+            'img'   => $service_maintenance_img,
             'icon'  => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>',
           ],
         ];
@@ -1250,8 +1440,10 @@ get_header(); ?>
   <!-- ═══════════════════════════════════════════════════════════
        S06 — WHY CHOOSE US
   ═══════════════════════════════════════════════════════════ -->
-  <section class="ar-why">
-    <div class="section-inner">
+  <?php $why_bg = $why_bg_img; ?>
+  <section class="ar-why" <?php if($why_bg): ?>style="background-image:url('<?= $why_bg ?>');background-size:cover;background-position:center;"<?php endif; ?>>
+  <?php if($why_bg_img): ?><div style="position:absolute;inset:0;background:rgba(15,35,34,0.92);z-index:0;"></div><?php endif; ?>
+    <div class="section-inner" style="position:relative;z-index:1;">
       <div class="ar-why__header">
         <span class="eyebrow">Why AR Roofing</span>
         <h2 style="color:#fff;">In a market full of contractors, we deliver certainty.</h2>
@@ -1323,28 +1515,28 @@ get_header(); ?>
           'num'     => '01',
           'title'   => 'Free Inspection & Consultation',
           'body'    => 'We come to your property, climb the roof, inspect every layer, and sit down with you to explain what we found — with photos. No cost. No obligation. No pressure to buy anything. Just a clear picture of where your roof stands.',
-          'img'     => '/wp-content/uploads/ar-process-inspection.jpg',
+          'img'     => $process_inspection_img,
           'reverse' => false,
         ],
         [
           'num'     => '02',
           'title'   => 'Honest Recommendation & Estimate',
           'body'    => 'Based on the inspection, we give you a written estimate that explains exactly what needs to be done, what materials we\'ll use, and what it costs. We explain every line. If you have a cheaper quote from someone else, we\'ll show you why the numbers are different.',
-          'img'     => '/wp-content/uploads/ar-process-estimate.jpg',
+          'img'     => $process_estimate_img,
           'reverse' => true,
         ],
         [
           'num'     => '03',
           'title'   => 'Expert Execution',
           'body'    => 'Our crew arrives on the scheduled date with all materials ready. We protect your property, work clean, and keep you updated. The owner is on-site supervising quality at every stage.',
-          'img'     => '/wp-content/uploads/ar-process-execution.jpg',
+          'img'     => $process_execution_img,
           'reverse' => false,
         ],
         [
           'num'     => '04',
           'title'   => 'Final Walkthrough & Ongoing Support',
           'body'    => 'When the job is done, we walk the entire project with you and show you exactly what we did. The project isn\'t finished until you say it\'s right. And if you call us six months later, we answer the phone.',
-          'img'     => '/wp-content/uploads/ar-process-walkthrough.jpg',
+          'img'     => $process_walkthrough_img,
           'reverse' => true,
         ],
       ];
@@ -1392,12 +1584,12 @@ get_header(); ?>
       <div class="ar-portfolio__grid">
         <?php
         $projects = [
-          ['type' => 'Full Roof Replacement',   'location' => 'Hood River, OR',     'img' => '/wp-content/uploads/ar-portfolio-1.jpg'],
-          ['type' => 'Emergency Storm Repair',   'location' => 'The Dalles, OR',     'img' => '/wp-content/uploads/ar-portfolio-2.jpg'],
-          ['type' => 'Metal Roof Installation',  'location' => 'Dufur, OR',          'img' => '/wp-content/uploads/ar-portfolio-3.jpg'],
-          ['type' => 'Commercial Flat Roof',     'location' => 'The Dalles, OR',     'img' => '/wp-content/uploads/ar-portfolio-4.jpg'],
-          ['type' => 'Residential Repair',       'location' => 'Mosier, OR',         'img' => '/wp-content/uploads/ar-portfolio-5.jpg'],
-          ['type' => 'Full Replacement',         'location' => 'White Salmon, WA',   'img' => '/wp-content/uploads/ar-portfolio-6.jpg'],
+          ['type' => 'Full Roof Replacement',   'location' => 'Hood River, OR',   'img' => $portfolio_1_img],
+          ['type' => 'Emergency Storm Repair',   'location' => 'The Dalles, OR',   'img' => $portfolio_2_img],
+          ['type' => 'Metal Roof Installation',  'location' => 'Dufur, OR',        'img' => $portfolio_3_img],
+          ['type' => 'Commercial Flat Roof',     'location' => 'The Dalles, OR',   'img' => $portfolio_4_img],
+          ['type' => 'Residential Repair',       'location' => 'Mosier, OR',       'img' => $portfolio_5_img],
+          ['type' => 'Full Replacement',         'location' => 'White Salmon, WA', 'img' => $portfolio_6_img],
         ];
         foreach ($projects as $proj) : ?>
           <div class="ar-portfolio__card">
@@ -1572,9 +1764,11 @@ get_header(); ?>
   <!-- ═══════════════════════════════════════════════════════════
        S12 — FINAL CTA
   ═══════════════════════════════════════════════════════════ -->
-  <section class="ar-final-cta">
+  <?php $final_bg = $final_cta_bg_img; ?>
+  <section class="ar-final-cta" <?php if($final_bg): ?>style="background-image:url('<?= $final_bg ?>');background-size:cover;background-position:center;"<?php endif; ?>>
+  <?php if($final_bg): ?><div style="position:absolute;inset:0;background:rgba(15,35,34,0.88);z-index:0;"></div><?php endif; ?>
     <div class="section-inner">
-      <div class="ar-final-cta__inner">
+      <div class="ar-final-cta__inner" style="position:relative;z-index:1;">
         <div class="ar-final-cta__left">
           <span class="eyebrow">Get Started Today</span>
           <h2>Your roof protects your family. Let us protect your roof.</h2>

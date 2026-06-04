@@ -360,308 +360,334 @@ function FooterHeading({
 }
 
 /* ── Main Component ─────────────────────────────────────────────── */
+// ── ESTAMPADO DE FONDO ───────────────────────────────────────────
+// Pega aquí la URL del medio que quieras usar como fondo del footer
+const FOOTER_BG_IMG = "/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png";
+// ─────────────────────────────────────────────────────────────────
+
 function Footer() {
   const year = new Date().getFullYear();
+  const footerStyle = {
+    backgroundColor: "#0a1e1d",
+    color: "#aaa",
+    ...(FOOTER_BG_IMG && {
+      backgroundImage: `url(${FOOTER_BG_IMG})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      position: "relative"
+    })
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("footer", {
-    style: {
-      backgroundColor: "#0a1e1d",
-      color: "#aaa"
-    },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    style: footerStyle,
+    children: [FOOTER_BG_IMG && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       style: {
-        backgroundColor: "#e8253a"
+        position: "absolute",
+        inset: 0,
+        backgroundColor: "rgba(10,28,27,0.93)",
+        zIndex: 0,
+        pointerEvents: "none"
+      }
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      style: {
+        position: "relative",
+        zIndex: 1
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "max-w-7xl mx-auto px-6 py-8",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         style: {
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "16px"
+          backgroundColor: "#e8253a"
         },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "max-w-7xl mx-auto px-6 py-8",
           style: {
             display: "flex",
+            flexWrap: "wrap",
             alignItems: "center",
+            justifyContent: "space-between",
             gap: "16px"
           },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            style: {
-              color: "rgba(255,255,255,0.85)"
-            },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconShield, {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-              style: {
-                color: "#fff",
-                fontWeight: "700",
-                fontSize: "18px",
-                margin: 0,
-                lineHeight: 1.3
-              },
-              children: "Ready for a new roof? Get your free estimate today."
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-              style: {
-                color: "rgba(255,255,255,0.8)",
-                fontSize: "13px",
-                margin: "4px 0 0 0"
-              },
-              children: "Licensed & insured \u2014 Serving Portland, Oregon"
-            })]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-          href: "/contact",
-          style: {
-            display: "inline-block",
-            padding: "11px 28px",
-            backgroundColor: "#fff",
-            color: "#e8253a",
-            fontWeight: "700",
-            fontSize: "14px",
-            textDecoration: "none",
-            borderRadius: "7px",
-            whiteSpace: "nowrap",
-            transition: "transform 0.15s ease, box-shadow 0.15s ease"
-          },
-          onMouseEnter: e => {
-            e.currentTarget.style.transform = "translateY(-2px)";
-            e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.2)";
-          },
-          onMouseLeave: e => {
-            e.currentTarget.style.transform = "translateY(0)";
-            e.currentTarget.style.boxShadow = "none";
-          },
-          children: "Get a Free Quote"
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "max-w-7xl mx-auto px-6 py-14",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        style: {
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
-          gap: "48px"
-        },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "/",
-            style: {
-              textDecoration: "none",
-              display: "inline-flex",
-              marginBottom: "18px"
-            },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/wp-content/uploads/2026/06/AR_Logotipo.png",
-              alt: "AR Roofing & Construction",
-              style: {
-                height: "52px",
-                width: "auto",
-                display: "block",
-                filter: "brightness(0) invert(1)"
-              }
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            style: {
-              fontSize: "13.5px",
-              lineHeight: "1.75",
-              color: "#999",
-              margin: "0 0 20px 0"
-            },
-            children: "Professional roofing solutions for residential and commercial properties across Portland, Oregon. Quality workmanship guaranteed."
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             style: {
               display: "flex",
               alignItems: "center",
-              gap: "10px"
+              gap: "16px"
             },
-            children: SOCIALS.map(({
-              href,
-              icon,
-              label
-            }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-              href: href,
-              "aria-label": label,
-              title: label,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
               style: {
-                width: "34px",
-                height: "34px",
-                backgroundColor: "#1a3332",
-                borderRadius: "7px",
+                color: "rgba(255,255,255,0.85)"
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconShield, {})
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                style: {
+                  color: "#fff",
+                  fontWeight: "700",
+                  fontSize: "18px",
+                  margin: 0,
+                  lineHeight: 1.3
+                },
+                children: "Ready for a new roof? Get your free estimate today."
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                style: {
+                  color: "rgba(255,255,255,0.8)",
+                  fontSize: "13px",
+                  margin: "4px 0 0 0"
+                },
+                children: "Licensed & insured \u2014 Serving Portland, Oregon"
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "/contact",
+            style: {
+              display: "inline-block",
+              padding: "11px 28px",
+              backgroundColor: "#fff",
+              color: "#e8253a",
+              fontWeight: "700",
+              fontSize: "14px",
+              textDecoration: "none",
+              borderRadius: "7px",
+              whiteSpace: "nowrap",
+              transition: "transform 0.15s ease, box-shadow 0.15s ease"
+            },
+            onMouseEnter: e => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.2)";
+            },
+            onMouseLeave: e => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "none";
+            },
+            children: "Get a Free Quote"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "max-w-7xl mx-auto px-6 py-14",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          style: {
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
+            gap: "48px"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: "/",
+              style: {
+                textDecoration: "none",
+                display: "inline-flex",
+                marginBottom: "18px"
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                src: "/wp-content/uploads/2026/06/AR_Logotipo.png",
+                alt: "AR Roofing & Construction",
+                style: {
+                  height: "52px",
+                  width: "auto",
+                  display: "block",
+                  filter: "brightness(0) invert(1)"
+                }
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              style: {
+                fontSize: "13.5px",
+                lineHeight: "1.75",
+                color: "#999",
+                margin: "0 0 20px 0"
+              },
+              children: "Professional roofing solutions for residential and commercial properties across Portland, Oregon. Quality workmanship guaranteed."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              style: {
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                color: "#aaa",
-                textDecoration: "none",
-                transition: "background-color 0.2s ease, color 0.2s ease"
+                gap: "10px"
               },
-              onMouseEnter: e => {
-                e.currentTarget.style.backgroundColor = "#6a9a9a";
-                e.currentTarget.style.color = "#fff";
+              children: SOCIALS.map(({
+                href,
+                icon,
+                label
+              }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                href: href,
+                "aria-label": label,
+                title: label,
+                style: {
+                  width: "34px",
+                  height: "34px",
+                  backgroundColor: "#1a3332",
+                  borderRadius: "7px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#aaa",
+                  textDecoration: "none",
+                  transition: "background-color 0.2s ease, color 0.2s ease"
+                },
+                onMouseEnter: e => {
+                  e.currentTarget.style.backgroundColor = "#6a9a9a";
+                  e.currentTarget.style.color = "#fff";
+                },
+                onMouseLeave: e => {
+                  e.currentTarget.style.backgroundColor = "#222";
+                  e.currentTarget.style.color = "#aaa";
+                },
+                children: icon
+              }, label))
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
+              children: "Our Services"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterLinkList, {
+              items: SERVICES
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
+              children: "Quick Links"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterLinkList, {
+              items: QUICK_LINKS
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
+              children: "Contact Us"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+              style: {
+                listStyle: "none",
+                margin: 0,
+                padding: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: "14px"
               },
-              onMouseLeave: e => {
-                e.currentTarget.style.backgroundColor = "#222";
-                e.currentTarget.style.color = "#aaa";
-              },
-              children: icon
-            }, label))
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
-            children: "Our Services"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterLinkList, {
-            items: SERVICES
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
-            children: "Quick Links"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterLinkList, {
-            items: QUICK_LINKS
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
-            children: "Contact Us"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-            style: {
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-              display: "flex",
-              flexDirection: "column",
-              gap: "14px"
-            },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "mailto:info@arroofingus.com",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  href: "mailto:info@arroofingus.com",
+                  style: {
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "10px",
+                    color: "#aaa",
+                    textDecoration: "none",
+                    fontSize: "14px",
+                    transition: "color 0.2s ease"
+                  },
+                  onMouseEnter: e => e.currentTarget.style.color = "#fff",
+                  onMouseLeave: e => e.currentTarget.style.color = "#aaa",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    style: {
+                      color: "#6a9a9a",
+                      marginTop: "1px",
+                      flexShrink: 0
+                    },
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
+                  }), "info@arroofingus.com"]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  href: "tel:+15031234567",
+                  style: {
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "10px",
+                    color: "#aaa",
+                    textDecoration: "none",
+                    fontSize: "14px",
+                    transition: "color 0.2s ease"
+                  },
+                  onMouseEnter: e => e.currentTarget.style.color = "#fff",
+                  onMouseLeave: e => e.currentTarget.style.color = "#aaa",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    style: {
+                      color: "#6a9a9a",
+                      marginTop: "1px",
+                      flexShrink: 0
+                    },
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
+                  }), "(503) 123-4567"]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
                 style: {
                   display: "flex",
                   alignItems: "flex-start",
                   gap: "10px",
-                  color: "#aaa",
-                  textDecoration: "none",
-                  fontSize: "14px",
-                  transition: "color 0.2s ease"
+                  fontSize: "14px"
                 },
-                onMouseEnter: e => e.currentTarget.style.color = "#fff",
-                onMouseLeave: e => e.currentTarget.style.color = "#aaa",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   style: {
                     color: "#6a9a9a",
                     marginTop: "1px",
                     flexShrink: 0
                   },
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
-                }), "info@arroofingus.com"]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "tel:+15031234567",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  children: "Portland, Oregon"
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
                 style: {
                   display: "flex",
                   alignItems: "flex-start",
                   gap: "10px",
-                  color: "#aaa",
-                  textDecoration: "none",
-                  fontSize: "14px",
-                  transition: "color 0.2s ease"
+                  fontSize: "14px"
                 },
-                onMouseEnter: e => e.currentTarget.style.color = "#fff",
-                onMouseLeave: e => e.currentTarget.style.color = "#aaa",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   style: {
                     color: "#6a9a9a",
                     marginTop: "1px",
                     flexShrink: 0
                   },
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
-                }), "(503) 123-4567"]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-              style: {
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "10px",
-                fontSize: "14px"
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                style: {
-                  color: "#6a9a9a",
-                  marginTop: "1px",
-                  flexShrink: 0
-                },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                children: "Portland, Oregon"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-              style: {
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "10px",
-                fontSize: "14px"
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                style: {
-                  color: "#6a9a9a",
-                  marginTop: "1px",
-                  flexShrink: 0
-                },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconClock, {})
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                children: "Mon \u2013 Sat: 7:00 AM \u2013 6:00 PM"
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconClock, {})
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  children: "Mon \u2013 Sat: 7:00 AM \u2013 6:00 PM"
+                })]
               })]
             })]
           })]
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      style: {
-        borderTop: "1px solid #222"
-      },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "max-w-7xl mx-auto px-6 py-5",
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         style: {
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "10px"
+          borderTop: "1px solid #222"
         },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
-          style: {
-            fontSize: "13px",
-            color: "#555",
-            margin: 0
-          },
-          children: ["\xA9 ", year, " AR Roofing & Construction. All rights reserved."]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "max-w-7xl mx-auto px-6 py-5",
           style: {
             display: "flex",
-            gap: "20px"
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "10px"
           },
-          children: [{
-            label: "Privacy Policy",
-            href: "/privacy-policy"
-          }, {
-            label: "Terms of Service",
-            href: "/terms"
-          }].map(({
-            label,
-            href
-          }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: href,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
             style: {
               fontSize: "13px",
               color: "#555",
-              textDecoration: "none",
-              transition: "color 0.2s ease"
+              margin: 0
             },
-            onMouseEnter: e => e.currentTarget.style.color = "#aaa",
-            onMouseLeave: e => e.currentTarget.style.color = "#555",
-            children: label
-          }, label))
-        })]
-      })
+            children: ["\xA9 ", year, " AR Roofing & Construction. All rights reserved."]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            style: {
+              display: "flex",
+              gap: "20px"
+            },
+            children: [{
+              label: "Privacy Policy",
+              href: "/privacy-policy"
+            }, {
+              label: "Terms of Service",
+              href: "/terms"
+            }].map(({
+              label,
+              href
+            }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: href,
+              style: {
+                fontSize: "13px",
+                color: "#555",
+                textDecoration: "none",
+                transition: "color 0.2s ease"
+              },
+              onMouseEnter: e => e.currentTarget.style.color = "#aaa",
+              onMouseLeave: e => e.currentTarget.style.color = "#555",
+              children: label
+            }, label))
+          })]
+        })
+      })]
     })]
   });
 }

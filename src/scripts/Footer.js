@@ -134,11 +134,35 @@ function FooterHeading({ children }) {
 }
 
 /* ── Main Component ─────────────────────────────────────────────── */
+// ── ESTAMPADO DE FONDO ───────────────────────────────────────────
+// Pega aquí la URL del medio que quieras usar como fondo del footer
+const FOOTER_BG_IMG = "/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png"
+// ─────────────────────────────────────────────────────────────────
+
 function Footer() {
   const year = new Date().getFullYear()
 
+  const footerStyle = {
+    backgroundColor: "#0a1e1d",
+    color: "#aaa",
+    ...(FOOTER_BG_IMG && {
+      backgroundImage: `url(${FOOTER_BG_IMG})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      position: "relative",
+    }),
+  }
+
   return (
-    <footer style={{ backgroundColor: "#0a1e1d", color: "#aaa" }}>
+    <footer style={footerStyle}>
+      {FOOTER_BG_IMG && (
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundColor: "rgba(10,28,27,0.93)",
+          zIndex: 0, pointerEvents: "none",
+        }} />
+      )}
+      <div style={{ position: "relative", zIndex: 1 }}>
 
       {/* ── CTA Banner ──────────────────────────────────────── */}
       <div style={{ backgroundColor: "#e8253a" }}>
@@ -324,6 +348,7 @@ function Footer() {
         </div>
       </div>
 
+      </div>
     </footer>
   )
 }
