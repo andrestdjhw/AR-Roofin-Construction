@@ -11,11 +11,11 @@ get_header(); ?>
    ════════════════════════════════════════════════════════════ */
 
 // ── S01 HERO ─────────────────────────────────────────────────
-$hero_poster_img          = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.png';   // Imagen fallback (si no hay video)
+$hero_poster_img          = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Imagen fallback (si no hay video)
 $hero_video_mp4           = '';   // Video drone .mp4
 
 // ── S04 ABOUT ────────────────────────────────────────────────
-$about_owner_img          = '';   // Foto de Antonio en el techo
+$about_owner_img          = '/wp-content/uploads/2026/06/CEO.png';   // Foto de Antonio CEO de la Empresa
 
 // ── S05 SERVICES ─────────────────────────────────────────────
 $service_installation_img = '/wp-content/uploads/2026/06/Roof_Installation_ARRC-scaled.jpg';   // Roof Installation
@@ -38,8 +38,8 @@ $portfolio_5_img          = '';   // Mosier, OR
 $portfolio_6_img          = '';   // White Salmon, WA
 
 // ── BACKGROUNDS ──────────────────────────────────────────────
-$why_bg_img               = '';   // S06 Why Us — estampado/textura de fondo
-$final_cta_bg_img         = '';   // S12 Final CTA — estampado/textura de fondo
+$why_bg_img               = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.png';   // S06 Why Us — estampado/textura de fondo
+$final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png';   // S12 Final CTA — estampado/textura de fondo
 
 /* ══════════════════════════════════════════════════════════════ */
 
@@ -1199,58 +1199,17 @@ $final_cta_bg_img         = '';   // S12 Final CTA — estampado/textura de fond
           </a>
           <a href="tel:5416450577" class="btn-ghost">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call 541-645-0577
+            Call 541-675-0577
           </a>
         </div>
-        <p class="ar-hero__phone-label">Available 24/7 for emergencies &nbsp;·&nbsp; <a href="tel:5416450577">541-645-0577</a></p>
+        <p class="ar-hero__phone-label">Available 24/7 for emergencies &nbsp;·&nbsp; <a href="tel:5416750577">541 675 0577</a></p>
       </div>
 
-      <!-- Right: form -->
+      <!-- Right: form (React ContactForm) -->
       <div class="ar-hero__right">
-        <h3>Get a Free Inspection</h3>
-        <div class="ar-form-row">
-          <div class="ar-form-field">
-            <label for="hero-name">Full Name</label>
-            <input type="text" id="hero-name" name="name" placeholder="Your name">
-          </div>
-          <div class="ar-form-field">
-            <label for="hero-phone">Phone</label>
-            <input type="tel" id="hero-phone" name="phone" placeholder="(541) 000-0000">
-          </div>
-        </div>
-        <div class="ar-form-field">
-          <label for="hero-email">Email</label>
-          <input type="email" id="hero-email" name="email" placeholder="you@email.com">
-        </div>
-        <div class="ar-form-row">
-          <div class="ar-form-field">
-            <label for="hero-service">Service Needed</label>
-            <select id="hero-service" name="service">
-              <option value="">Select a service...</option>
-              <option>Free Inspection</option>
-              <option>Roof Installation</option>
-              <option>Roof Repair</option>
-              <option>Emergency Roofing</option>
-              <option>Roof Maintenance</option>
-              <option>Commercial</option>
-            </select>
-          </div>
-          <div class="ar-form-field">
-            <label for="hero-city">City</label>
-            <input type="text" id="hero-city" name="city" placeholder="Hood River, OR">
-          </div>
-        </div>
-        <div class="ar-form-field" style="flex:1; display:flex; flex-direction:column;">
-          <label for="hero-message">Message</label>
-          <textarea id="hero-message" name="message" placeholder="Tell us about your roof..." style="flex:1; min-height:72px; resize:none;"></textarea>
-        </div>
-        <button type="button" class="ar-form-submit">Send Message →</button>
+        <div id="hero-contact-form"></div>
       </div>
 
-    </div>
-    <div class="ar-hero__scroll">
-      <div class="ar-hero__scroll-line"></div>
-      <span>Scroll</span>
     </div>
   </section>
 
@@ -1269,6 +1228,7 @@ $final_cta_bg_img         = '';   // S12 Final CTA — estampado/textura de fond
         '24/7 Emergency Response',
         'Free Inspections',
         'Family-Owned',
+        'GAF Certified Contractor',
       ];
       // Duplicate 3× for seamless loop
       for ($i = 0; $i < 3; $i++) :
@@ -1563,9 +1523,9 @@ $final_cta_bg_img         = '';   // S12 Final CTA — estampado/textura de fond
         <p>Ready to start? Call or request your free inspection.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
           <a href="/contact" class="btn-primary">Get a Free Inspection</a>
-          <a href="tel:5416450577" class="btn-primary" style="background:var(--slate);">
+          <a href="tel:5416750577" class="btn-primary" style="background:var(--slate);">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call 541-645-0577
+            Call 541-675-0577
           </a>
         </div>
       </div>
@@ -1719,7 +1679,7 @@ $final_cta_bg_img         = '';   // S12 Final CTA — estampado/textura de fond
         $faqs = [
           [
             'q' => 'How much does a new roof cost in Oregon?',
-            'a' => 'It depends on five factors: roof size, pitch, material, layers to remove, and wood condition. Asphalt shingle roofs for a standard home start between $8,000 and $12,000. Metal starts between $15,000 and $25,000. We give free in-person estimates — never over the phone.',
+            'a' => 'It depends on five factors: roof size, pitch, material, layers to remove, and wood condition. Asphalt shingle roofs for a standard home start between $8,000 and $12,000. Metal starts between $15,000 and $25,000. We give free in-person estimates never over the phone.',
           ],
           [
             'q' => 'Do you work with insurance companies?',
@@ -1775,48 +1735,11 @@ $final_cta_bg_img         = '';   // S12 Final CTA — estampado/textura de fond
           <p>Whether you need an inspection, a repair, or a complete replacement — AR Roofing has you covered. Serving 18 cities across Oregon and Washington. Licensed, insured, and ready to help.</p>
           <div class="ar-final-cta__btns">
             <a href="#contact-form" class="btn-primary">Get a Free Inspection</a>
-            <a href="tel:5416450577" class="btn-ghost">Call 541-645-0577</a>
+            <a href="tel:5416450577" class="btn-ghost">Call 541-675-0577</a>
           </div>
         </div>
         <div class="ar-final-cta__form" id="contact-form">
-          <h3>Send Us a Message</h3>
-          <div class="ar-form-row">
-            <div class="ar-form-field">
-              <label for="ar-name">Full Name</label>
-              <input type="text" id="ar-name" name="name" placeholder="Antonio Robles">
-            </div>
-            <div class="ar-form-field">
-              <label for="ar-phone">Phone</label>
-              <input type="tel" id="ar-phone" name="phone" placeholder="(541) 000-0000">
-            </div>
-          </div>
-          <div class="ar-form-field">
-            <label for="ar-email">Email</label>
-            <input type="email" id="ar-email" name="email" placeholder="you@email.com">
-          </div>
-          <div class="ar-form-row">
-            <div class="ar-form-field">
-              <label for="ar-service">Service Needed</label>
-              <select id="ar-service" name="service">
-                <option value="">Select a service...</option>
-                <option>Free Inspection</option>
-                <option>Roof Installation</option>
-                <option>Roof Repair</option>
-                <option>Emergency Roofing</option>
-                <option>Roof Maintenance</option>
-                <option>Commercial</option>
-              </select>
-            </div>
-            <div class="ar-form-field">
-              <label for="ar-city">City</label>
-              <input type="text" id="ar-city" name="city" placeholder="Hood River, OR">
-            </div>
-          </div>
-          <div class="ar-form-field">
-            <label for="ar-message">Message</label>
-            <textarea id="ar-message" name="message" placeholder="Tell us about your roof..."></textarea>
-          </div>
-          <button type="button" class="ar-form-submit">Send Message →</button>
+          <div id="final-contact-form"></div>
         </div>
       </div>
     </div>

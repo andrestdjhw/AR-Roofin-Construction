@@ -11,10 +11,10 @@ get_header(); ?>
    ════════════════════════════════════════════════════════════ */
 
 // ── HERO ─────────────────────────────────────────────────────
-$hero_bg_img        = '';   // Crew respondiendo a daño de tormenta o tarping
+$hero_bg_img        = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Crew respondiendo a daño de tormenta o tarping
 
 // ── PROCESO DE RESPUESTA ─────────────────────────────────────
-$response_photo_img = '';   // Foto real de tarping / emergencia en acción
+$response_photo_img = '/wp-content/uploads/2026/06/Roof_Repair_ARRC-scaled.jpg';   // Foto real de tarping / emergencia en acción
 
 /* ══════════════════════════════════════════════════════════════ */
 ?>
@@ -473,7 +473,7 @@ $response_photo_img = '';   // Foto real de tarping / emergencia en acción
           <div class="er-hero__phone-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
-          Call Now: 541-645-0577
+          Call Now: 541-675-0577
         </a>
         <a href="/contact" class="er-hero__secondary">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -538,7 +538,7 @@ $response_photo_img = '';   // Foto real de tarping / emergencia en acción
   <div class="er-phone-bar">
     <span class="er-phone-bar__label">Emergency line — answered 24/7</span>
     <a href="tel:5416450577" class="er-phone-bar__number" onclick="gtag && gtag('event','conversion',{send_to:'AW-XXXXXXX/XXXXXXX'})">
-      541-645-0577
+      541-675-0577
     </a>
     <span class="er-phone-bar__sub">Same-day response · Licensed & insured · Oregon & Washington</span>
   </div>
@@ -599,7 +599,7 @@ $response_photo_img = '';   // Foto real de tarping / emergencia en acción
           <?php endif; ?>
           <div class="er-process__photo-badge">
             <div class="er-process__photo-badge-dot"></div>
-            <span>Available right now<br>541-645-0577</span>
+            <span>Available right now<br>541-675-0577</span>
           </div>
         </div>
       </div>
@@ -673,7 +673,7 @@ $response_photo_img = '';   // Foto real de tarping / emergencia en acción
       <span class="er-cta__eyebrow">Save this number</span>
       <h2>You might need it tonight.</h2>
       <a href="tel:5416450577" class="er-cta__phone" onclick="gtag && gtag('event','conversion',{send_to:'AW-XXXXXXX/XXXXXXX'})">
-        541-645-0577
+        541-675-0577
       </a>
       <a href="/contact" class="er-cta__btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
@@ -692,7 +692,7 @@ $response_photo_img = '';   // Foto real de tarping / emergencia en acción
   <span class="er-sticky-call__dot"></span>
   <a href="tel:5416450577" onclick="gtag && gtag('event','conversion',{send_to:'AW-XXXXXXX/XXXXXXX'})">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Call Now: 541-645-0577
+    Call Now: 541-675-0577
   </a>
 </div>
 

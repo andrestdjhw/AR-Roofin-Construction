@@ -11,14 +11,14 @@ get_header(); ?>
    ════════════════════════════════════════════════════════════ */
 
 // ── HERO ─────────────────────────────────────────────────────
-$hero_bg_img      = '';   // Antonio y crew en el techo, mañana, Oregon
+$hero_bg_img      = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png';   // Antonio y crew en el techo, mañana, Oregon
 
 // ── OUR STORY ────────────────────────────────────────────────
-$story_photo_img  = '';   // Antonio en work gear, mirando a cámara
+$story_photo_img  = '/wp-content/uploads/2026/06/About_Home_AR_Roofing_Construction-scaled.jpg';   // Antonio en work gear, mirando a cámara
 
 // ── MEET THE TEAM ────────────────────────────────────────────
-$antonio_photo_img = '';  // Headshot o candid de Antonio
-$crew_photo_img    = '';  // Foto grupal del crew en obra
+$antonio_photo_img = '/wp-content/uploads/2026/06/CEO_PIC.png';  // Headshot o candid de Antonio
+$crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Foto grupal del crew en obra
 
 /* ══════════════════════════════════════════════════════════════ */
 ?>
@@ -642,7 +642,7 @@ $crew_photo_img    = '';  // Foto grupal del crew en obra
           </a>
           <a href="tel:5416450577" class="btn-ghost">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call 541-645-0577
+            Call 541-675-0577
           </a>
         </div>
       </div>

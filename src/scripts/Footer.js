@@ -303,7 +303,7 @@ function Footer() {
                   onMouseLeave={e => e.currentTarget.style.color = "#aaa"}
                 >
                   <span style={{ color: "#6a9a9a", marginTop: "1px", flexShrink: 0 }}><IconPhone /></span>
-                  (503) 123-4567
+                  (541) 675 0577
                 </a>
               </li>
               <li style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "14px" }}>

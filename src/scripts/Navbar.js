@@ -133,7 +133,7 @@ function Navbar() {
             </a>
             <a href="tel:+15031234567" className="flex items-center gap-1.5 hover:text-white transition-colors duration-200">
               <span style={{ color: "#6a9a9a" }}><IconPhone /></span>
-              (503) 123-4567
+              (541) 675 0577
             </a>
           </div>
 
@@ -374,7 +374,7 @@ function Navbar() {
                 <span style={{ color: "#6a9a9a" }}><IconMail /></span> info@arroofingus.com
               </a>
               <a href="tel:+15031234567" className="flex items-center gap-2 text-xs" style={{ color: "#666", textDecoration: "none" }}>
-                <span style={{ color: "#6a9a9a" }}><IconPhone /></span> (503) 123-4567
+                <span style={{ color: "#6a9a9a" }}><IconPhone /></span> (541) 675 0577
               </a>
               <div className="flex items-center gap-2 text-xs" style={{ color: "#666" }}>
                 <span style={{ color: "#6a9a9a" }}><IconPin /></span> Serving in Portland, Oregon
