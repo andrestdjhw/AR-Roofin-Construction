@@ -297,7 +297,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+15031234567"
+                  href="tel:5416750577"
                   style={{ display: "flex", alignItems: "flex-start", gap: "10px", color: "#aaa", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
                   onMouseEnter={e => e.currentTarget.style.color = "#fff"}
                   onMouseLeave={e => e.currentTarget.style.color = "#aaa"}

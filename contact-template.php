@@ -8,7 +8,7 @@ get_header(); ?>
 /* ═══════════════════════════════════════════════════════════════
    CONFIGURACIÓN
    ════════════════════════════════════════════════════════════ */
-$google_maps_embed = '';
+$google_maps_embed = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89484.07363784768!2d-122.7635023!3d45.5050853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C%20OR!5e0!3m2!1sen!2sus!4v1700000000000';
 $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
 /* ══════════════════════════════════════════════════════════════ */
 ?>
@@ -31,7 +31,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
   .ct-hero { position:relative; min-height:38vh; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; background:var(--slate); }
   .ct-hero__bg { position:absolute; inset:0; background-size:cover; background-position:center; z-index:0; }
   .ct-hero__overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(15,35,34,0.92) 0%, rgba(15,35,34,0.60) 60%, rgba(15,35,34,0.35) 100%); z-index:1; }
-  .ct-hero__content { position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:32px 24px 56px; }
+  .ct-hero__content { position:relative; z-index:2; width:100%; padding:32px 0 56px; }
   .ct-hero__breadcrumb { display:flex; align-items:center; gap:8px; font-size:12px; color:rgba(255,255,255,0.5); margin-bottom:20px; letter-spacing:0.5px; }
   .ct-hero__breadcrumb a { color:rgba(255,255,255,0.5); text-decoration:none; transition:color .2s; }
   .ct-hero__breadcrumb a:hover { color:var(--mist); }
@@ -61,7 +61,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
   .ct-detail-value a { color:var(--slate); text-decoration:none; transition:color .2s; }
   .ct-detail-value a:hover { color:var(--red); }
 
-  .ct-map { border-radius:14px; overflow:hidden; height:260px; background:linear-gradient(135deg, var(--slate), #1e3e3d); position:relative; }
+  .ct-map { grid-column:1 / -1; border-radius:14px; overflow:hidden; height:400px; background:linear-gradient(135deg, var(--slate), #1e3e3d); position:relative; }
   .ct-map iframe { width:100%; height:100%; border:none; display:block; }
   .ct-map__placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; color:rgba(255,255,255,0.2); font-size:12px; letter-spacing:1px; text-transform:uppercase; }
 
@@ -80,7 +80,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
     .ct-info { flex-direction:row; flex-wrap:wrap; }
     .ct-phone { flex:1; min-width:240px; }
     .ct-details { flex:1; min-width:260px; }
-    .ct-map { height:220px; flex:100%; }
+    .ct-map { height:300px; flex:100%; }
     .ct-trust__grid { grid-template-columns:repeat(2,1fr); }
     .ct-trust__item:nth-child(2) { border-right:none; }
   }
@@ -99,6 +99,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
     <div class="ct-hero__bg" <?php if($hero_bg_img): ?>style="background-image:url('<?= esc_url($hero_bg_img) ?>')"<?php endif; ?>></div>
     <div class="ct-hero__overlay"></div>
     <div class="ct-hero__content">
+      <div class="section-inner">
       <nav class="ct-hero__breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a><span>›</span>
         <span style="color:rgba(255,255,255,0.75);">Contact</span>
@@ -106,6 +107,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
       <span class="eyebrow" style="color:var(--mist);">Get in Touch</span>
       <h1>Let's talk about your roof.</h1>
       <p class="ct-hero__sub">Free estimates. Free inspections. Honest answers. Reach us by phone, email, or the form below. We respond within 24 hours.</p>
+      </div>
     </div>
   </section>
 
@@ -116,7 +118,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
         <div class="ct-info">
           <div class="ct-phone">
             <span class="ct-phone__label">Call Us Directly</span>
-            <a href="tel:5416450577" class="ct-phone__number">(541) 675 0577</a>
+            <a href="tel:5416750577" class="ct-phone__number">(541) 675 0577</a>
             <span class="ct-phone__sub">Mon &ndash; Fri &nbsp;7:00 AM &ndash; 5:00 PM</span>
             <span class="ct-phone__emergency">24/7 Emergency Response</span>
           </div>
@@ -142,21 +144,23 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
             <?php endforeach; ?>
           </div>
 
-          <div class="ct-map">
-            <?php if($google_maps_embed): ?>
-              <iframe src="<?= esc_url($google_maps_embed) ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AR Roofing service area map"></iframe>
-            <?php else: ?>
-              <div class="ct-map__placeholder">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                <span>Portland, Oregon</span>
-              </div>
-            <?php endif; ?>
-          </div>
         </div>
 
         <!-- RIGHT: Form (React ContactForm — theme light) -->
         <div class="ct-form-wrap" id="contact-form">
           <div id="ct-react-form"></div>
+        </div>
+
+        <!-- Map (full width, below both columns) -->
+        <div class="ct-map">
+          <?php if($google_maps_embed): ?>
+            <iframe src="<?= esc_url($google_maps_embed) ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AR Roofing service area map"></iframe>
+          <?php else: ?>
+            <div class="ct-map__placeholder">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Portland, Oregon</span>
+            </div>
+          <?php endif; ?>
         </div>
 
       </div>

@@ -110,8 +110,8 @@ $crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Fot
   }
   .ab-hero__content {
     position: relative; z-index: 2;
-    max-width: 1200px; margin: 0 auto;
-    padding: 32px 24px 56px;
+    width: 100%;
+    padding: 32px 0 56px;
   }
   .ab-hero__breadcrumb {
     display: flex; align-items: center; gap: 8px;
@@ -416,14 +416,16 @@ $crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Fot
     <div class="ab-hero__bg" <?php if($hero_bg_img): ?>style="background-image:url('<?= esc_url($hero_bg_img) ?>')"<?php endif; ?>></div>
     <div class="ab-hero__overlay"></div>
     <div class="ab-hero__content">
-      <nav class="ab-hero__breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span>›</span>
-        <span style="color:rgba(255,255,255,0.75);">About</span>
-      </nav>
-      <span class="eyebrow" style="color:var(--mist);">About Us</span>
-      <h1>We don't just fix roofs.<br>We protect families.</h1>
-      <p class="ab-hero__sub">Family-owned. Owner on every job. Eighteen years of honest work across Oregon and Washington.</p>
+      <div class="section-inner">
+        <nav class="ab-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>›</span>
+          <span style="color:rgba(255,255,255,0.75);">About</span>
+        </nav>
+        <span class="eyebrow" style="color:var(--mist);">About Us</span>
+        <h1>We don't just fix roofs.<br>We protect families.</h1>
+        <p class="ab-hero__sub">Family-owned. Owner on every job. Eighteen years of honest work across Oregon and Washington.</p>
+      </div>
     </div>
   </section>
 
@@ -640,7 +642,7 @@ $crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Fot
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
             Get a Free Inspection
           </a>
-          <a href="tel:5416450577" class="btn-ghost">
+          <a href="tel:5416750577" class="btn-ghost">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             Call 541-675-0577
           </a>

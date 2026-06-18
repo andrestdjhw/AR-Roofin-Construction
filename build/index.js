@@ -2,6 +2,375 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/scripts/CertificateBadges.js"
+/*!******************************************!*\
+  !*** ./src/scripts/CertificateBadges.js ***!
+  \******************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* ─── DATA ─────────────────────────────────────────────────────
+   Edita labels/imágenes aquí, o pásalos por la prop `certificates`.
+   ──────────────────────────────────────────────────────────── */
+
+const DEFAULT_CERTIFICATES = [{
+  id: "residential",
+  label: "Certified",
+  caption: "Residential Certification",
+  image: "/wp-content/uploads/2026/06/Certified-scaled.png"
+}, {
+  id: "commercial",
+  label: "Commercial Certified",
+  caption: "Commercial Certification",
+  image: "/wp-content/uploads/2026/06/COMMERCIAL_CERTIFIED.png"
+}];
+
+/* ─── ICONS ────────────────────────────────────────────────────── */
+const ShieldIcon = ({
+  size = 16
+}) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: size,
+  height: size,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("polyline", {
+    points: "9 12 11 14 15 10"
+  })]
+});
+const ExpandIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "13",
+  height: "13",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.4",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"
+  })
+});
+const CloseIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "18",
+  height: "18",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M18 6 6 18M6 6l12 12"
+  })
+});
+const MinIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "14",
+  height: "14",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.6",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+    x1: "5",
+    y1: "12",
+    x2: "19",
+    y2: "12"
+  })
+});
+
+/* ─── STYLES (inyectados una sola vez) ────────────────────────── */
+const injectStyles = () => {
+  if (document.getElementById("ar-cert-styles")) return;
+  const style = document.createElement("style");
+  style.id = "ar-cert-styles";
+  style.textContent = `
+    @keyframes arCertFade { from { opacity:0; } to { opacity:1; } }
+    @keyframes arCertZoom { from { opacity:0; transform:scale(.94); } to { opacity:1; transform:scale(1); } }
+    @keyframes arCertSlideR { from { opacity:0; transform:translateX(16px); } to { opacity:1; transform:translateX(0); } }
+
+    .ar-cert-wrap, .ar-cert-wrap * { box-sizing:border-box; font-family:'GT America','DM Sans',sans-serif; }
+
+    /* ── Floating shell ───────────────────────── */
+    .ar-cert-float { position:fixed; z-index:900; }
+    .ar-cert-float--rm { right:0; top:30%; transform:translateY(-50%); }
+    .ar-cert-float--bl { left:22px; bottom:22px; }
+    .ar-cert-float--br { right:22px; bottom:22px; }
+
+    /* Pestaña / etiqueta (estado plegado en modo borde derecho) */
+    .ar-cert-tab {
+      display:flex; flex-direction:column; align-items:center; gap:11px;
+      padding:18px 11px; border:none; cursor:pointer;
+      background:#e8253a; color:#fff; border-radius:12px 0 0 12px;
+      box-shadow:-6px 8px 28px rgba(15,35,34,0.22);
+      transition:padding-right .18s, background .2s; animation:arCertSlideR .22s ease both;
+    }
+    .ar-cert-tab:hover { background:#8b0a1a; padding-right:16px; }
+    .ar-cert-tab__text { writing-mode:vertical-rl; text-orientation:mixed; font-size:11px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; }
+
+    /* Botón redondo (estado plegado en modo esquina) */
+    .ar-cert-launch {
+      width:54px; height:54px; border-radius:50%; border:none; cursor:pointer;
+      background:#e8253a; color:#fff; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 10px 30px rgba(232,37,58,0.42); transition:transform .18s, background .2s; animation:arCertZoom .2s ease both;
+    }
+    .ar-cert-launch:hover { transform:translateY(-2px); background:#8b0a1a; }
+
+    /* Panel desplegado */
+    .ar-cert-panel {
+      background:#fff; border:1px solid #eef2f2; border-radius:16px; padding:12px;
+      box-shadow:0 14px 44px rgba(15,35,34,0.18);
+      display:flex; flex-direction:column; gap:10px; width:max-content; max-width:280px;
+      animation:arCertSlideR .22s ease both;
+    }
+    .ar-cert-panel--rm { border-radius:16px 0 0 16px; box-shadow:-10px 10px 44px rgba(15,35,34,0.2); }
+    .ar-cert-panel__head { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:2px 4px 0; }
+    .ar-cert-panel__title { font-size:10.5px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#6a9a9a; }
+    .ar-cert-panel__min { width:24px; height:24px; border:none; border-radius:7px; background:#f5f6f5; color:#0f2322; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s; }
+    .ar-cert-panel__min:hover { background:#dde8e8; }
+
+    /* ── Badges ───────────────────────────────── */
+    .ar-cert-list { display:flex; flex-direction:column; gap:8px; }
+    .ar-cert-row  { display:flex; flex-wrap:wrap; gap:14px; }   /* modo inline */
+    .ar-cert-eyebrow { font-size:11px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:#6a9a9a; margin:0 0 14px; display:block; }
+
+    .ar-cert-badge {
+      position:relative; display:inline-flex; align-items:center; gap:10px; width:100%;
+      padding:10px 15px; border-radius:10px; cursor:pointer; font-family:inherit; text-align:left;
+      border:1.5px solid #dde8e8; background:#fff; color:#0f2322;
+      transition:border-color .2s, background .2s, transform .18s, box-shadow .2s;
+    }
+    .ar-cert-badge:hover { border-color:#6a9a9a; background:#f7fbfb; }
+    .ar-cert-badge:focus-visible { outline:2px solid #6a9a9a; outline-offset:2px; }
+    .ar-cert-badge__icon { display:flex; color:#e8253a; flex-shrink:0; }
+    .ar-cert-badge__label { font-size:13px; font-weight:700; letter-spacing:.3px; flex:1; white-space:nowrap; }
+    .ar-cert-badge__expand { display:flex; color:#6a9a9a; opacity:.65; transition:opacity .2s; }
+    .ar-cert-badge:hover .ar-cert-badge__expand { opacity:1; }
+
+    .ar-cert-row .ar-cert-badge { width:auto; border-radius:100px; padding:11px 18px; box-shadow:0 1px 8px rgba(15,35,34,0.05); }
+    .ar-cert-row .ar-cert-badge:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(15,35,34,0.12); }
+
+    /* ── Hover preview ────────────────────────── */
+    .ar-cert-pop {
+      position:absolute; z-index:40; background:#fff; border-radius:12px; padding:10px; width:240px;
+      box-shadow:0 16px 48px rgba(15,35,34,0.25); pointer-events:none; animation:arCertFade .15s ease both;
+    }
+    .ar-cert-pop img { display:block; width:100%; height:auto; max-height:280px; object-fit:contain; border-radius:6px; }
+    .ar-cert-pop__hint { display:block; text-align:center; font-size:10px; font-weight:600; letter-spacing:.5px; text-transform:uppercase; color:#889; margin-top:8px; }
+    .ar-cert-pop::after { content:''; position:absolute; border:7px solid transparent; }
+
+    .ar-cert-pop--left  { right:calc(100% + 14px); top:50%; transform:translateY(-50%); }
+    .ar-cert-pop--left::after  { left:100%; top:50%; transform:translateY(-50%); border-left-color:#fff; }
+    .ar-cert-pop--right { left:calc(100% + 14px); top:50%; transform:translateY(-50%); }
+    .ar-cert-pop--right::after { right:100%; top:50%; transform:translateY(-50%); border-right-color:#fff; }
+    .ar-cert-pop--up    { bottom:calc(100% + 12px); left:50%; transform:translateX(-50%); }
+    .ar-cert-pop--up::after { top:100%; left:50%; transform:translateX(-50%); border-top-color:#fff; }
+
+    /* ── Lightbox ─────────────────────────────── */
+    .ar-cert-modal {
+      position:fixed; inset:0; z-index:9999; background:rgba(10,20,20,0.85); backdrop-filter:blur(6px);
+      display:flex; align-items:center; justify-content:center; padding:24px; animation:arCertFade .2s ease both;
+    }
+    .ar-cert-modal__inner {
+      position:relative; background:#fff; border-radius:16px; overflow:hidden;
+      max-width:760px; width:100%; max-height:90vh; display:flex; flex-direction:column;
+      box-shadow:0 24px 80px rgba(0,0,0,0.45); animation:arCertZoom .22s ease both;
+    }
+    .ar-cert-modal__head { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #eee; flex-shrink:0; }
+    .ar-cert-modal__title { display:flex; align-items:center; gap:9px; font-size:15px; font-weight:700; color:#0f2322; }
+    .ar-cert-modal__title svg { color:#e8253a; }
+    .ar-cert-modal__close { width:34px; height:34px; border:none; border-radius:9px; cursor:pointer; background:#f5f6f5; color:#0f2322; display:flex; align-items:center; justify-content:center; transition:background .15s; }
+    .ar-cert-modal__close:hover { background:#dde8e8; }
+    .ar-cert-modal__body { padding:22px; overflow:auto; background:#f5f6f5; display:flex; justify-content:center; }
+    .ar-cert-modal__body img { max-width:100%; max-height:72vh; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.12); }
+
+    @media (max-width:600px) {
+      .ar-cert-pop { display:none; }                 /* en móvil: solo lightbox por click */
+    }
+  `;
+  document.head.appendChild(style);
+};
+injectStyles();
+
+/* ─── COMPONENT ────────────────────────────────────────────────── */
+function CertificateBadges({
+  floating = true,
+  // true = widget fijo; false = fila inline
+  position = "right-middle",
+  // "right-middle" | "bottom-left" | "bottom-right"
+  title = "Certifications",
+  // "" para ocultar
+  certificates = DEFAULT_CERTIFICATES
+}) {
+  const [hovered, setHovered] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  const [active, setActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null); // certificado en el lightbox
+  const [open, setOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false); // panel desplegado
+  const closeBtnRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+
+  // Lightbox: bloquear scroll + cerrar con ESC
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!active) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = e => {
+      if (e.key === "Escape") setActive(null);
+    };
+    document.addEventListener("keydown", onKey);
+    closeBtnRef.current?.focus();
+    return () => {
+      document.body.style.overflow = prev;
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [active]);
+  const isRightMid = position === "right-middle";
+  const isBottomR = position === "bottom-right";
+  const floatClass = isRightMid ? "ar-cert-float--rm" : isBottomR ? "ar-cert-float--br" : "ar-cert-float--bl";
+  const popDir = !floating ? "up" : isRightMid || isBottomR ? "left" : "right";
+  const renderBadge = cert => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+    type: "button",
+    className: "ar-cert-badge",
+    onMouseEnter: () => setHovered(cert.id),
+    onMouseLeave: () => setHovered(null),
+    onFocus: () => setHovered(cert.id),
+    onBlur: () => setHovered(null),
+    onClick: () => setActive(cert),
+    "aria-label": `Ver ${cert.label}`,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cert-badge__icon",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ShieldIcon, {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cert-badge__label",
+      children: cert.label
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cert-badge__expand",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ExpandIcon, {})
+    }), hovered === cert.id && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+      className: `ar-cert-pop ar-cert-pop--${popDir}`,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+        src: cert.image,
+        alt: cert.caption || cert.label
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        className: "ar-cert-pop__hint",
+        children: "Click para ampliar"
+      })]
+    })]
+  }, cert.id);
+  const lightbox = active && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "ar-cert-modal",
+    onClick: e => {
+      if (e.target === e.currentTarget) setActive(null);
+    },
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-label": active.caption || active.label,
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cert-modal__inner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "ar-cert-modal__head",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+          className: "ar-cert-modal__title",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ShieldIcon, {}), active.caption || active.label]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          ref: closeBtnRef,
+          type: "button",
+          className: "ar-cert-modal__close",
+          onClick: () => setActive(null),
+          "aria-label": "Cerrar",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(CloseIcon, {})
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "ar-cert-modal__body",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: active.image,
+          alt: active.caption || active.label
+        })
+      })]
+    })
+  });
+
+  /* ── Modo inline ── */
+  if (!floating) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cert-wrap",
+      children: [title ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        className: "ar-cert-eyebrow",
+        children: title
+      }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "ar-cert-row",
+        children: certificates.map(renderBadge)
+      }), lightbox]
+    });
+  }
+
+  /* ── Plegado: etiqueta (borde derecho) o botón redondo (esquina) ── */
+  const collapsed = isRightMid ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+    type: "button",
+    className: "ar-cert-tab",
+    onClick: () => setOpen(true),
+    "aria-label": "Ver certificaciones",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ShieldIcon, {
+      size: 20
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cert-tab__text",
+      children: title || "Certifications"
+    })]
+  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+    type: "button",
+    className: "ar-cert-launch",
+    onClick: () => setOpen(true),
+    "aria-label": "Ver certificaciones",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ShieldIcon, {
+      size: 22
+    })
+  });
+
+  /* ── Desplegado ── */
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "ar-cert-wrap",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: `ar-cert-float ${floatClass}`,
+      children: open ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: `ar-cert-panel${isRightMid ? " ar-cert-panel--rm" : ""}`,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "ar-cert-panel__head",
+          children: [title ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            className: "ar-cert-panel__title",
+            children: title
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "ar-cert-panel__min",
+            onClick: () => setOpen(false),
+            "aria-label": "Minimizar",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MinIcon, {})
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "ar-cert-list",
+          children: certificates.map(renderBadge)
+        })]
+      }) : collapsed
+    }), lightbox]
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CertificateBadges);
+
+/***/ },
+
 /***/ "./src/scripts/ContactForm.js"
 /*!************************************!*\
   !*** ./src/scripts/ContactForm.js ***!
@@ -482,7 +851,7 @@ function ContactForm({
     } catch (err) {
       console.error("Form submission error:", err);
       setStatus("error");
-      setErrorMsg("Something went wrong. Please call us directly at 541-645-0577.");
+      setErrorMsg("Something went wrong. Please call us directly at 541-675-0577.");
     }
   };
 
@@ -502,15 +871,15 @@ function ContactForm({
           className: isLight ? "light" : "",
           children: isEmergency ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
             children: ["For immediate help, call ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-              href: "tel:5416450577",
+              href: "tel:5416750577",
               className: isLight ? "light" : "",
-              children: "541-645-0577"
+              children: "541-675-0577"
             }), " now. We respond to emergencies 24/7."]
           }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
             children: ["We'll get back to you within 24 hours. For immediate help call ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-              href: "tel:5416450577",
+              href: "tel:5416750577",
               className: isLight ? "light" : "",
-              children: "541-645-0577"
+              children: "541-675-0577"
             }), "."]
           })
         })]
@@ -559,8 +928,8 @@ function ContactForm({
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
         children: "For immediate help, call us now:"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-        href: "tel:5416450577",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(PhoneIcon, {}), "541-645-0577"]
+        href: "tel:5416750577",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(PhoneIcon, {}), "541-675-0577"]
       })]
     }), status === "error" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "ar-cf-error-banner",
@@ -1289,7 +1658,7 @@ function Footer() {
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "tel:+15031234567",
+                  href: "tel:5416750577",
                   style: {
                     display: "flex",
                     alignItems: "flex-start",
@@ -1750,7 +2119,7 @@ function Navbar() {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
               }), "info@arroofingus.com"]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-              href: "tel:+15031234567",
+              href: "tel:5416750577",
               className: "flex items-center gap-1.5 hover:text-white transition-colors duration-200",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                 style: {
@@ -2012,7 +2381,7 @@ function Navbar() {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
                 }), " info@arroofingus.com"]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "tel:+15031234567",
+                href: "tel:5416750577",
                 className: "flex items-center gap-2 text-xs",
                 style: {
                   color: "#666",
@@ -2298,8 +2667,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/ContactForm */ "./src/scripts/ContactForm.js");
 /* harmony import */ var _scripts_Person__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/Person */ "./src/scripts/Person.js");
 /* harmony import */ var _scripts_ExampleReactComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/ExampleReactComponent */ "./src/scripts/ExampleReactComponent.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _scripts_CertificateBadges__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/CertificateBadges */ "./src/scripts/CertificateBadges.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 
@@ -2312,22 +2683,22 @@ const person1 = new _scripts_Person__WEBPACK_IMPORTED_MODULE_5__["default"]("Bra
 
 // Example component
 if (document.querySelector("#render-react-example-here")) {
-  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#render-react-example-here")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_scripts_ExampleReactComponent__WEBPACK_IMPORTED_MODULE_6__["default"], {}));
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#render-react-example-here")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_scripts_ExampleReactComponent__WEBPACK_IMPORTED_MODULE_6__["default"], {}));
 }
 
 // Navbar
 if (document.querySelector("#navbar")) {
-  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#navbar")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_scripts_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {}));
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#navbar")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_scripts_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {}));
 }
 
 // Footer
 if (document.querySelector("#footer")) {
-  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#footer")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_scripts_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {}));
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#footer")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_scripts_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {}));
 }
 
 // Hero contact form (dark theme — inside the glassmorphism panel)
 if (document.querySelector("#hero-contact-form")) {
-  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#hero-contact-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#hero-contact-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
     theme: "dark",
     title: "Get a Free Inspection",
     showTitle: true
@@ -2336,7 +2707,7 @@ if (document.querySelector("#hero-contact-form")) {
 
 // Final CTA contact form (dark theme — inside the dark CTA section)
 if (document.querySelector("#final-contact-form")) {
-  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#final-contact-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#final-contact-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
     theme: "dark",
     title: "Send Us a Message",
     showTitle: true
@@ -2345,10 +2716,17 @@ if (document.querySelector("#final-contact-form")) {
 
 // Contact page form (light theme — inside white card)
 if (document.querySelector("#ct-react-form")) {
-  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#ct-react-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#ct-react-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
     theme: "light",
     title: "Get your free estimate today.",
     showTitle: true
+  }));
+}
+
+// Floating certificate badges (etiqueta borde derecho, centrado)
+if (document.querySelector("#certificate-badges")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#certificate-badges")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_scripts_CertificateBadges__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    title: "Certifications"
   }));
 }
 })();

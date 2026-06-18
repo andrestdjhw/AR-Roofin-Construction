@@ -5,6 +5,9 @@ import Footer from "./scripts/Footer"
 import ContactForm from "./scripts/ContactForm"
 import Person from "./scripts/Person"
 import ExampleReactComponent from "./scripts/ExampleReactComponent"
+import CertificateBadges from "./scripts/CertificateBadges"
+
+
 
 const person1 = new Person("Brad")
 
@@ -60,4 +63,11 @@ if (document.querySelector("#ct-react-form")) {
         showTitle={true}
       />
     )
+}
+
+
+// Floating certificate badges (etiqueta borde derecho, centrado)
+if (document.querySelector("#certificate-badges")) {
+  ReactDOM.createRoot(document.querySelector("#certificate-badges"))
+    .render(<CertificateBadges title="Certifications" />)
 }
