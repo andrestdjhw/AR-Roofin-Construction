@@ -14,8 +14,14 @@ get_header(); ?>
 $hero_bg_img     = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Antonio inspeccionando o reparación en progreso
 
 // ── REPAIR VS REPLACE ─────────────────────────────────────────
-$split_left_img  = '';   // Imagen lado "When repair makes sense"
-$split_right_img = '';   // Imagen lado "When replacement makes sense"
+$split_left_img  = '/wp-content/uploads/2026/06/DamagedRoof-scaled.jpg';   // Imagen lado "When repair makes sense"
+$split_right_img = '/wp-content/uploads/2026/06/Repaired.png';   // Imagen lado "When replacement makes sense"
+
+// ── WHAT WE FIX ──────────────────────────────────────────────
+$types_bg_img    = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png';   // Estampado de la sección "What We Fix" (fondo blanco hueso)
+
+// ── FINAL CTA ────────────────────────────────────────────────
+$cta_bg_img      = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.png';   // Estampado del CTA final
 
 /* ══════════════════════════════════════════════════════════════ */
 ?>
@@ -54,6 +60,7 @@ $split_right_img = '';   // Imagen lado "When replacement makes sense"
     --aqua:  #6a9a9a;
     --mist:  #c8e8e8;
     --light: #f5f6f5;
+    --bone:  #f5f1e8;
   }
 
   .rr * { box-sizing: border-box; }
@@ -248,25 +255,28 @@ $split_right_img = '';   // Imagen lado "When replacement makes sense"
   }
   .rr-vs__trust-text p em { font-style: normal; font-weight: 600; color: var(--slate); }
 
-  /* ── COMMON REPAIRS ────────────────────────────────────────── */
-  .rr-types { background: var(--slate); padding: 100px 0; }
+  /* ── COMMON REPAIRS (What We Fix) — fondo blanco hueso + estampado ── */
+  .rr-types { background-color: var(--bone); padding: 100px 0; }
   .rr-types__header { text-align: center; margin-bottom: 60px; }
   .rr-types__header h2 {
-    font-size: clamp(26px, 3vw, 44px); color: #fff; margin: 0;
+    font-size: clamp(26px, 3vw, 44px); color: var(--slate); margin: 0;
   }
   .rr-types__grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 14px; overflow: hidden;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
     margin-bottom: 56px;
   }
   .rr-types__item {
     padding: 36px 28px;
-    background: var(--slate);
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: background .25s;
+    background: #fff;
+    border: 1px solid rgba(15,35,34,0.06);
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(15,35,34,0.05);
+    transition: transform .25s, box-shadow .25s;
   }
-  .rr-types__item:hover { background: #162e2d; }
+  .rr-types__item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(15,35,34,0.10);
+  }
   .rr-types__icon {
     width: 44px; height: 44px; border-radius: 10px;
     background: rgba(106,154,154,0.12);
@@ -274,11 +284,11 @@ $split_right_img = '';   // Imagen lado "When replacement makes sense"
     color: var(--aqua); margin-bottom: 18px;
   }
   .rr-types__item h3 {
-    font-size: 15px; font-weight: 700; color: #fff;
+    font-size: 15px; font-weight: 700; color: var(--slate);
     margin: 0 0 8px; line-height: 1.3;
   }
   .rr-types__item p {
-    font-size: 13px; color: rgba(255,255,255,0.45);
+    font-size: 13px; color: #667;
     margin: 0; line-height: 1.6; font-weight: 300;
   }
 
@@ -319,7 +329,23 @@ $split_right_img = '';   // Imagen lado "When replacement makes sense"
     .rr-types__grid { grid-template-columns: 1fr; }
     .rr-signs__grid { grid-template-columns: 1fr; }
   }
+
+  /* ── SCROLL REVEAL ─────────────────────────────────────────── */
+  html.ar-js :is(.rr-hero__content,.rr-signs__header,.rr-signs__card,.rr-signs__note,.rr-vs__header,.rr-vs__col,.rr-vs__trust,.rr-types__header,.rr-types__item,.rr-cta__inner){
+    transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);
+  }
+  html.ar-js :is(.rr-hero__content,.rr-signs__header,.rr-signs__card,.rr-signs__note,.rr-vs__header,.rr-vs__col,.rr-vs__trust,.rr-types__header,.rr-types__item,.rr-cta__inner):not(.ar-in){
+    opacity: 0; transform: translateY(30px);
+  }
+  html.ar-js .rr-signs__card:hover { transition: border-color .25s, transform .25s, box-shadow .25s; }
+  html.ar-js .rr-types__item:hover { transition: transform .25s, box-shadow .25s; }
+  @media (prefers-reduced-motion: reduce){
+    html.ar-js :is(.rr-hero__content,.rr-signs__header,.rr-signs__card,.rr-signs__note,.rr-vs__header,.rr-vs__col,.rr-vs__trust,.rr-types__header,.rr-types__item,.rr-cta__inner){ transition: none !important; }
+    html.ar-js :is(.rr-hero__content,.rr-signs__header,.rr-signs__card,.rr-signs__note,.rr-vs__header,.rr-vs__col,.rr-vs__trust,.rr-types__header,.rr-types__item,.rr-cta__inner):not(.ar-in){ opacity: 1; transform: none; }
+  }
 </style>
+
+<script>document.documentElement.classList.add('ar-js');</script>
 
 <div class="rr">
 
@@ -493,12 +519,12 @@ $split_right_img = '';   // Imagen lado "When replacement makes sense"
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       COMMON REPAIRS
+       COMMON REPAIRS (What We Fix) — fondo blanco hueso + estampado
   ═══════════════════════════════════════════════════════════ -->
-  <section class="rr-types">
+  <section class="rr-types"<?php if($types_bg_img): ?> style="background-image:linear-gradient(rgba(245,241,232,0.92),rgba(245,241,232,0.94)),url('<?= esc_url($types_bg_img) ?>');background-size:cover;background-position:center;"<?php endif; ?>>
     <div class="section-inner">
       <div class="rr-types__header">
-        <span class="eyebrow" style="color:var(--mist);">What We Fix</span>
+        <span class="eyebrow">What We Fix</span>
         <h2>Common repairs we handle every week.</h2>
       </div>
       <div class="rr-types__grid">
@@ -561,7 +587,7 @@ $split_right_img = '';   // Imagen lado "When replacement makes sense"
   <!-- ═══════════════════════════════════════════════════════════
        FINAL CTA
   ═══════════════════════════════════════════════════════════ -->
-  <section class="rr-cta">
+  <section class="rr-cta"<?php if($cta_bg_img): ?> style="background-image:linear-gradient(rgba(15,35,34,0.90),rgba(15,35,34,0.92)),url('<?= esc_url($cta_bg_img) ?>');background-size:cover;background-position:center;"<?php endif; ?>>
     <div class="section-inner">
       <div class="rr-cta__inner">
         <span class="eyebrow" style="color:var(--mist);">Get Started</span>
@@ -582,5 +608,31 @@ $split_right_img = '';   // Imagen lado "When replacement makes sense"
   </section>
 
 </div><!-- /.rr -->
+
+<script>
+(function(){
+  var root = document.querySelector('.rr');
+  if(!root) return;
+  var sel = '.rr-hero__content,.rr-signs__header,.rr-signs__card,.rr-signs__note,.rr-vs__header,.rr-vs__col,.rr-vs__trust,.rr-types__header,.rr-types__item,.rr-cta__inner';
+  var els = root.querySelectorAll(sel);
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<els.length;i++){ els[i].classList.add('ar-in'); }
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target; io.unobserve(el);
+      var sibs = el.parentNode ? el.parentNode.children : [el];
+      var idx = Array.prototype.indexOf.call(sibs, el);
+      var delay = Math.min(idx, 6) * 90;
+      el.style.transitionDelay = delay + 'ms';
+      el.classList.add('ar-in');
+      setTimeout(function(){ el.style.transitionDelay = ''; }, delay + 1000);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -7% 0px' });
+  for(var j=0;j<els.length;j++){ io.observe(els[j]); }
+})();
+</script>
 
 <?php get_footer(); ?>

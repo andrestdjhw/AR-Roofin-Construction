@@ -94,7 +94,7 @@ const injectStyles = () => {
     /* Emergency toggle */
     .ar-cf-emergency-bar {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 16px; border-radius: 10px; margin-bottom: 20px;
+      padding: 10px 16px; border-radius: 10px; margin-bottom: 14px;
       border: 1.5px solid #dde8e8;
       background: #f5f6f5;
       cursor: pointer; transition: background .2s, border-color .2s;
@@ -150,7 +150,7 @@ const injectStyles = () => {
     /* Emergency phone bar */
     .ar-cf-phone-banner {
       background: #e8253a; border-radius: 10px;
-      padding: 14px 20px; margin-bottom: 24px;
+      padding: 12px 20px; margin-bottom: 14px;
       display: flex; align-items: center; justify-content: space-between;
       gap: 12px; flex-wrap: wrap;
       animation: arFadeUp .3s ease both;
@@ -169,12 +169,14 @@ const injectStyles = () => {
 
     /* Row */
     .ar-cf-row {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
     }
 
     /* Field */
-    .ar-cf-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .ar-cf-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
     .ar-cf-field:last-of-type { margin-bottom: 0; }
+    /* Fields inside a row don't add their own bottom margin — the row handles it */
+    .ar-cf-row .ar-cf-field { margin-bottom: 0; }
     .ar-cf-label {
       font-size: 11px; font-weight: 700; letter-spacing: 1px;
       text-transform: uppercase;
@@ -186,7 +188,7 @@ const injectStyles = () => {
     .ar-cf-input, .ar-cf-select, .ar-cf-textarea {
       background: rgba(255,255,255,0.07);
       border: 1.5px solid rgba(255,255,255,0.12);
-      border-radius: 8px; padding: 11px 14px;
+      border-radius: 8px; padding: 9px 13px;
       color: #fff; font-family: inherit; font-size: 14px;
       outline: none; width: 100%;
       transition: border-color .2s, background .2s;
@@ -207,35 +209,7 @@ const injectStyles = () => {
     }
     .ar-cf-select option { background: #0f2322; color: #fff; }
     .ar-cf-select.light option { background: #fff; color: #0f2322; }
-    .ar-cf-textarea { resize: vertical; min-height: 90px; }
-
-    /* Roof type pills */
-    .ar-cf-pills {
-      display: flex; flex-wrap: wrap; gap: 8px;
-    }
-    .ar-cf-pill {
-      padding: 8px 16px; border-radius: 100px;
-      font-size: 13px; font-weight: 600; cursor: pointer;
-      border: 1.5px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.65);
-      transition: all .2s; user-select: none;
-    }
-    .ar-cf-pill.light {
-      border-color: #dde8e8; background: #fff; color: #556;
-    }
-    .ar-cf-pill.selected {
-      background: rgba(232,37,58,0.15); border-color: rgba(232,37,58,0.55);
-      color: #fff;
-    }
-    .ar-cf-pill.light.selected {
-      background: rgba(232,37,58,0.08); border-color: #e8253a; color: #e8253a;
-    }
-    .ar-cf-pill:hover:not(.selected) {
-      border-color: rgba(255,255,255,0.35); color: #fff;
-    }
-    .ar-cf-pill.light:hover:not(.selected) {
-      border-color: #6a9a9a; color: #0f2322;
-    }
+    .ar-cf-textarea { resize: vertical; min-height: 68px; }
 
     /* Field error message */
     .ar-cf-error-msg {
@@ -244,7 +218,7 @@ const injectStyles = () => {
 
     /* Submit button */
     .ar-cf-submit {
-      width: 100%; padding: 15px; margin-top: 8px;
+      width: 100%; padding: 13px; margin-top: 6px;
       background: #e8253a; color: #fff;
       font-family: inherit; font-size: 15px; font-weight: 700;
       border: none; border-radius: 8px; cursor: pointer;
@@ -257,14 +231,14 @@ const injectStyles = () => {
 
     /* Note */
     .ar-cf-note {
-      text-align: center; margin-top: 12px;
+      text-align: center; margin-top: 10px;
       font-size: 11.5px; color: rgba(255,255,255,0.35); line-height: 1.5;
     }
     .ar-cf-note.light { color: #aab; }
 
     /* Success */
     .ar-cf-success {
-      text-align: center; padding: 48px 24px;
+      text-align: center; padding: 40px 24px;
       animation: arSuccessPop .4s ease both;
     }
     .ar-cf-success__icon {
@@ -285,19 +259,13 @@ const injectStyles = () => {
     /* General error banner */
     .ar-cf-error-banner {
       background: rgba(232,37,58,0.1); border: 1px solid rgba(232,37,58,0.3);
-      border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;
+      border-radius: 8px; padding: 12px 16px; margin-bottom: 14px;
       font-size: 13px; color: #ff6b7a; display: flex; align-items: center; gap: 10px;
     }
 
-    /* Divider */
-    .ar-cf-divider {
-      border: none; border-top: 1px solid rgba(255,255,255,0.08);
-      margin: 20px 0;
-    }
-    .ar-cf-divider.light { border-color: #eef3f3; }
-
     @media (max-width: 520px) {
-      .ar-cf-row { grid-template-columns: 1fr; }
+      .ar-cf-row { grid-template-columns: 1fr; gap: 0; }
+      .ar-cf-row .ar-cf-field { margin-bottom: 12px; }
     }
   `
   document.head.appendChild(style)
@@ -373,11 +341,6 @@ function ContactForm({
 
   const set = (field) => (e) => {
     setForm(prev => ({ ...prev, [field]: e.target.value }))
-    if (errors[field]) setErrors(prev => ({ ...prev, [field]: "" }))
-  }
-
-  const setPill = (field, value) => {
-    setForm(prev => ({ ...prev, [field]: value }))
     if (errors[field]) setErrors(prev => ({ ...prev, [field]: "" }))
   }
 
@@ -458,7 +421,7 @@ function ContactForm({
 
       {showTitle && (
         <h3 style={{
-          fontFamily: "inherit", fontSize: "17px", fontWeight: 700, margin: "0 0 24px",
+          fontFamily: "inherit", fontSize: "17px", fontWeight: 700, margin: "0 0 18px",
           color: isLight ? "#0f2322" : "#fff",
         }}>
           {title}
@@ -527,18 +490,16 @@ function ContactForm({
         </Field>
       </div>
 
-      {/* Email */}
-      <Field id="cf-email" label="Email" isLight={isLight}>
-        <input
-          id="cf-email" type="email"
-          className={cls("ar-cf-input")}
-          placeholder="you@email.com"
-          value={form.email} onChange={set("email")}
-        />
-      </Field>
-
-      {/* City + Service */}
+      {/* Email + City */}
       <div className="ar-cf-row">
+        <Field id="cf-email" label="Email" isLight={isLight}>
+          <input
+            id="cf-email" type="email"
+            className={cls("ar-cf-input")}
+            placeholder="you@email.com"
+            value={form.email} onChange={set("email")}
+          />
+        </Field>
         <Field id="cf-city" label="City" required error={errors.city} isLight={isLight}>
           <select
             id="cf-city"
@@ -555,6 +516,10 @@ function ContactForm({
             <option value="other">Other / Not sure</option>
           </select>
         </Field>
+      </div>
+
+      {/* Service + Roof Type */}
+      <div className="ar-cf-row">
         <Field id="cf-service" label="Service Needed" isLight={isLight}>
           <select
             id="cf-service"
@@ -567,29 +532,19 @@ function ContactForm({
             ))}
           </select>
         </Field>
+        <Field id="cf-roof-type" label="Roof Type" isLight={isLight}>
+          <select
+            id="cf-roof-type"
+            className={cls("ar-cf-select")}
+            value={form.roofType} onChange={set("roofType")}
+          >
+            <option value="">Select roof type...</option>
+            {ROOF_TYPES.map(r => (
+              <option key={r.value} value={r.value}>{r.label}</option>
+            ))}
+          </select>
+        </Field>
       </div>
-
-      {/* Roof type pills */}
-      <div className="ar-cf-field">
-        <label className={isLight ? "ar-cf-label light" : "ar-cf-label"}>Roof Type</label>
-        <div className="ar-cf-pills">
-          {ROOF_TYPES.map(r => (
-            <div
-              key={r.value}
-              className={`ar-cf-pill${isLight ? " light" : ""}${form.roofType === r.value ? " selected" : ""}`}
-              onClick={() => setPill("roofType", form.roofType === r.value ? "" : r.value)}
-              role="radio"
-              aria-checked={form.roofType === r.value}
-              tabIndex={0}
-              onKeyDown={(e) => e.key === " " && setPill("roofType", form.roofType === r.value ? "" : r.value)}
-            >
-              {r.label}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <hr className={cls("ar-cf-divider")} />
 
       {/* Message */}
       <Field id="cf-message" label="Message" isLight={isLight}>

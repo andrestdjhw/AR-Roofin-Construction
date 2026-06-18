@@ -14,8 +14,11 @@ get_header(); ?>
 $hero_bg_img   = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Antonio inspeccionando techo con herramientas
 
 // ── SEASONAL ─────────────────────────────────────────────────
-$spring_img    = '';   // Imagen primavera — techo post-invierno
-$fall_img      = '';   // Imagen otoño — techo pre-invierno
+$spring_img    = '/wp-content/uploads/2026/06/Spring-scaled.jpg';   // Imagen primavera — techo post-invierno
+$fall_img      = '/wp-content/uploads/2026/06/Fall-scaled.jpg';   // Imagen otoño — techo pre-invierno
+
+// ── FINAL CTA ────────────────────────────────────────────────
+$cta_bg_img    = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.png';   // Estampado del CTA final
 
 /* ══════════════════════════════════════════════════════════════ */
 ?>
@@ -348,7 +351,21 @@ $fall_img      = '';   // Imagen otoño — techo pre-invierno
     .rm-hero__ctas { flex-direction: column; align-items: flex-start; }
     .rm-cta__btns { flex-direction: column; align-items: center; }
   }
+
+  /* ── SCROLL REVEAL ─────────────────────────────────────────── */
+  html.ar-js :is(.rm-hero__content,.rm-cost__header,.rm-cost__col,.rm-cost__note,.rm-checklist__inner > div,.rm-seasonal__header,.rm-seasonal__card,.rm-cta__inner){
+    transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);
+  }
+  html.ar-js :is(.rm-hero__content,.rm-cost__header,.rm-cost__col,.rm-cost__note,.rm-checklist__inner > div,.rm-seasonal__header,.rm-seasonal__card,.rm-cta__inner):not(.ar-in){
+    opacity: 0; transform: translateY(30px);
+  }
+  @media (prefers-reduced-motion: reduce){
+    html.ar-js :is(.rm-hero__content,.rm-cost__header,.rm-cost__col,.rm-cost__note,.rm-checklist__inner > div,.rm-seasonal__header,.rm-seasonal__card,.rm-cta__inner){ transition: none !important; }
+    html.ar-js :is(.rm-hero__content,.rm-cost__header,.rm-cost__col,.rm-cost__note,.rm-checklist__inner > div,.rm-seasonal__header,.rm-seasonal__card,.rm-cta__inner):not(.ar-in){ opacity: 1; transform: none; }
+  }
 </style>
+
+<script>document.documentElement.classList.add('ar-js');</script>
 
 <div class="rm">
 
@@ -628,7 +645,7 @@ $fall_img      = '';   // Imagen otoño — techo pre-invierno
   <!-- ═══════════════════════════════════════════════════════════
        FINAL CTA
   ═══════════════════════════════════════════════════════════ -->
-  <section class="rm-cta">
+  <section class="rm-cta"<?php if($cta_bg_img): ?> style="background-image:linear-gradient(rgba(15,35,34,0.90),rgba(15,35,34,0.92)),url('<?= esc_url($cta_bg_img) ?>');background-size:cover;background-position:center;"<?php endif; ?>>
     <div class="section-inner">
       <div class="rm-cta__inner">
         <span class="eyebrow" style="color:var(--mist);">Start Today</span>
@@ -649,5 +666,31 @@ $fall_img      = '';   // Imagen otoño — techo pre-invierno
   </section>
 
 </div><!-- /.rm -->
+
+<script>
+(function(){
+  var root = document.querySelector('.rm');
+  if(!root) return;
+  var sel = '.rm-hero__content,.rm-cost__header,.rm-cost__col,.rm-cost__note,.rm-checklist__inner > div,.rm-seasonal__header,.rm-seasonal__card,.rm-cta__inner';
+  var els = root.querySelectorAll(sel);
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<els.length;i++){ els[i].classList.add('ar-in'); }
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target; io.unobserve(el);
+      var sibs = el.parentNode ? el.parentNode.children : [el];
+      var idx = Array.prototype.indexOf.call(sibs, el);
+      var delay = Math.min(idx, 6) * 90;
+      el.style.transitionDelay = delay + 'ms';
+      el.classList.add('ar-in');
+      setTimeout(function(){ el.style.transitionDelay = ''; }, delay + 1000);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -7% 0px' });
+  for(var j=0;j<els.length;j++){ io.observe(els[j]); }
+})();
+</script>
 
 <?php get_footer(); ?>

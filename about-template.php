@@ -17,7 +17,7 @@ $hero_bg_img      = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png'; 
 $story_photo_img  = '/wp-content/uploads/2026/06/About_Home_AR_Roofing_Construction-scaled.jpg';   // Antonio en work gear, mirando a cámara
 
 // ── MEET THE TEAM ────────────────────────────────────────────
-$antonio_photo_img = '/wp-content/uploads/2026/06/CEO_PIC.png';  // Headshot o candid de Antonio
+$antonio_photo_img = '/wp-content/uploads/2026/06/CEO_AR_Roofing.png';  // Headshot o candid de Antonio
 $crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Foto grupal del crew en obra
 
 /* ══════════════════════════════════════════════════════════════ */

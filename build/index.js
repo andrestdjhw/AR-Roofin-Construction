@@ -170,7 +170,7 @@ const injectStyles = () => {
     /* Emergency toggle */
     .ar-cf-emergency-bar {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 16px; border-radius: 10px; margin-bottom: 20px;
+      padding: 10px 16px; border-radius: 10px; margin-bottom: 14px;
       border: 1.5px solid #dde8e8;
       background: #f5f6f5;
       cursor: pointer; transition: background .2s, border-color .2s;
@@ -226,7 +226,7 @@ const injectStyles = () => {
     /* Emergency phone bar */
     .ar-cf-phone-banner {
       background: #e8253a; border-radius: 10px;
-      padding: 14px 20px; margin-bottom: 24px;
+      padding: 12px 20px; margin-bottom: 14px;
       display: flex; align-items: center; justify-content: space-between;
       gap: 12px; flex-wrap: wrap;
       animation: arFadeUp .3s ease both;
@@ -245,12 +245,14 @@ const injectStyles = () => {
 
     /* Row */
     .ar-cf-row {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
     }
 
     /* Field */
-    .ar-cf-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .ar-cf-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
     .ar-cf-field:last-of-type { margin-bottom: 0; }
+    /* Fields inside a row don't add their own bottom margin — the row handles it */
+    .ar-cf-row .ar-cf-field { margin-bottom: 0; }
     .ar-cf-label {
       font-size: 11px; font-weight: 700; letter-spacing: 1px;
       text-transform: uppercase;
@@ -262,7 +264,7 @@ const injectStyles = () => {
     .ar-cf-input, .ar-cf-select, .ar-cf-textarea {
       background: rgba(255,255,255,0.07);
       border: 1.5px solid rgba(255,255,255,0.12);
-      border-radius: 8px; padding: 11px 14px;
+      border-radius: 8px; padding: 9px 13px;
       color: #fff; font-family: inherit; font-size: 14px;
       outline: none; width: 100%;
       transition: border-color .2s, background .2s;
@@ -283,35 +285,7 @@ const injectStyles = () => {
     }
     .ar-cf-select option { background: #0f2322; color: #fff; }
     .ar-cf-select.light option { background: #fff; color: #0f2322; }
-    .ar-cf-textarea { resize: vertical; min-height: 90px; }
-
-    /* Roof type pills */
-    .ar-cf-pills {
-      display: flex; flex-wrap: wrap; gap: 8px;
-    }
-    .ar-cf-pill {
-      padding: 8px 16px; border-radius: 100px;
-      font-size: 13px; font-weight: 600; cursor: pointer;
-      border: 1.5px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.65);
-      transition: all .2s; user-select: none;
-    }
-    .ar-cf-pill.light {
-      border-color: #dde8e8; background: #fff; color: #556;
-    }
-    .ar-cf-pill.selected {
-      background: rgba(232,37,58,0.15); border-color: rgba(232,37,58,0.55);
-      color: #fff;
-    }
-    .ar-cf-pill.light.selected {
-      background: rgba(232,37,58,0.08); border-color: #e8253a; color: #e8253a;
-    }
-    .ar-cf-pill:hover:not(.selected) {
-      border-color: rgba(255,255,255,0.35); color: #fff;
-    }
-    .ar-cf-pill.light:hover:not(.selected) {
-      border-color: #6a9a9a; color: #0f2322;
-    }
+    .ar-cf-textarea { resize: vertical; min-height: 68px; }
 
     /* Field error message */
     .ar-cf-error-msg {
@@ -320,7 +294,7 @@ const injectStyles = () => {
 
     /* Submit button */
     .ar-cf-submit {
-      width: 100%; padding: 15px; margin-top: 8px;
+      width: 100%; padding: 13px; margin-top: 6px;
       background: #e8253a; color: #fff;
       font-family: inherit; font-size: 15px; font-weight: 700;
       border: none; border-radius: 8px; cursor: pointer;
@@ -333,14 +307,14 @@ const injectStyles = () => {
 
     /* Note */
     .ar-cf-note {
-      text-align: center; margin-top: 12px;
+      text-align: center; margin-top: 10px;
       font-size: 11.5px; color: rgba(255,255,255,0.35); line-height: 1.5;
     }
     .ar-cf-note.light { color: #aab; }
 
     /* Success */
     .ar-cf-success {
-      text-align: center; padding: 48px 24px;
+      text-align: center; padding: 40px 24px;
       animation: arSuccessPop .4s ease both;
     }
     .ar-cf-success__icon {
@@ -361,19 +335,13 @@ const injectStyles = () => {
     /* General error banner */
     .ar-cf-error-banner {
       background: rgba(232,37,58,0.1); border: 1px solid rgba(232,37,58,0.3);
-      border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;
+      border-radius: 8px; padding: 12px 16px; margin-bottom: 14px;
       font-size: 13px; color: #ff6b7a; display: flex; align-items: center; gap: 10px;
     }
 
-    /* Divider */
-    .ar-cf-divider {
-      border: none; border-top: 1px solid rgba(255,255,255,0.08);
-      margin: 20px 0;
-    }
-    .ar-cf-divider.light { border-color: #eef3f3; }
-
     @media (max-width: 520px) {
-      .ar-cf-row { grid-template-columns: 1fr; }
+      .ar-cf-row { grid-template-columns: 1fr; gap: 0; }
+      .ar-cf-row .ar-cf-field { margin-bottom: 12px; }
     }
   `;
   document.head.appendChild(style);
@@ -476,16 +444,6 @@ function ContactForm({
       [field]: ""
     }));
   };
-  const setPill = (field, value) => {
-    setForm(prev => ({
-      ...prev,
-      [field]: value
-    }));
-    if (errors[field]) setErrors(prev => ({
-      ...prev,
-      [field]: ""
-    }));
-  };
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = "Name is required";
@@ -568,7 +526,7 @@ function ContactForm({
         fontFamily: "inherit",
         fontSize: "17px",
         fontWeight: 700,
-        margin: "0 0 24px",
+        margin: "0 0 18px",
         color: isLight ? "#0f2322" : "#fff"
       },
       children: title
@@ -638,21 +596,21 @@ function ContactForm({
           onChange: set("phone")
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
-      id: "cf-email",
-      label: "Email",
-      isLight: isLight,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-        id: "cf-email",
-        type: "email",
-        className: cls("ar-cf-input"),
-        placeholder: "you@email.com",
-        value: form.email,
-        onChange: set("email")
-      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "ar-cf-row",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+        id: "cf-email",
+        label: "Email",
+        isLight: isLight,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+          id: "cf-email",
+          type: "email",
+          className: cls("ar-cf-input"),
+          placeholder: "you@email.com",
+          value: form.email,
+          onChange: set("email")
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
         id: "cf-city",
         label: "City",
         required: true,
@@ -683,7 +641,10 @@ function ContactForm({
             children: "Other / Not sure"
           })]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cf-row",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
         id: "cf-service",
         label: "Service Needed",
         isLight: isLight,
@@ -700,26 +661,24 @@ function ContactForm({
             children: s.label
           }, s.value))]
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+        id: "cf-roof-type",
+        label: "Roof Type",
+        isLight: isLight,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("select", {
+          id: "cf-roof-type",
+          className: cls("ar-cf-select"),
+          value: form.roofType,
+          onChange: set("roofType"),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+            value: "",
+            children: "Select roof type..."
+          }), ROOF_TYPES.map(r => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+            value: r.value,
+            children: r.label
+          }, r.value))]
+        })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "ar-cf-field",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
-        className: isLight ? "ar-cf-label light" : "ar-cf-label",
-        children: "Roof Type"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "ar-cf-pills",
-        children: ROOF_TYPES.map(r => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: `ar-cf-pill${isLight ? " light" : ""}${form.roofType === r.value ? " selected" : ""}`,
-          onClick: () => setPill("roofType", form.roofType === r.value ? "" : r.value),
-          role: "radio",
-          "aria-checked": form.roofType === r.value,
-          tabIndex: 0,
-          onKeyDown: e => e.key === " " && setPill("roofType", form.roofType === r.value ? "" : r.value),
-          children: r.label
-        }, r.value))
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("hr", {
-      className: cls("ar-cf-divider")
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
       id: "cf-message",
       label: "Message",
@@ -1696,11 +1655,51 @@ function Navbar() {
   const [dropdownOpen, setDropdownOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [mobileServicesOpen, setMobileServicesOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [scrolled, setScrolled] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [showTopbar, setShowTopbar] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true); // visible al inicio y al hacer scroll up
+  const [headerH, setHeaderH] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0); // alto total (topbar + nav) para el espaciador
+  const [topbarH, setTopbarH] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0); // alto del topbar para el desplazamiento
+
   const closeTimer = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   const dropdownRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const headerRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const topbarRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const lastScrollY = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
+
+  // Mide el alto del header completo y del topbar.
+  // useLayoutEffect para fijar el espaciador antes del primer pintado (sin salto).
+  // Se re-mide en resize (en móvil el topbar está oculto, así que su alto pasa a 0).
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect)(() => {
+    const measure = () => {
+      if (headerRef.current) setHeaderH(headerRef.current.offsetHeight);
+      setTopbarH(topbarRef.current ? topbarRef.current.offsetHeight : 0);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
+  // Mostrar/ocultar el topbar según la dirección del scroll.
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      const y = window.scrollY < 0 ? 0 : window.scrollY;
+      const tbH = topbarRef.current ? topbarRef.current.offsetHeight : 0;
+      setScrolled(y > 10);
+      const last = lastScrollY.current;
+      if (Math.abs(y - last) < 4) return; // ignora micro-movimientos (anti-jitter)
+
+      if (y <= tbH) {
+        setShowTopbar(true); // cerca del tope → topbar siempre visible
+      } else if (y > last) {
+        setShowTopbar(false); // scroll down → ocultar topbar
+      } else {
+        setShowTopbar(true); // scroll up → revelar topbar
+      }
+      lastScrollY.current = y;
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, {
+      passive: true
+    });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   const handleMouseEnter = () => {
@@ -1712,393 +1711,67 @@ function Navbar() {
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      "aria-hidden": "true",
       style: {
-        backgroundColor: "#0f2322"
+        height: headerH
+      }
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("header", {
+      ref: headerRef,
+      style: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 999,
+        transform: `translateY(${showTopbar ? 0 : -topbarH}px)`,
+        transition: "transform 0.3s ease",
+        willChange: "transform"
       },
-      className: "hidden md:block",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "max-w-7xl mx-auto px-6 py-2 flex items-center justify-between",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "flex items-center gap-5 text-xs",
-          style: {
-            color: "#aaa"
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-            href: "mailto:info@arroofingus.com",
-            className: "flex items-center gap-1.5 hover:text-white transition-colors duration-200",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              style: {
-                color: "#6a9a9a"
-              },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
-            }), "info@arroofingus.com"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-            href: "tel:+15031234567",
-            className: "flex items-center gap-1.5 hover:text-white transition-colors duration-200",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              style: {
-                color: "#6a9a9a"
-              },
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
-            }), "(541) 675 0577"]
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "flex items-center gap-1.5 text-xs",
-          style: {
-            color: "#aaa"
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-            style: {
-              color: "#6a9a9a"
-            },
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
-          }), "Serving in Portland, Oregon"]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "flex items-center gap-3",
-          children: [{
-            href: "https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconFacebook, {}),
-            label: "Facebook"
-          }, {
-            href: "https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconInstagram, {}),
-            label: "Instagram"
-          }, {
-            href: "https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq",
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconTikTok, {}),
-            label: "TikTok"
-          }, {
-            href: "#",
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconGoogle, {}),
-            label: "Google My Business"
-          }, {
-            href: "#",
-            icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconBBB, {}),
-            label: "Better Business Bureau"
-          }].map(({
-            href,
-            icon,
-            label
-          }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: href,
-            "aria-label": label,
-            title: label,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        ref: topbarRef,
+        style: {
+          backgroundColor: "#0f2322"
+        },
+        className: "hidden md:block",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "max-w-7xl mx-auto px-6 py-2 flex items-center justify-between",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "flex items-center gap-5 text-xs",
             style: {
               color: "#aaa"
             },
-            className: "hover:text-white transition-colors duration-200",
-            children: icon
-          }, label))
-        })]
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("nav", {
-      style: {
-        backgroundColor: scrolled ? "rgba(255,255,255,0.98)" : "#ffffff",
-        boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.10)" : "0 1px 0 rgba(0,0,0,0.06)",
-        transition: "box-shadow 0.3s ease, background-color 0.3s ease",
-        position: "sticky",
-        top: 0,
-        zIndex: 999
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "max-w-7xl mx-auto px-6 grid items-center",
-        style: {
-          height: "68px",
-          gridTemplateColumns: "1fr auto 1fr"
-        },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-          href: "/",
-          style: {
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center"
-          },
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: "/wp-content/uploads/2026/06/AR_Simplificado-scaled.png",
-            alt: "AR Roofing & Construction",
-            style: {
-              height: "36px",
-              width: "auto",
-              display: "block"
-            }
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "hidden md:flex items-center justify-center gap-1",
-          children: NAV_LINKS.map(link => link.dropdown ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            ref: dropdownRef,
-            className: "relative",
-            onMouseEnter: handleMouseEnter,
-            onMouseLeave: handleMouseLeave,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
-              style: {
-                display: "flex",
-                alignItems: "center",
-                gap: "5px",
-                padding: "8px 14px",
-                fontSize: "14px",
-                fontWeight: "500",
-                color: dropdownOpen ? "#6a9a9a" : "#1a2e2d",
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                borderRadius: "6px",
-                transition: "color 0.2s ease"
-              },
-              children: [link.label, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconChevron, {
-                open: dropdownOpen
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-              style: {
-                position: "absolute",
-                top: "calc(100% + 8px)",
-                left: "50%",
-                transform: "translateX(-50%)",
-                backgroundColor: "#fff",
-                borderRadius: "10px",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.13)",
-                border: "1px solid rgba(0,0,0,0.07)",
-                minWidth: "210px",
-                padding: "6px",
-                opacity: dropdownOpen ? 1 : 0,
-                visibility: dropdownOpen ? "visible" : "hidden",
-                transform: dropdownOpen ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(-6px)",
-                transition: "opacity 0.2s ease, transform 0.2s ease, visibility 0.2s",
-                zIndex: 1000
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                style: {
-                  position: "absolute",
-                  top: "-6px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  width: "12px",
-                  height: "12px",
-                  backgroundColor: "#fff",
-                  border: "1px solid rgba(0,0,0,0.07)",
-                  borderRight: "none",
-                  borderBottom: "none",
-                  rotate: "45deg"
-                }
-              }), link.dropdown.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: item.href,
-                style: {
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "10px",
-                  padding: "9px 14px",
-                  fontSize: "13.5px",
-                  color: "#1a2e2d",
-                  textDecoration: "none",
-                  borderRadius: "7px",
-                  transition: "background 0.15s ease, color 0.15s ease"
-                },
-                onMouseEnter: e => {
-                  e.currentTarget.style.backgroundColor = "#eaf4f4";
-                  e.currentTarget.style.color = "#6a9a9a";
-                },
-                onMouseLeave: e => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.color = "#1a2e2d";
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  style: {
-                    width: "6px",
-                    height: "6px",
-                    borderRadius: "50%",
-                    backgroundColor: "#6a9a9a",
-                    flexShrink: 0
-                  }
-                }), item.label]
-              }, item.label))]
-            })]
-          }, link.label) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: link.href,
-            style: {
-              padding: "8px 14px",
-              fontSize: "14px",
-              fontWeight: "500",
-              color: "#1a2e2d",
-              textDecoration: "none",
-              borderRadius: "6px",
-              transition: "color 0.2s ease"
-            },
-            onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
-            onMouseLeave: e => e.currentTarget.style.color = "#1a2e2d",
-            children: link.label
-          }, link.label))
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          style: {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            gap: "12px"
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "/contact",
-            className: "hidden md:inline-block",
-            style: {
-              padding: "9px 20px",
-              backgroundColor: "#e8253a",
-              color: "#fff",
-              fontSize: "14px",
-              fontWeight: "600",
-              textDecoration: "none",
-              borderRadius: "7px",
-              transition: "background-color 0.2s ease, transform 0.15s ease",
-              letterSpacing: "0.2px"
-            },
-            onMouseEnter: e => {
-              e.currentTarget.style.backgroundColor = "#8b0a1a";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            },
-            onMouseLeave: e => {
-              e.currentTarget.style.backgroundColor = "#e8253a";
-              e.currentTarget.style.transform = "translateY(0)";
-            },
-            children: "Get a Free Quote"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
-            className: "md:hidden",
-            onClick: () => setMobileOpen(!mobileOpen),
-            "aria-label": "Toggle menu",
-            style: {
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              color: "#1a2e2d",
-              padding: "4px"
-            },
-            children: mobileOpen ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconX, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMenu, {})
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        style: {
-          maxHeight: mobileOpen ? "600px" : "0",
-          overflow: "hidden",
-          transition: "max-height 0.35s ease",
-          backgroundColor: "#fff",
-          borderTop: mobileOpen ? "1px solid #f0f0f0" : "none"
-        },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "px-6 py-4 flex flex-col gap-1",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: "flex flex-col gap-2 pb-4 mb-2",
-            style: {
-              borderBottom: "1px solid #f0f0f0"
-            },
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
               href: "mailto:info@arroofingus.com",
-              className: "flex items-center gap-2 text-xs",
-              style: {
-                color: "#666",
-                textDecoration: "none"
-              },
+              className: "flex items-center gap-1.5 hover:text-white transition-colors duration-200",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                 style: {
                   color: "#6a9a9a"
                 },
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
-              }), " info@arroofingus.com"]
+              }), "info@arroofingus.com"]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
               href: "tel:+15031234567",
-              className: "flex items-center gap-2 text-xs",
-              style: {
-                color: "#666",
-                textDecoration: "none"
-              },
+              className: "flex items-center gap-1.5 hover:text-white transition-colors duration-200",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                 style: {
                   color: "#6a9a9a"
                 },
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
-              }), " (541) 675 0577"]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-              className: "flex items-center gap-2 text-xs",
-              style: {
-                color: "#666"
-              },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                style: {
-                  color: "#6a9a9a"
-                },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
-              }), " Serving in Portland, Oregon"]
+              }), "(541) 675 0577"]
             })]
-          }), NAV_LINKS.map(link => link.dropdown ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
-              onClick: () => setMobileServicesOpen(!mobileServicesOpen),
-              style: {
-                width: "100%",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "10px 12px",
-                fontSize: "15px",
-                fontWeight: "500",
-                color: "#1a2e2d",
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                borderRadius: "7px",
-                textAlign: "left"
-              },
-              children: [link.label, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconChevron, {
-                open: mobileServicesOpen
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              style: {
-                maxHeight: mobileServicesOpen ? "300px" : "0",
-                overflow: "hidden",
-                transition: "max-height 0.3s ease"
-              },
-              children: link.dropdown.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                href: item.href,
-                style: {
-                  display: "block",
-                  padding: "9px 12px 9px 28px",
-                  fontSize: "14px",
-                  color: "#555",
-                  textDecoration: "none",
-                  borderRadius: "7px"
-                },
-                onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
-                onMouseLeave: e => e.currentTarget.style.color = "#555",
-                children: item.label
-              }, item.label))
-            })]
-          }, link.label) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: link.href,
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "flex items-center gap-1.5 text-xs",
             style: {
-              display: "block",
-              padding: "10px 12px",
-              fontSize: "15px",
-              fontWeight: "500",
-              color: "#1a2e2d",
-              textDecoration: "none",
-              borderRadius: "7px"
+              color: "#aaa"
             },
-            onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
-            onMouseLeave: e => e.currentTarget.style.color = "#1a2e2d",
-            children: link.label
-          }, link.label)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "/contact",
-            style: {
-              display: "block",
-              marginTop: "8px",
-              padding: "12px",
-              backgroundColor: "#e8253a",
-              color: "#fff",
-              fontSize: "14px",
-              fontWeight: "600",
-              textDecoration: "none",
-              borderRadius: "7px",
-              textAlign: "center"
-            },
-            children: "Get a Free Quote"
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              style: {
+                color: "#6a9a9a"
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
+            }), "Serving in Portland, Oregon"]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "flex items-center gap-4 pt-4 mt-2",
-            style: {
-              borderTop: "1px solid #f0f0f0"
-            },
+            className: "flex items-center gap-3",
             children: [{
               href: "https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",
               icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconFacebook, {}),
@@ -2126,13 +1799,354 @@ function Navbar() {
             }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
               href: href,
               "aria-label": label,
+              title: label,
               style: {
-                color: "#666"
+                color: "#aaa"
               },
+              className: "hover:text-white transition-colors duration-200",
               children: icon
             }, label))
           })]
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("nav", {
+        style: {
+          backgroundColor: scrolled ? "rgba(255,255,255,0.98)" : "#ffffff",
+          boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.10)" : "0 1px 0 rgba(0,0,0,0.06)",
+          transition: "box-shadow 0.3s ease, background-color 0.3s ease"
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "max-w-7xl mx-auto px-6 grid items-center",
+          style: {
+            height: "68px",
+            gridTemplateColumns: "1fr auto 1fr"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "/",
+            style: {
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center"
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+              src: "/wp-content/uploads/2026/06/AR_Simplificado-scaled.png",
+              alt: "AR Roofing & Construction",
+              style: {
+                height: "36px",
+                width: "auto",
+                display: "block"
+              }
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "hidden md:flex items-center justify-center gap-1",
+            children: NAV_LINKS.map(link => link.dropdown ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              ref: dropdownRef,
+              className: "relative",
+              onMouseEnter: handleMouseEnter,
+              onMouseLeave: handleMouseLeave,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+                style: {
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  padding: "8px 14px",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  color: dropdownOpen ? "#6a9a9a" : "#1a2e2d",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  borderRadius: "6px",
+                  transition: "color 0.2s ease"
+                },
+                children: [link.label, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconChevron, {
+                  open: dropdownOpen
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                style: {
+                  position: "absolute",
+                  top: "calc(100% + 8px)",
+                  left: "50%",
+                  backgroundColor: "#fff",
+                  borderRadius: "10px",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.13)",
+                  border: "1px solid rgba(0,0,0,0.07)",
+                  minWidth: "210px",
+                  padding: "6px",
+                  opacity: dropdownOpen ? 1 : 0,
+                  visibility: dropdownOpen ? "visible" : "hidden",
+                  transform: dropdownOpen ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(-6px)",
+                  transition: "opacity 0.2s ease, transform 0.2s ease, visibility 0.2s",
+                  zIndex: 1000
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  style: {
+                    position: "absolute",
+                    top: "-6px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: "12px",
+                    height: "12px",
+                    backgroundColor: "#fff",
+                    border: "1px solid rgba(0,0,0,0.07)",
+                    borderRight: "none",
+                    borderBottom: "none",
+                    rotate: "45deg"
+                  }
+                }), link.dropdown.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  href: item.href,
+                  style: {
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    padding: "9px 14px",
+                    fontSize: "13.5px",
+                    color: "#1a2e2d",
+                    textDecoration: "none",
+                    borderRadius: "7px",
+                    transition: "background 0.15s ease, color 0.15s ease"
+                  },
+                  onMouseEnter: e => {
+                    e.currentTarget.style.backgroundColor = "#eaf4f4";
+                    e.currentTarget.style.color = "#6a9a9a";
+                  },
+                  onMouseLeave: e => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.color = "#1a2e2d";
+                  },
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    style: {
+                      width: "6px",
+                      height: "6px",
+                      borderRadius: "50%",
+                      backgroundColor: "#6a9a9a",
+                      flexShrink: 0
+                    }
+                  }), item.label]
+                }, item.label))]
+              })]
+            }, link.label) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: link.href,
+              style: {
+                padding: "8px 14px",
+                fontSize: "14px",
+                fontWeight: "500",
+                color: "#1a2e2d",
+                textDecoration: "none",
+                borderRadius: "6px",
+                transition: "color 0.2s ease"
+              },
+              onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
+              onMouseLeave: e => e.currentTarget.style.color = "#1a2e2d",
+              children: link.label
+            }, link.label))
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            style: {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              gap: "12px"
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: "/contact",
+              className: "hidden md:inline-block",
+              style: {
+                padding: "9px 20px",
+                backgroundColor: "#e8253a",
+                color: "#fff",
+                fontSize: "14px",
+                fontWeight: "600",
+                textDecoration: "none",
+                borderRadius: "7px",
+                transition: "background-color 0.2s ease, transform 0.15s ease",
+                letterSpacing: "0.2px"
+              },
+              onMouseEnter: e => {
+                e.currentTarget.style.backgroundColor = "#8b0a1a";
+                e.currentTarget.style.transform = "translateY(-1px)";
+              },
+              onMouseLeave: e => {
+                e.currentTarget.style.backgroundColor = "#e8253a";
+                e.currentTarget.style.transform = "translateY(0)";
+              },
+              children: "Get a Free Quote"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+              className: "md:hidden",
+              onClick: () => setMobileOpen(!mobileOpen),
+              "aria-label": "Toggle menu",
+              style: {
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: "#1a2e2d",
+                padding: "4px"
+              },
+              children: mobileOpen ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconX, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMenu, {})
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          style: {
+            maxHeight: mobileOpen ? "600px" : "0",
+            overflow: "hidden",
+            transition: "max-height 0.35s ease",
+            backgroundColor: "#fff",
+            borderTop: mobileOpen ? "1px solid #f0f0f0" : "none"
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "px-6 py-4 flex flex-col gap-1",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              className: "flex flex-col gap-2 pb-4 mb-2",
+              style: {
+                borderBottom: "1px solid #f0f0f0"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                href: "mailto:info@arroofingus.com",
+                className: "flex items-center gap-2 text-xs",
+                style: {
+                  color: "#666",
+                  textDecoration: "none"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  style: {
+                    color: "#6a9a9a"
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
+                }), " info@arroofingus.com"]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                href: "tel:+15031234567",
+                className: "flex items-center gap-2 text-xs",
+                style: {
+                  color: "#666",
+                  textDecoration: "none"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  style: {
+                    color: "#6a9a9a"
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
+                }), " (541) 675 0577"]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                className: "flex items-center gap-2 text-xs",
+                style: {
+                  color: "#666"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  style: {
+                    color: "#6a9a9a"
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
+                }), " Serving in Portland, Oregon"]
+              })]
+            }), NAV_LINKS.map(link => link.dropdown ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+                onClick: () => setMobileServicesOpen(!mobileServicesOpen),
+                style: {
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "10px 12px",
+                  fontSize: "15px",
+                  fontWeight: "500",
+                  color: "#1a2e2d",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  borderRadius: "7px",
+                  textAlign: "left"
+                },
+                children: [link.label, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconChevron, {
+                  open: mobileServicesOpen
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                style: {
+                  maxHeight: mobileServicesOpen ? "300px" : "0",
+                  overflow: "hidden",
+                  transition: "max-height 0.3s ease"
+                },
+                children: link.dropdown.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                  href: item.href,
+                  style: {
+                    display: "block",
+                    padding: "9px 12px 9px 28px",
+                    fontSize: "14px",
+                    color: "#555",
+                    textDecoration: "none",
+                    borderRadius: "7px"
+                  },
+                  onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
+                  onMouseLeave: e => e.currentTarget.style.color = "#555",
+                  children: item.label
+                }, item.label))
+              })]
+            }, link.label) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: link.href,
+              style: {
+                display: "block",
+                padding: "10px 12px",
+                fontSize: "15px",
+                fontWeight: "500",
+                color: "#1a2e2d",
+                textDecoration: "none",
+                borderRadius: "7px"
+              },
+              onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
+              onMouseLeave: e => e.currentTarget.style.color = "#1a2e2d",
+              children: link.label
+            }, link.label)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: "/contact",
+              style: {
+                display: "block",
+                marginTop: "8px",
+                padding: "12px",
+                backgroundColor: "#e8253a",
+                color: "#fff",
+                fontSize: "14px",
+                fontWeight: "600",
+                textDecoration: "none",
+                borderRadius: "7px",
+                textAlign: "center"
+              },
+              children: "Get a Free Quote"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "flex items-center gap-4 pt-4 mt-2",
+              style: {
+                borderTop: "1px solid #f0f0f0"
+              },
+              children: [{
+                href: "https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconFacebook, {}),
+                label: "Facebook"
+              }, {
+                href: "https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconInstagram, {}),
+                label: "Instagram"
+              }, {
+                href: "https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq",
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconTikTok, {}),
+                label: "TikTok"
+              }, {
+                href: "#",
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconGoogle, {}),
+                label: "Google My Business"
+              }, {
+                href: "#",
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconBBB, {}),
+                label: "Better Business Bureau"
+              }].map(({
+                href,
+                icon,
+                label
+              }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                href: href,
+                "aria-label": label,
+                style: {
+                  color: "#666"
+                },
+                children: icon
+              }, label))
+            })]
+          })
+        })]
       })]
     })]
   });

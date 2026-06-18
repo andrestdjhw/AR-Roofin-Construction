@@ -16,6 +16,9 @@ $hero_bg_img        = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png'
 // ── PROCESO DE RESPUESTA ─────────────────────────────────────
 $response_photo_img = '/wp-content/uploads/2026/06/Roof_Repair_ARRC-scaled.jpg';   // Foto real de tarping / emergencia en acción
 
+// ── FINAL CTA ────────────────────────────────────────────────
+$cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Estampado de fondo del CTA final
+
 /* ══════════════════════════════════════════════════════════════ */
 ?>
 
@@ -367,7 +370,7 @@ $response_photo_img = '/wp-content/uploads/2026/06/Roof_Repair_ARRC-scaled.jpg';
   .er-cta::before {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(139,10,26,0.5) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(232,37,58,0.90) 0%, rgba(139,10,26,0.82) 100%);
     pointer-events: none;
   }
   .er-cta__inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
@@ -440,7 +443,21 @@ $response_photo_img = '/wp-content/uploads/2026/06/Roof_Repair_ARRC-scaled.jpg';
     .er-hero__phone-btn { font-size: 22px; padding: 16px 28px; }
     .er-hero__phone-icon { width: 28px; height: 28px; }
   }
+
+  /* ── SCROLL REVEAL ─────────────────────────────────────────── */
+  html.ar-js :is(.er-hero__content,.er-types__header,.er-type-card,.er-process__header,.er-process__step,.er-process__photo,.er-insurance__copy,.er-insurance__visual,.er-cta__inner){
+    transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);
+  }
+  html.ar-js :is(.er-hero__content,.er-types__header,.er-type-card,.er-process__header,.er-process__step,.er-process__photo,.er-insurance__copy,.er-insurance__visual,.er-cta__inner):not(.ar-in){
+    opacity: 0; transform: translateY(30px);
+  }
+  @media (prefers-reduced-motion: reduce){
+    html.ar-js :is(.er-hero__content,.er-types__header,.er-type-card,.er-process__header,.er-process__step,.er-process__photo,.er-insurance__copy,.er-insurance__visual,.er-cta__inner){ transition: none !important; }
+    html.ar-js :is(.er-hero__content,.er-types__header,.er-type-card,.er-process__header,.er-process__step,.er-process__photo,.er-insurance__copy,.er-insurance__visual,.er-cta__inner):not(.ar-in){ opacity: 1; transform: none; }
+  }
 </style>
+
+<script>document.documentElement.classList.add('ar-js');</script>
 
 <div class="er">
 
@@ -668,7 +685,7 @@ $response_photo_img = '/wp-content/uploads/2026/06/Roof_Repair_ARRC-scaled.jpg';
   <!-- ═══════════════════════════════════════════════════════════
        FINAL CTA
   ═══════════════════════════════════════════════════════════ -->
-  <section class="er-cta">
+  <section class="er-cta"<?php if($cta_bg_img): ?> style="background-image:url('<?= esc_url($cta_bg_img) ?>');background-size:cover;background-position:center;"<?php endif; ?>>
     <div class="er-cta__inner">
       <span class="er-cta__eyebrow">Save this number</span>
       <h2>You might need it tonight.</h2>
@@ -695,5 +712,31 @@ $response_photo_img = '/wp-content/uploads/2026/06/Roof_Repair_ARRC-scaled.jpg';
     Call Now: 541-675-0577
   </a>
 </div>
+
+<script>
+(function(){
+  var root = document.querySelector('.er');
+  if(!root) return;
+  var sel = '.er-hero__content,.er-types__header,.er-type-card,.er-process__header,.er-process__step,.er-process__photo,.er-insurance__copy,.er-insurance__visual,.er-cta__inner';
+  var els = root.querySelectorAll(sel);
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<els.length;i++){ els[i].classList.add('ar-in'); }
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target; io.unobserve(el);
+      var sibs = el.parentNode ? el.parentNode.children : [el];
+      var idx = Array.prototype.indexOf.call(sibs, el);
+      var delay = Math.min(idx, 6) * 90;
+      el.style.transitionDelay = delay + 'ms';
+      el.classList.add('ar-in');
+      setTimeout(function(){ el.style.transitionDelay = ''; }, delay + 1000);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -7% 0px' });
+  for(var j=0;j<els.length;j++){ io.observe(els[j]); }
+})();
+</script>
 
 <?php get_footer(); ?>

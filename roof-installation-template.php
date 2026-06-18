@@ -14,24 +14,27 @@ get_header(); ?>
 $hero_bg_img          = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Drone shot de techo instalado, paisaje del Gorge
 
 // ── MATERIALES ───────────────────────────────────────────────
-$material_asphalt_img = '';   // Foto de techo de asphalt shingles
-$material_metal_img   = '';   // Foto de techo de metal
-$material_tpo_img     = '';   // Foto de sistema TPO
-$material_pvc_img     = '';   // Foto de sistema PVC
+$material_asphalt_img = '/wp-content/uploads/2026/06/AsphaltShingles-scaled.jpg';   // Foto de techo de asphalt shingles
+$material_metal_img   = '/wp-content/uploads/2026/06/MetalRoofing-scaled.jpg';   // Foto de techo de metal
+$material_tpo_img     = '/wp-content/uploads/2026/06/TPOSystem-scaled.jpg';   // Foto de sistema TPO
+$material_pvc_img     = '/wp-content/uploads/2026/06/PVCSystem.jpg';   // Foto de sistema PVC
 
 // ── PROCESO ──────────────────────────────────────────────────
-$process_1_img        = '';   // Paso 01 — Inspección y selección
-$process_2_img        = '';   // Paso 02 — Tear-off
-$process_3_img        = '';   // Paso 03 — Instalación
-$process_4_img        = '';   // Paso 04 — Limpieza y walkthrough
+$process_1_img        = '/wp-content/uploads/2026/06/inspector-scaled.jpg';   // Paso 01 — Inspección y selección
+$process_2_img        = '/wp-content/uploads/2026/06/man-is-repairing-the-roof-of-a-house-scaled.png';   // Paso 02 — Tear-off
+$process_3_img        = '/wp-content/uploads/2026/06/Illustration-of-Man-Installing-Solar-Panel-scaled.png';   // Paso 03 — Instalación
+$process_4_img        = '/wp-content/uploads/2026/06/Repairing-the-roof-with-dad-scaled.png';   // Paso 04 — Limpieza y walkthrough
 
 // ── GALERÍA ───────────────────────────────────────────────────
-$gallery_1_img        = '';   // Proyecto 1
-$gallery_2_img        = '';   // Proyecto 2
-$gallery_3_img        = '';   // Proyecto 3
-$gallery_4_img        = '';   // Proyecto 4
-$gallery_5_img        = '';   // Proyecto 5
-$gallery_6_img        = '';   // Proyecto 6
+$gallery_1_img        = '/wp-content/uploads/2026/06/Project1ARRC.jpg';   // Proyecto 1
+$gallery_2_img        = '/wp-content/uploads/2026/06/Project2ARRC-scaled.jpg';   // Proyecto 2
+$gallery_3_img        = '/wp-content/uploads/2026/06/Project3ARRC-scaled.jpg';   // Proyecto 3
+$gallery_4_img        = '/wp-content/uploads/2026/06/Project4ARRC-scaled.jpg';   // Proyecto 4
+$gallery_5_img        = '/wp-content/uploads/2026/06/Project5ARRC-scaled.jpg';   // Proyecto 5
+$gallery_6_img        = '/wp-content/uploads/2026/06/Project6ARRC-scaled.jpg';   // Proyecto 6
+
+// ── FINAL CTA ────────────────────────────────────────────────
+$cta_bg_img           = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.png';   // Estampado de fondo del CTA final
 
 /* ══════════════════════════════════════════════════════════════ */
 ?>
@@ -349,7 +352,22 @@ $gallery_6_img        = '';   // Proyecto 6
   @media (max-width: 480px) {
     .ri-gallery__grid { grid-template-columns: 1fr; }
   }
+
+  /* ── SCROLL REVEAL ─────────────────────────────────────────── */
+  html.ar-js :is(.ri-hero__content,.ri-materials__header,.ri-material-card,.ri-process__header,.ri-process__step,.ri-included__left,.ri-included__item,.ri-gallery__header,.ri-gallery__card,.ri-cta__inner){
+    transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);
+  }
+  html.ar-js :is(.ri-hero__content,.ri-materials__header,.ri-material-card,.ri-process__header,.ri-process__step,.ri-included__left,.ri-included__item,.ri-gallery__header,.ri-gallery__card,.ri-cta__inner):not(.ar-in){
+    opacity: 0; transform: translateY(30px);
+  }
+  html.ar-js .ri-material-card:hover { transition: transform .25s, box-shadow .25s; }
+  @media (prefers-reduced-motion: reduce){
+    html.ar-js :is(.ri-hero__content,.ri-materials__header,.ri-material-card,.ri-process__header,.ri-process__step,.ri-included__left,.ri-included__item,.ri-gallery__header,.ri-gallery__card,.ri-cta__inner){ transition: none !important; }
+    html.ar-js :is(.ri-hero__content,.ri-materials__header,.ri-material-card,.ri-process__header,.ri-process__step,.ri-included__left,.ri-included__item,.ri-gallery__header,.ri-gallery__card,.ri-cta__inner):not(.ar-in){ opacity: 1; transform: none; }
+  }
 </style>
+
+<script>document.documentElement.classList.add('ar-js');</script>
 
 <div class="ri">
 
@@ -601,7 +619,7 @@ $gallery_6_img        = '';   // Proyecto 6
   <!-- ═══════════════════════════════════════════════════════════
        FINAL CTA
   ═══════════════════════════════════════════════════════════ -->
-  <section class="ri-cta">
+  <section class="ri-cta"<?php if($cta_bg_img): ?> style="background-image:linear-gradient(rgba(15,35,34,0.90),rgba(15,35,34,0.92)),url('<?= esc_url($cta_bg_img) ?>');background-size:cover;background-position:center;"<?php endif; ?>>
     <div class="section-inner">
       <div class="ri-cta__inner">
         <span class="eyebrow" style="color:var(--mist);">Get Started</span>
@@ -622,5 +640,31 @@ $gallery_6_img        = '';   // Proyecto 6
   </section>
 
 </div><!-- /.ri -->
+
+<script>
+(function(){
+  var root = document.querySelector('.ri');
+  if(!root) return;
+  var sel = '.ri-hero__content,.ri-materials__header,.ri-material-card,.ri-process__header,.ri-process__step,.ri-included__left,.ri-included__item,.ri-gallery__header,.ri-gallery__card,.ri-cta__inner';
+  var els = root.querySelectorAll(sel);
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<els.length;i++){ els[i].classList.add('ar-in'); }
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target; io.unobserve(el);
+      var sibs = el.parentNode ? el.parentNode.children : [el];
+      var idx = Array.prototype.indexOf.call(sibs, el);
+      var delay = Math.min(idx, 6) * 90;
+      el.style.transitionDelay = delay + 'ms';
+      el.classList.add('ar-in');
+      setTimeout(function(){ el.style.transitionDelay = ''; }, delay + 1000);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -7% 0px' });
+  for(var j=0;j<els.length;j++){ io.observe(els[j]); }
+})();
+</script>
 
 <?php get_footer(); ?>

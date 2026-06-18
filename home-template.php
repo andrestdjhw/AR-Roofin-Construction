@@ -12,10 +12,10 @@ get_header(); ?>
 
 // ── S01 HERO ─────────────────────────────────────────────────
 $hero_poster_img          = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Imagen fallback (si no hay video)
-$hero_video_mp4           = '';   // Video drone .mp4
+$hero_video_mp4           = '/wp-content/uploads/2026/06/VIDEO-WEB.mp4';   // Video drone .mp4
 
 // ── S04 ABOUT ────────────────────────────────────────────────
-$about_owner_img          = '/wp-content/uploads/2026/06/CEO.png';   // Foto de Antonio CEO de la Empresa
+$about_owner_img          = '/wp-content/uploads/2026/06/CEO_AR_Roofing.png';   // Foto de Antonio CEO de la Empresa
 
 // ── S05 SERVICES ─────────────────────────────────────────────
 $service_installation_img = '/wp-content/uploads/2026/06/Roof_Installation_ARRC-scaled.jpg';   // Roof Installation
@@ -24,18 +24,18 @@ $service_emergency_img    = '/wp-content/uploads/2026/06/Emergency_Roofing_ARRC-
 $service_maintenance_img  = '/wp-content/uploads/2026/06/Roof_Maintenance_ARRC-scaled.jpg';   // Roof Maintenance
 
 // ── S07 PROCESS ──────────────────────────────────────────────
-$process_inspection_img   = '';   // Paso 01 — Inspección
-$process_estimate_img     = '';   // Paso 02 — Estimado
-$process_execution_img    = '';   // Paso 03 — Ejecución
-$process_walkthrough_img  = '';   // Paso 04 — Walkthrough
+$process_inspection_img   = '/wp-content/uploads/2026/06/Roof_Inspection-scaled.jpg';   // Paso 01 — Inspección
+$process_estimate_img     = '/wp-content/uploads/2026/06/EstimateRecomendation-scaled.jpg';   // Paso 02 — Estimado
+$process_execution_img    = '/wp-content/uploads/2026/06/Execution-scaled.jpg';   // Paso 03 — Ejecución
+$process_walkthrough_img  = '/wp-content/uploads/2026/06/Callback-scaled.jpg';   // Paso 04 — Walkthrough
 
 // ── S08 PORTFOLIO ─────────────────────────────────────────────
-$portfolio_1_img          = '';   // Hood River, OR
-$portfolio_2_img          = '';   // The Dalles, OR
-$portfolio_3_img          = '';   // Dufur, OR
-$portfolio_4_img          = '';   // The Dalles, OR (comercial)
-$portfolio_5_img          = '';   // Mosier, OR
-$portfolio_6_img          = '';   // White Salmon, WA
+$portfolio_1_img          = '/wp-content/uploads/2026/06/Project1ARRC.jpg';   // Hood River, OR
+$portfolio_2_img          = '/wp-content/uploads/2026/06/Project2ARRC-scaled.jpg';   // The Dalles, OR
+$portfolio_3_img          = '/wp-content/uploads/2026/06/Project3ARRC-scaled.jpg';   // Dufur, OR
+$portfolio_4_img          = '/wp-content/uploads/2026/06/Project4ARRC-scaled.jpg';   // The Dalles, OR (comercial)
+$portfolio_5_img          = '/wp-content/uploads/2026/06/Project5ARRC-scaled.jpg';   // Mosier, OR
+$portfolio_6_img          = '/wp-content/uploads/2026/06/Project6ARRC-scaled.jpg';   // White Salmon, WA
 
 // ── BACKGROUNDS ──────────────────────────────────────────────
 $why_bg_img               = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.png';   // S06 Why Us — estampado/textura de fondo
@@ -150,7 +150,7 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
     display: block;
   }
   .ar-home .section-inner {
-    max-width: 1200px;
+    max-width: 1520px;
     margin: 0 auto;
     padding: 0 24px;
   }
@@ -217,12 +217,13 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
   .ar-hero__content {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
+    max-width: 1520px;
     margin: 0 auto;
     padding: 100px 24px 60px;
     display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 56px;
+    grid-template-columns: minmax(0, 760px) 400px;
+    justify-content: space-between;
+    gap: 48px;
     align-items: stretch;
   }
   .ar-hero__left { display: flex; flex-direction: column; justify-content: space-between; }
@@ -511,10 +512,32 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
     color: var(--slate);
     margin: 0;
   }
-  .ar-services__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+  .ar-services__carousel {
+    position: relative;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+  }
+  .ar-services__track {
+    display: flex;
+    width: max-content;
+    animation: arServicesScroll 32s linear infinite;
+    will-change: transform;
+  }
+  .ar-services__carousel:hover .ar-services__track { animation-play-state: paused; }
+  .ar-services__slide {
+    flex: 0 0 360px;
+    margin-right: 28px;
+    display: flex;
+  }
+  .ar-services__slide > .ar-services__card { flex: 1; min-width: 0; }
+  @keyframes arServicesScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ar-services__track { animation: none; }
+    .ar-services__carousel { overflow-x: auto; }
   }
   .ar-services__card {
     background: #fff;
@@ -949,6 +972,7 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
     letter-spacing: 0.3px;
   }
   .ar-reviews__cta { text-align: center; margin-top: 48px; }
+  .ar-reviews__widget { margin-top: 40px; }
 
   /* ── S11 FAQ ───────────────────────────────────────────────── */
   .ar-faq {
@@ -1150,7 +1174,7 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
   }
   @media (max-width: 768px) {
     .ar-pain__grid { grid-template-columns: 1fr; }
-    .ar-services__grid { grid-template-columns: 1fr; }
+    .ar-services__slide { flex-basis: 320px; }
     .ar-why__grid { grid-template-columns: 1fr; }
     .ar-portfolio__grid { grid-template-columns: repeat(2, 1fr); }
     .ar-reviews__grid { grid-template-columns: 1fr; }
@@ -1164,7 +1188,73 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
     .ar-portfolio__grid { grid-template-columns: 1fr; }
     .ar-about__stats { grid-template-columns: repeat(2,1fr); }
   }
+
+  /* ── PANTALLAS GRANDES — escalado para monitores anchos ──────── */
+  @media (min-width: 1600px) {
+    .ar-home .section-inner { max-width: 1720px; }
+    .ar-hero__content {
+      max-width: 1720px;
+      grid-template-columns: minmax(0, 1000px) 480px;
+      gap: 72px;
+      padding-top: 120px;
+    }
+    .ar-hero h1 { font-size: 64px; max-width: 860px; }
+    .ar-hero__sub { font-size: 18px; max-width: 640px; }
+    .ar-hero__right { padding: 44px 40px; }
+    .ar-home .eyebrow { font-size: 12px; letter-spacing: 3px; }
+    .ar-pain__header h2 { font-size: 52px; }
+    .ar-about h2,
+    .ar-services__header h2,
+    .ar-why__header h2,
+    .ar-process__header h2,
+    .ar-portfolio__header h2,
+    .ar-areas__header h2,
+    .ar-reviews__header h2,
+    .ar-faq__header h2,
+    .ar-final-cta__left h2 { font-size: 50px; }
+    .ar-about p,
+    .ar-final-cta__left p { font-size: 17px; }
+    .ar-services__slide { flex-basis: 420px; }
+    .ar-process__visual { height: 380px; }
+    .ar-about__img img { height: 600px; }
+  }
+  @media (min-width: 2100px) {
+    .ar-home .section-inner { max-width: 1880px; }
+    .ar-hero__content {
+      max-width: 1880px;
+      grid-template-columns: minmax(0, 1120px) 520px;
+      gap: 88px;
+    }
+    .ar-hero h1 { font-size: 74px; max-width: 980px; }
+    .ar-hero__sub { font-size: 19px; max-width: 700px; }
+    .ar-pain__header h2 { font-size: 58px; }
+    .ar-about h2,
+    .ar-services__header h2,
+    .ar-why__header h2,
+    .ar-process__header h2,
+    .ar-portfolio__header h2,
+    .ar-areas__header h2,
+    .ar-reviews__header h2,
+    .ar-faq__header h2,
+    .ar-final-cta__left h2 { font-size: 56px; }
+    .ar-services__slide { flex-basis: 460px; }
+  }
+
+  /* ── SCROLL REVEAL ─────────────────────────────────────────── */
+  html.ar-js :is(.ar-hero__left,.ar-hero__right,.ar-pain__header,.ar-pain__card,.ar-about__copy,.ar-about__img,.ar-services__header,.ar-services__carousel,.ar-why__header,.ar-why__item,.ar-why__cta,.ar-process__header,.ar-process__step,.ar-process__cta,.ar-portfolio__header,.ar-portfolio__card,.ar-areas__header,.ar-areas__col,.ar-areas__copy,.ar-reviews__header,.ar-reviews__widget,.ar-faq__header,.ar-faq__item,.ar-final-cta__left,.ar-final-cta__form){
+    transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);
+  }
+  html.ar-js :is(.ar-hero__left,.ar-hero__right,.ar-pain__header,.ar-pain__card,.ar-about__copy,.ar-about__img,.ar-services__header,.ar-services__carousel,.ar-why__header,.ar-why__item,.ar-why__cta,.ar-process__header,.ar-process__step,.ar-process__cta,.ar-portfolio__header,.ar-portfolio__card,.ar-areas__header,.ar-areas__col,.ar-areas__copy,.ar-reviews__header,.ar-reviews__widget,.ar-faq__header,.ar-faq__item,.ar-final-cta__left,.ar-final-cta__form):not(.ar-in){
+    opacity: 0; transform: translateY(30px);
+  }
+  html.ar-js .ar-pain__card:hover { transition: border-color .25s, transform .25s, box-shadow .25s; }
+  @media (prefers-reduced-motion: reduce){
+    html.ar-js :is(.ar-hero__left,.ar-hero__right,.ar-pain__header,.ar-pain__card,.ar-about__copy,.ar-about__img,.ar-services__header,.ar-services__carousel,.ar-why__header,.ar-why__item,.ar-why__cta,.ar-process__header,.ar-process__step,.ar-process__cta,.ar-portfolio__header,.ar-portfolio__card,.ar-areas__header,.ar-areas__col,.ar-areas__copy,.ar-reviews__header,.ar-reviews__widget,.ar-faq__header,.ar-faq__item,.ar-final-cta__left,.ar-final-cta__form){ transition: none !important; }
+    html.ar-js :is(.ar-hero__left,.ar-hero__right,.ar-pain__header,.ar-pain__card,.ar-about__copy,.ar-about__img,.ar-services__header,.ar-services__carousel,.ar-why__header,.ar-why__item,.ar-why__cta,.ar-process__header,.ar-process__step,.ar-process__cta,.ar-portfolio__header,.ar-portfolio__card,.ar-areas__header,.ar-areas__col,.ar-areas__copy,.ar-reviews__header,.ar-reviews__widget,.ar-faq__header,.ar-faq__item,.ar-final-cta__left,.ar-final-cta__form):not(.ar-in){ opacity: 1; transform: none; }
+  }
 </style>
+
+<script>document.documentElement.classList.add('ar-js');</script>
 
 <div class="ar-home">
 
@@ -1339,7 +1429,8 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
         <span class="eyebrow">Our Services</span>
         <h2>Everything your property needs. One team you can trust.</h2>
       </div>
-      <div class="ar-services__grid">
+      <div class="ar-services__carousel">
+        <div class="ar-services__track">
         <?php
         $services = [
           [
@@ -1371,7 +1462,10 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
             'icon'  => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>',
           ],
         ];
+        // Render twice for a seamless infinite auto-scroll loop
+        for ($pass = 0; $pass < 2; $pass++) :
         foreach ($services as $svc) : ?>
+          <div class="ar-services__slide"<?= $pass === 1 ? ' aria-hidden="true"' : '' ?>>
           <div class="ar-services__card">
             <div class="ar-services__img">
               <img src="<?= esc_attr($svc['img']) ?>" alt="<?= esc_attr($svc['title']) ?> — AR Roofing Oregon" loading="lazy"
@@ -1392,7 +1486,10 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
               </a>
             </div>
           </div>
-        <?php endforeach; ?>
+          </div>
+        <?php endforeach;
+        endfor; ?>
+        </div>
       </div>
     </div>
   </section>
@@ -1570,12 +1667,12 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
           </div>
         <?php endforeach; ?>
       </div>
-      <div class="ar-portfolio__cta">
+      <!-- <div class="ar-portfolio__cta">
         <a href="/portfolio" class="btn-ghost">
           View Full Portfolio
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
         </a>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -1625,42 +1722,8 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
         <span class="eyebrow">Client Reviews</span>
         <h2>Don't take our word for it. Read theirs.</h2>
       </div>
-      <div style="text-align:center;">
-        <span class="ar-reviews__badge">
-          <span class="ar-reviews__stars">★★★★★</span>
-          5.0 Google Reviews
-        </span>
-      </div>
-      <div class="ar-reviews__grid">
-        <?php
-        $reviews = [
-          [
-            'name' => 'Ken Byers',
-            'text' => 'Antonio and crew did an exemplary job... close attention to detail revealed the need to re-nail virtually all of the plywood sheathing and to replace a potentially leaky skylight. Every member of his crew demonstrated dedication toward customer service and a job well done.',
-          ],
-          [
-            'name' => 'Rusty Neff',
-            'text' => 'On each project they\'ve done exceptional work. The crew works quickly and goes out of their way to make sure we\'re happy. We keep them on speed dial.',
-          ],
-          [
-            'name' => 'Steven Brantley',
-            'text' => 'Extremely professional and high quality. Owner is responsive and very friendly. They identified and replaced damaged wood as they went. I don\'t think I found a single stray nail.',
-          ],
-        ];
-        foreach ($reviews as $rev) : ?>
-          <div class="ar-reviews__card">
-            <span class="ar-reviews__quote-icon">"</span>
-            <div class="ar-reviews__stars-sm">★★★★★</div>
-            <p><?= esc_html($rev['text']) ?></p>
-            <span class="ar-reviews__author">— <?= esc_html($rev['name']) ?></span>
-          </div>
-        <?php endforeach; ?>
-      </div>
-      <div class="ar-reviews__cta">
-        <a href="https://g.page/r/ar-roofing/review" target="_blank" rel="noopener" class="btn-primary" style="background:var(--slate);">
-          Read All Reviews on Google
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
+      <div class="ar-reviews__widget">
+        <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
       </div>
     </div>
   </section>
@@ -1770,6 +1833,31 @@ function arToggleFaq(index) {
     item.querySelector('.ar-faq__question').setAttribute('aria-expanded', 'true')
   }
 }
+</script>
+
+<script>
+(function(){
+  var root = document.querySelector('.ar-home');
+  if(!root) return;
+  var sel = '.ar-hero__left,.ar-hero__right,.ar-pain__header,.ar-pain__card,.ar-about__copy,.ar-about__img,.ar-services__header,.ar-services__carousel,.ar-why__header,.ar-why__item,.ar-why__cta,.ar-process__header,.ar-process__step,.ar-process__cta,.ar-portfolio__header,.ar-portfolio__card,.ar-areas__header,.ar-areas__col,.ar-areas__copy,.ar-reviews__header,.ar-reviews__widget,.ar-faq__header,.ar-faq__item,.ar-final-cta__left,.ar-final-cta__form';
+  var els = root.querySelectorAll(sel);
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<els.length;i++){ els[i].classList.add('ar-in'); }
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    var batch = [];
+    entries.forEach(function(e){ if(e.isIntersecting) batch.push(e.target); });
+    batch.forEach(function(el, k){
+      io.unobserve(el);
+      var delay = Math.min(k, 6) * 90;
+      el.style.transitionDelay = delay + 'ms';
+      el.classList.add('ar-in');
+      setTimeout(function(){ el.style.transitionDelay = ''; }, delay + 1000);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -7% 0px' });
+  for(var j=0;j<els.length;j++){ io.observe(els[j]); }
+})();
 </script>
 
 <?php get_footer(); ?>
