@@ -1333,95 +1333,7 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════
-       S03 — PAIN POINTS
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="ar-pain">
-    <div class="section-inner">
-      <div class="ar-pain__header">
-        <span class="eyebrow">If any of this sounds familiar</span>
-        <h2>Three problems. One solution.</h2>
-      </div>
-      <div class="ar-pain__grid">
-        <?php
-        $pain_cards = [
-          [
-            'num'   => '01',
-            'title' => 'You see the damage but don\'t know how serious it is.',
-            'body'  => 'A stain on the ceiling. Shingles in the yard after a storm. A gutter full of what looks like sand. You know something\'s not right, but you don\'t know if it\'s a $200 fix or a $15,000 problem.',
-          ],
-          [
-            'num'   => '02',
-            'title' => 'You\'ve heard too many contractor horror stories.',
-            'body'  => 'The guy who took the deposit and vanished. The crew that left nails all over the driveway. The "emergency roofer" with out-of-state plates who showed up after the storm and did work that failed six months later.',
-          ],
-          [
-            'num'   => '03',
-            'title' => 'You don\'t know who to trust with the thing that protects your family.',
-            'body'  => 'Your roof isn\'t a cosmetic upgrade. It\'s what stands between your family and Oregon\'s rain, wind, heat, and ice. You need someone who treats that responsibility seriously.',
-          ],
-        ];
-        foreach ($pain_cards as $card) : ?>
-          <div class="ar-pain__card">
-            <div class="ar-pain__num"><?= $card['num'] ?></div>
-            <h3><?= esc_html($card['title']) ?></h3>
-            <p><?= esc_html($card['body']) ?></p>
-          </div>
-        <?php endforeach; ?>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
-       S04 — ABOUT
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="ar-about">
-    <div class="section-inner">
-      <div class="ar-about__inner">
-        <div class="ar-about__copy">
-          <span class="eyebrow">About AR Roofing</span>
-          <h2>Owner on every roof. Every project. For eighteen years.</h2>
-          <p>AR Roofing &amp; Construction is a family-operated roofing company serving 18 cities across Oregon and Washington. For over eighteen years, owner Antonio Robles has personally inspected every roof, supervised every project, and walked every final review with the client.</p>
-          <p>We are not a call center. We are not a franchise. We are a local team that lives in the communities we serve. When we say the owner is on your roof, we mean it. Our clients don't get a salesperson — they get the person whose name is on the truck.</p>
-          <p>We specialize in residential and commercial roofing: asphalt shingles, metal roofing, and flat roof systems (TPO and PVC). Every project receives the same level of care, transparency, and follow-through.</p>
-          <div class="ar-about__stats">
-            <?php
-            $stats = [
-              ['num' => '18+', 'label' => 'Years in Business'],
-              ['num' => '18',  'label' => 'Cities Served'],
-              ['num' => '5★',  'label' => 'Google Rated'],
-              ['num' => '24/7','label' => 'Emergency Response'],
-            ];
-            foreach ($stats as $s) : ?>
-              <div>
-                <span class="ar-about__stat-num"><?= $s['num'] ?></span>
-                <span class="ar-about__stat-label"><?= esc_html($s['label']) ?></span>
-              </div>
-            <?php endforeach; ?>
-          </div>
-          <a href="/about" class="btn-primary" style="background:var(--slate);">
-            Learn Our Story
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-          </a>
-        </div>
-        <div class="ar-about__img">
-          <?php $about_img = $about_owner_img; if($about_img): ?>
-          <img src="<?= $about_img ?>" alt="Antonio Robles — Owner, AR Roofing & Construction" loading="lazy">
-          <?php else: ?>
-          <div style="width:100%;height:520px;border-radius:12px;background:linear-gradient(135deg,var(--slate),#1e3e3d);display:flex;align-items:center;justify-content:center;">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <?php endif; ?>
-          <div class="ar-about__img-badge">
-            <strong>18+</strong>
-            YEARS<br>EXPERIENCE
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
-       S05 — SERVICES
+       S03 — SERVICES
   ═══════════════════════════════════════════════════════════ -->
   <section class="ar-services">
     <div class="section-inner">
@@ -1495,7 +1407,112 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       S06 — WHY CHOOSE US
+       S04 — REVIEWS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="ar-reviews">
+    <div class="section-inner">
+      <div class="ar-reviews__header">
+        <span class="eyebrow">Client Reviews</span>
+        <h2>Don't take our word for it. Read theirs.</h2>
+      </div>
+      <div class="ar-reviews__widget">
+        <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
+      </div>
+    </div>
+  </section>      
+
+  <!-- ═══════════════════════════════════════════════════════════
+       S05 — PAIN POINTS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="ar-pain">
+    <div class="section-inner">
+      <div class="ar-pain__header">
+        <span class="eyebrow">If any of this sounds familiar</span>
+        <h2>Three problems. One solution.</h2>
+      </div>
+      <div class="ar-pain__grid">
+        <?php
+        $pain_cards = [
+          [
+            'num'   => '01',
+            'title' => 'You see the damage but don\'t know how serious it is.',
+            'body'  => 'A stain on the ceiling. Shingles in the yard after a storm. A gutter full of what looks like sand. You know something\'s not right, but you don\'t know if it\'s a $200 fix or a $15,000 problem.',
+          ],
+          [
+            'num'   => '02',
+            'title' => 'You\'ve heard too many contractor horror stories.',
+            'body'  => 'The guy who took the deposit and vanished. The crew that left nails all over the driveway. The "emergency roofer" with out-of-state plates who showed up after the storm and did work that failed six months later.',
+          ],
+          [
+            'num'   => '03',
+            'title' => 'You don\'t know who to trust with the thing that protects your family.',
+            'body'  => 'Your roof isn\'t a cosmetic upgrade. It\'s what stands between your family and Oregon\'s rain, wind, heat, and ice. You need someone who treats that responsibility seriously.',
+          ],
+        ];
+        foreach ($pain_cards as $card) : ?>
+          <div class="ar-pain__card">
+            <div class="ar-pain__num"><?= $card['num'] ?></div>
+            <h3><?= esc_html($card['title']) ?></h3>
+            <p><?= esc_html($card['body']) ?></p>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       S06 — ABOUT
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="ar-about">
+    <div class="section-inner">
+      <div class="ar-about__inner">
+        <div class="ar-about__copy">
+          <span class="eyebrow">About AR Roofing</span>
+          <h2>Owner on every roof. Every project. For eighteen years.</h2>
+          <p>AR Roofing &amp; Construction is a family-operated roofing company serving 18 cities across Oregon and Washington. For over eighteen years, owner Antonio Robles has personally inspected every roof, supervised every project, and walked every final review with the client.</p>
+          <p>We are not a call center. We are not a franchise. We are a local team that lives in the communities we serve. When we say the owner is on your roof, we mean it. Our clients don't get a salesperson — they get the person whose name is on the truck.</p>
+          <p>We specialize in residential and commercial roofing: asphalt shingles, metal roofing, and flat roof systems (TPO and PVC). Every project receives the same level of care, transparency, and follow-through.</p>
+          <div class="ar-about__stats">
+            <?php
+            $stats = [
+              ['num' => '18+', 'label' => 'Years in Business'],
+              ['num' => '18',  'label' => 'Cities Served'],
+              ['num' => '5★',  'label' => 'Google Rated'],
+              ['num' => '24/7','label' => 'Emergency Response'],
+            ];
+            foreach ($stats as $s) : ?>
+              <div>
+                <span class="ar-about__stat-num"><?= $s['num'] ?></span>
+                <span class="ar-about__stat-label"><?= esc_html($s['label']) ?></span>
+              </div>
+            <?php endforeach; ?>
+          </div>
+          <a href="/about" class="btn-primary" style="background:var(--slate);">
+            Learn Our Story
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </a>
+        </div>
+        <div class="ar-about__img">
+          <?php $about_img = $about_owner_img; if($about_img): ?>
+          <img src="<?= $about_img ?>" alt="Antonio Robles — Owner, AR Roofing & Construction" loading="lazy">
+          <?php else: ?>
+          <div style="width:100%;height:520px;border-radius:12px;background:linear-gradient(135deg,var(--slate),#1e3e3d);display:flex;align-items:center;justify-content:center;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <?php endif; ?>
+          <div class="ar-about__img-badge">
+            <strong>18+</strong>
+            YEARS<br>EXPERIENCE
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ═══════════════════════════════════════════════════════════
+       S07 — WHY CHOOSE US
   ═══════════════════════════════════════════════════════════ -->
   <?php $why_bg = $why_bg_img; ?>
   <section class="ar-why" <?php if($why_bg): ?>style="background-image:url('<?= $why_bg ?>');background-size:cover;background-position:center;"<?php endif; ?>>
@@ -1557,7 +1574,7 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       S07 — PROCESS
+       S08 — PROCESS
   ═══════════════════════════════════════════════════════════ -->
   <section class="ar-process">
     <div class="section-inner">
@@ -1630,7 +1647,7 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       S08 — PORTFOLIO
+       S09 — PORTFOLIO
   ═══════════════════════════════════════════════════════════ -->
   <section class="ar-portfolio">
     <div class="section-inner">
@@ -1676,60 +1693,10 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════
-       S09 — SERVICE AREAS
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="ar-areas">
-    <div class="section-inner">
-      <div class="ar-areas__header">
-        <span class="eyebrow">Service Areas</span>
-        <h2>Protecting homes from Portland to Wishram.<br>18 cities. Two states.</h2>
-      </div>
-      <div class="ar-areas__layout">
-        <div class="ar-areas__col">
-          <h4>Oregon</h4>
-          <div class="ar-areas__tags">
-            <?php
-            $or_cities = ['Portland','The Dalles','Hood River','Gresham','Troutdale','Cascade Locks','Mosier','Wasco','Dufur'];
-            foreach ($or_cities as $city) : ?>
-              <a href="/locations/<?= sanitize_title($city) ?>" class="ar-areas__tag"><?= esc_html($city) ?></a>
-            <?php endforeach; ?>
-          </div>
-        </div>
-        <div class="ar-areas__col">
-          <h4>Washington</h4>
-          <div class="ar-areas__tags">
-            <?php
-            $wa_cities = ['Stevenson','White Salmon','North Bonneville','Bingen','Goldendale','Dallesport','Lyle','Carson','Wishram'];
-            foreach ($wa_cities as $city) : ?>
-              <a href="/locations/<?= sanitize_title($city) ?>" class="ar-areas__tag"><?= esc_html($city) ?></a>
-            <?php endforeach; ?>
-          </div>
-        </div>
-      </div>
-      <div class="ar-areas__copy">
-        <p>Licensed and insured in both Oregon and Washington. We know what the Gorge winds do to a ridge cap, what five months of rain does to sheathing, and which side of a house in Hood River gets hit hardest. This isn't textbook knowledge. This is eighteen years of being on Oregon roofs in Oregon weather.</p>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ═══════════════════════════════════════════════════════════
-       S10 — REVIEWS
-  ═══════════════════════════════════════════════════════════ -->
-  <section class="ar-reviews">
-    <div class="section-inner">
-      <div class="ar-reviews__header">
-        <span class="eyebrow">Client Reviews</span>
-        <h2>Don't take our word for it. Read theirs.</h2>
-      </div>
-      <div class="ar-reviews__widget">
-        <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
-       S11 — FAQ
+       S10 — FAQ
   ═══════════════════════════════════════════════════════════ -->
   <section class="ar-faq">
     <div class="section-inner">
@@ -1780,6 +1747,43 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
             </div>
           </div>
         <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       S11 — SERVICE AREAS
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="ar-areas">
+    <div class="section-inner">
+      <div class="ar-areas__header">
+        <span class="eyebrow">Service Areas</span>
+        <h2>Protecting homes from Portland to Wishram.<br>18 cities. Two states.</h2>
+      </div>
+      <div class="ar-areas__layout">
+        <div class="ar-areas__col">
+          <h4>Oregon</h4>
+          <div class="ar-areas__tags">
+            <?php
+            $or_cities = ['Portland','The Dalles','Hood River','Gresham','Troutdale','Cascade Locks','Mosier','Wasco','Dufur'];
+            foreach ($or_cities as $city) : ?>
+              <a href="/locations/<?= sanitize_title($city) ?>" class="ar-areas__tag"><?= esc_html($city) ?></a>
+            <?php endforeach; ?>
+          </div>
+        </div>
+        <div class="ar-areas__col">
+          <h4>Washington</h4>
+          <div class="ar-areas__tags">
+            <?php
+            $wa_cities = ['Stevenson','White Salmon','North Bonneville','Bingen','Goldendale','Dallesport','Lyle','Carson','Wishram'];
+            foreach ($wa_cities as $city) : ?>
+              <a href="/locations/<?= sanitize_title($city) ?>" class="ar-areas__tag"><?= esc_html($city) ?></a>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </div>
+      <div class="ar-areas__copy">
+        <p>Licensed and insured in both Oregon and Washington. We know what the Gorge winds do to a ridge cap, what five months of rain does to sheathing, and which side of a house in Hood River gets hit hardest. This isn't textbook knowledge. This is eighteen years of being on Oregon roofs in Oregon weather.</p>
       </div>
     </div>
   </section>
