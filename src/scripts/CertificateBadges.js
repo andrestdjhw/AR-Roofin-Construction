@@ -6,7 +6,7 @@ import React, { useState, useEffect, useRef } from "react"
 const DEFAULT_CERTIFICATES = [
   {
     id: "residential",
-    label: "Certified",
+    label: "Residential Certified",
     caption: "Residential Certification",
     image: "/wp-content/uploads/2026/06/Certified-scaled.png",
   },
