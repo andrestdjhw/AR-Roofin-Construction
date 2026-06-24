@@ -1319,6 +1319,7 @@ const IconShield = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MOD
 });
 
 /* ── Data ───────────────────────────────────────────────────────── */
+const GEOTAG_URL = "https://www.google.com/maps/search/?api=1&query=400+Portway+Ave+Suite+300%2C+Hood+River%2C+OR+97031";
 const SERVICES = [{
   label: "Roof Installation",
   href: "/services/roof-installation"
@@ -1679,23 +1680,33 @@ function Footer() {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
                   }), "(541) 675 0577"]
                 })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
-                style: {
-                  display: "flex",
-                  alignItems: "flex-start",
-                  gap: "10px",
-                  fontSize: "14px"
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  href: GEOTAG_URL,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
                   style: {
-                    color: "#6a9a9a",
-                    marginTop: "1px",
-                    flexShrink: 0
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "10px",
+                    color: "#aaa",
+                    textDecoration: "none",
+                    fontSize: "14px",
+                    transition: "color 0.2s ease"
                   },
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                  children: "Portland, Oregon"
-                })]
+                  onMouseEnter: e => e.currentTarget.style.color = "#fff",
+                  onMouseLeave: e => e.currentTarget.style.color = "#aaa",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    style: {
+                      color: "#6a9a9a",
+                      marginTop: "1px",
+                      flexShrink: 0
+                    },
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    children: "400 Portway Ave Suite 300, Hood River, OR 97031"
+                  })]
+                })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
                 style: {
                   display: "flex",
@@ -1818,6 +1829,7 @@ const NAV_LINKS = [{
   label: "Contact",
   href: "/contact"
 }];
+const GEOTAG_URL = "https://www.google.com/maps/search/?api=1&query=400+Portway+Ave+Suite+300%2C+Hood+River%2C+OR+97031";
 
 /* ── SVG Icons ─────────────────────────────────────────────────── */
 const IconMail = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
@@ -2128,8 +2140,12 @@ function Navbar() {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
               }), "(541) 675 0577"]
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: "flex items-center gap-1.5 text-xs",
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+            href: GEOTAG_URL,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            "aria-label": "400 Portway Ave Suite 300, Hood River, OR 97031",
+            className: "flex items-center gap-1.5 text-xs hover:text-white transition-colors duration-200",
             style: {
               color: "#aaa"
             },
@@ -2138,7 +2154,7 @@ function Navbar() {
                 color: "#6a9a9a"
               },
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
-            }), "Serving in Portland, Oregon"]
+            }), "400 Portway Ave Suite 300, Hood River, OR 97031"]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             className: "flex items-center gap-3",
             children: [{
@@ -2393,17 +2409,21 @@ function Navbar() {
                   },
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
                 }), " (541) 675 0577"]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                href: GEOTAG_URL,
+                target: "_blank",
+                rel: "noopener noreferrer",
                 className: "flex items-center gap-2 text-xs",
                 style: {
-                  color: "#666"
+                  color: "#666",
+                  textDecoration: "none"
                 },
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                   style: {
                     color: "#6a9a9a"
                   },
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
-                }), " Serving in Portland, Oregon"]
+                }), " 400 Portway Ave Suite 300, Hood River, OR 97031"]
               })]
             }), NAV_LINKS.map(link => link.dropdown ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {

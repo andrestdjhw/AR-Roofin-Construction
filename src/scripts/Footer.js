@@ -78,6 +78,9 @@ const IconShield = () => (
 )
 
 /* ── Data ───────────────────────────────────────────────────────── */
+const GEOTAG_URL =
+  "https://www.google.com/maps/search/?api=1&query=400+Portway+Ave+Suite+300%2C+Hood+River%2C+OR+97031"
+
 const SERVICES = [
   { label: "Roof Installation", href: "/services/roof-installation" },
   { label: "Roof Repair", href: "/services/roof-repair" },
@@ -306,9 +309,18 @@ function Footer() {
                   (541) 675 0577
                 </a>
               </li>
-              <li style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "14px" }}>
-                <span style={{ color: "#6a9a9a", marginTop: "1px", flexShrink: 0 }}><IconPin /></span>
-                <span>Portland, Oregon</span>
+              <li>
+                <a
+                  href={GEOTAG_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "flex", alignItems: "flex-start", gap: "10px", color: "#aaa", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
+                  onMouseEnter={e => e.currentTarget.style.color = "#fff"}
+                  onMouseLeave={e => e.currentTarget.style.color = "#aaa"}
+                >
+                  <span style={{ color: "#6a9a9a", marginTop: "1px", flexShrink: 0 }}><IconPin /></span>
+                  <span>400 Portway Ave Suite 300, Hood River, OR 97031</span>
+                </a>
               </li>
               <li style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "14px" }}>
                 <span style={{ color: "#6a9a9a", marginTop: "1px", flexShrink: 0 }}><IconClock /></span>
