@@ -17,6 +17,9 @@ const NAV_LINKS = [
   { label: "Contact", href: "/contact" },
 ]
 
+const GEOTAG_URL =
+  "https://www.google.com/maps/search/?api=1&query=400+Portway+Ave+Suite+300%2C+Hood+River%2C+OR+97031"
+
 /* ── SVG Icons ─────────────────────────────────────────────────── */
 const IconMail = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -194,11 +197,18 @@ function Navbar() {
               </a>
             </div>
 
-            {/* Center: location */}
-            <div className="flex items-center gap-1.5 text-xs" style={{ color: "#aaa" }}>
+            {/* Center: location (geotag → Google Maps) */}
+            <a
+              href={GEOTAG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="400 Portway Ave Suite 300, Hood River, OR 97031"
+              className="flex items-center gap-1.5 text-xs hover:text-white transition-colors duration-200"
+              style={{ color: "#aaa" }}
+            >
               <span style={{ color: "#6a9a9a" }}><IconPin /></span>
-              Serving in Portland, Oregon
-            </div>
+              400 Portway Ave Suite 300, Hood River, OR 97031
+            </a>
 
             {/* Right: social icons */}
             <div className="flex items-center gap-3">
@@ -429,9 +439,15 @@ function Navbar() {
                 <a href="tel:5416750577" className="flex items-center gap-2 text-xs" style={{ color: "#666", textDecoration: "none" }}>
                   <span style={{ color: "#6a9a9a" }}><IconPhone /></span> (541) 675 0577
                 </a>
-                <div className="flex items-center gap-2 text-xs" style={{ color: "#666" }}>
-                  <span style={{ color: "#6a9a9a" }}><IconPin /></span> Serving in Portland, Oregon
-                </div>
+                <a
+                  href={GEOTAG_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs"
+                  style={{ color: "#666", textDecoration: "none" }}
+                >
+                  <span style={{ color: "#6a9a9a" }}><IconPin /></span> 400 Portway Ave Suite 300, Hood River, OR 97031
+                </a>
               </div>
 
               {NAV_LINKS.map((link) =>
