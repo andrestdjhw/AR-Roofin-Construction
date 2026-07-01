@@ -18,7 +18,7 @@ const NAV_LINKS = [
 ]
 
 const GEOTAG_URL =
-  "https://www.google.com/maps/search/?api=1&query=400+Portway+Ave+Suite+300%2C+Hood+River%2C+OR+97031"
+  "https://www.google.com/maps/search/?api=1&query=400+Portway+Ave+Suite+304%2C+Hood+River%2C+OR+97031"
 
 /* ── SVG Icons ─────────────────────────────────────────────────── */
 const IconMail = () => (
@@ -202,12 +202,12 @@ function Navbar() {
               href={GEOTAG_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="400 Portway Ave Suite 300, Hood River, OR 97031"
+              aria-label="400 Portway Ave Suite 304, Hood River, OR 97031"
               className="flex items-center gap-1.5 text-xs hover:text-white transition-colors duration-200"
               style={{ color: "#aaa" }}
             >
               <span style={{ color: "#6a9a9a" }}><IconPin /></span>
-              400 Portway Ave Suite 300, Hood River, OR 97031
+              400 Portway Ave Suite 304, Hood River, OR 97031
             </a>
 
             {/* Right: social icons */}
@@ -446,7 +446,7 @@ function Navbar() {
                   className="flex items-center gap-2 text-xs"
                   style={{ color: "#666", textDecoration: "none" }}
                 >
-                  <span style={{ color: "#6a9a9a" }}><IconPin /></span> 400 Portway Ave Suite 300, Hood River, OR 97031
+                  <span style={{ color: "#6a9a9a" }}><IconPin /></span> 400 Portway Ave Suite 304, Hood River, OR 97031
                 </a>
               </div>
 
