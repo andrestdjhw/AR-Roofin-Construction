@@ -391,7 +391,7 @@ function ContactForm({
     } catch (err) {
       console.error("Form submission error:", err)
       setStatus("error")
-      setErrorMsg("Something went wrong. Please call us directly at 541-675-0577.")
+      setErrorMsg("Something went wrong. Please call us directly at 541-645-0577.")
     }
   }
 
@@ -406,8 +406,8 @@ function ContactForm({
           </h3>
           <p className={isLight ? "light" : ""}>
             {isEmergency
-              ? <>For immediate help, call <a href="tel:5416750577" className={isLight ? "light" : ""}>541-675-0577</a> now. We respond to emergencies 24/7.</>
-              : <>We'll get back to you within 24 hours. For immediate help call <a href="tel:5416750577" className={isLight ? "light" : ""}>541-675-0577</a>.</>
+              ? <>For immediate help, call <a href="tel:5416750577" className={isLight ? "light" : ""}>541-645-0577</a> now. We respond to emergencies 24/7.</>
+              : <>We'll get back to you within 24 hours. For immediate help call <a href="tel:5416750577" className={isLight ? "light" : ""}>541-645-0577</a>.</>
             }
           </p>
         </div>
@@ -455,9 +455,9 @@ function ContactForm({
       {isEmergency && (
         <div className="ar-cf-phone-banner">
           <span>For immediate help, call us now:</span>
-          <a href="tel:5416750577">
+          <a href="tel:5416450577">
             <PhoneIcon />
-            541-675-0577
+            541-645-0577
           </a>
         </div>
       )}

@@ -300,13 +300,13 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:5416750577"
+                  href="tel:5416450577"
                   style={{ display: "flex", alignItems: "flex-start", gap: "10px", color: "#aaa", textDecoration: "none", fontSize: "14px", transition: "color 0.2s ease" }}
                   onMouseEnter={e => e.currentTarget.style.color = "#fff"}
                   onMouseLeave={e => e.currentTarget.style.color = "#aaa"}
                 >
                   <span style={{ color: "#6a9a9a", marginTop: "1px", flexShrink: 0 }}><IconPhone /></span>
-                  (541) 675 0577
+                  (541) 645 0577
                 </a>
               </li>
               <li>

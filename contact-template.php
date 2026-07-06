@@ -118,7 +118,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
         <div class="ct-info">
           <div class="ct-phone">
             <span class="ct-phone__label">Call Us Directly</span>
-            <a href="tel:5416750577" class="ct-phone__number">(541) 675 0577</a>
+            <a href="tel:5416450577" class="ct-phone__number">(541) 645 0577</a>
             <span class="ct-phone__sub">Mon &ndash; Fri &nbsp;7:00 AM &ndash; 5:00 PM</span>
             <span class="ct-phone__emergency">24/7 Emergency Response</span>
           </div>

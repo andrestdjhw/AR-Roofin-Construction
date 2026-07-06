@@ -851,7 +851,7 @@ function ContactForm({
     } catch (err) {
       console.error("Form submission error:", err);
       setStatus("error");
-      setErrorMsg("Something went wrong. Please call us directly at 541-675-0577.");
+      setErrorMsg("Something went wrong. Please call us directly at 541-645-0577.");
     }
   };
 
@@ -873,13 +873,13 @@ function ContactForm({
             children: ["For immediate help, call ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
               href: "tel:5416750577",
               className: isLight ? "light" : "",
-              children: "541-675-0577"
+              children: "541-645-0577"
             }), " now. We respond to emergencies 24/7."]
           }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
             children: ["We'll get back to you within 24 hours. For immediate help call ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
               href: "tel:5416750577",
               className: isLight ? "light" : "",
-              children: "541-675-0577"
+              children: "541-645-0577"
             }), "."]
           })
         })]
@@ -928,8 +928,8 @@ function ContactForm({
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
         children: "For immediate help, call us now:"
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-        href: "tel:5416750577",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(PhoneIcon, {}), "541-675-0577"]
+        href: "tel:5416450577",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(PhoneIcon, {}), "541-645-0577"]
       })]
     }), status === "error" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "ar-cf-error-banner",
@@ -1659,7 +1659,7 @@ function Footer() {
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                  href: "tel:5416750577",
+                  href: "tel:5416450577",
                   style: {
                     display: "flex",
                     alignItems: "flex-start",
@@ -1678,7 +1678,7 @@ function Footer() {
                       flexShrink: 0
                     },
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
-                  }), "(541) 675 0577"]
+                  }), "(541) 645 0577"]
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
@@ -2131,14 +2131,14 @@ function Navbar() {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
               }), "info@arroofingus.com"]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-              href: "tel:5416750577",
+              href: "tel:5416450577",
               className: "flex items-center gap-1.5 hover:text-white transition-colors duration-200",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
                 style: {
                   color: "#6a9a9a"
                 },
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
-              }), "(541) 675 0577"]
+              }), "(541) 645 0577"]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
             href: GEOTAG_URL,
@@ -2397,7 +2397,7 @@ function Navbar() {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
                 }), " info@arroofingus.com"]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-                href: "tel:5416750577",
+                href: "tel:5416450577",
                 className: "flex items-center gap-2 text-xs",
                 style: {
                   color: "#666",
@@ -2408,7 +2408,7 @@ function Navbar() {
                     color: "#6a9a9a"
                   },
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
-                }), " (541) 675 0577"]
+                }), " (541) 645 0577"]
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
                 href: GEOTAG_URL,
                 target: "_blank",

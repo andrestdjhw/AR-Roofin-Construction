@@ -1289,10 +1289,10 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
           </a>
           <a href="tel:5416450577" class="btn-ghost">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call 541-675-0577
+            Call 541-645-0577
           </a>
         </div>
-        <p class="ar-hero__phone-label">Available 24/7 for emergencies &nbsp;·&nbsp; <a href="tel:5416750577">541 675 0577</a></p>
+        <p class="ar-hero__phone-label">Available 24/7 for emergencies &nbsp;·&nbsp; <a href="tel:5416750577">541 645 0577</a></p>
       </div>
 
       <!-- Right: form (React ContactForm) -->
@@ -1637,9 +1637,9 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
         <p>Ready to start? Call or request your free inspection.</p>
         <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
           <a href="/contact" class="btn-primary">Get a Free Inspection</a>
-          <a href="tel:5416750577" class="btn-primary" style="background:var(--slate);">
+          <a href="tel:5416450577" class="btn-primary" style="background:var(--slate);">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call 541-675-0577
+            Call 541-645-0577
           </a>
         </div>
       </div>
@@ -1802,7 +1802,7 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
           <p>Whether you need an inspection, a repair, or a complete replacement — AR Roofing has you covered. Serving 18 cities across Oregon and Washington. Licensed, insured, and ready to help.</p>
           <div class="ar-final-cta__btns">
             <a href="#contact-form" class="btn-primary">Get a Free Inspection</a>
-            <a href="tel:5416450577" class="btn-ghost">Call 541-675-0577</a>
+            <a href="tel:5416450577" class="btn-ghost">Call 541-645-0577</a>
           </div>
         </div>
         <div class="ar-final-cta__form" id="contact-form">
