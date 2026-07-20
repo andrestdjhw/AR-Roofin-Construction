@@ -12,7 +12,7 @@ get_header(); ?>
 
 // ── S01 HERO ─────────────────────────────────────────────────
 $hero_poster_img          = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Imagen fallback (si no hay video)
-$hero_video_mp4           = '/wp-content/uploads/2026/06/VIDEO-WEB.mp4';   // Video drone .mp4
+$hero_video_mp4           = '/wp-content/uploads/2026/07/ARHeroPanel.mp4';   // Video drone .mp4
 
 // ── S04 ABOUT ────────────────────────────────────────────────
 $about_owner_img          = '/wp-content/uploads/2026/06/CEO_AR_Roofing.png';   // Foto de Antonio CEO de la Empresa

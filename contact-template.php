@@ -8,7 +8,7 @@ get_header(); ?>
 /* ═══════════════════════════════════════════════════════════════
    CONFIGURACIÓN
    ════════════════════════════════════════════════════════════ */
-$google_maps_embed = 'https://maps.google.com/maps?q=400+Portway+Ave+Suite+304%2C+Hood+River%2C+OR+97031&z=15&output=embed';
+$google_maps_embed = 'https://maps.google.com/maps?q=403+Portway+Ave+%23304%2C+Hood+River%2C+OR+97031&z=15&output=embed';
 $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
 /* ══════════════════════════════════════════════════════════════ */
 ?>
@@ -127,7 +127,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
             <?php
             $details = [
               [ 'label' => 'Email',         'value' => '<a href="mailto:info@arroofingus.com">info@arroofingus.com</a>', 'icon' => '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>' ],
-              [ 'label' => 'Address',       'value' => '<a href="https://www.google.com/maps/search/?api=1&query=400+Portway+Ave+Suite+304%2C+Hood+River%2C+OR+97031" target="_blank" rel="noopener noreferrer">400 Portway Ave Suite 304, Hood River, OR 97031</a>', 'icon' => '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>' ],
+              [ 'label' => 'Address',       'value' => '<a href="https://www.google.com/maps/search/?api=1&query=403+Portway+Ave+%23304%2C+Hood+River%2C+OR+97031" target="_blank" rel="noopener noreferrer">403 Portway Ave #304, Hood River, OR 97031</a>', 'icon' => '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>' ],
               [ 'label' => 'Service Area',  'value' => '18 cities across Oregon &amp; Washington',              'icon' => '<path d="M3 11l19-9-9 19-2-8-8-2z"/>' ],
               [ 'label' => 'Office Hours',  'value' => 'Mon &ndash; Fri: 7:00 AM &ndash; 5:00 PM<br>Emergency: 24/7', 'icon' => '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>' ],
               [ 'label' => 'Response Time', 'value' => 'Within 24 hours on all inquiries',                    'icon' => '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/><path d="M1 1l22 22"/>' ],
@@ -155,7 +155,7 @@ $hero_bg_img       = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
         <!-- Map (full width, below both columns) -->
         <div class="ct-map">
           <?php if($google_maps_embed): ?>
-            <iframe src="<?= esc_url($google_maps_embed) ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AR Roofing — 400 Portway Ave Suite 304, Hood River, OR 97031"></iframe>
+            <iframe src="<?= esc_url($google_maps_embed) ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="AR Roofing — 403 Portway Ave #304, Hood River, OR 97031"></iframe>
           <?php else: ?>
             <div class="ct-map__placeholder">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
