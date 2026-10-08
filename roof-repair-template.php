@@ -11,11 +11,11 @@ get_header(); ?>
    ════════════════════════════════════════════════════════════ */
 
 // ── HERO ─────────────────────────────────────────────────────
-$hero_bg_img     = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Antonio inspeccionando o reparación en progreso
+$hero_bg_img     = ar_jobsite_img(13, 1536);   // Antonio inspeccionando o reparación en progreso
 
 // ── REPAIR VS REPLACE ─────────────────────────────────────────
 $split_left_img  = '/wp-content/uploads/2026/06/DamagedRoof-scaled.jpg';   // Imagen lado "When repair makes sense"
-$split_right_img = '/wp-content/uploads/2026/06/Repaired.png';   // Imagen lado "When replacement makes sense"
+$split_right_img = ar_jobsite_img(15);   // Imagen lado "When replacement makes sense"
 
 // ── WHAT WE FIX ──────────────────────────────────────────────
 $types_bg_img    = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png';   // Estampado de la sección "What We Fix" (fondo blanco hueso)

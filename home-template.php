@@ -11,14 +11,14 @@ get_header(); ?>
    ════════════════════════════════════════════════════════════ */
 
 // ── S01 HERO ─────────────────────────────────────────────────
-$hero_poster_img          = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Imagen fallback (si no hay video)
+$hero_poster_img          = ar_jobsite_img(11, 1536);   // Imagen fallback (si no hay video)
 $hero_video_mp4           = '/wp-content/uploads/2026/07/ARHeroPanel.mp4';   // Video drone .mp4
 
 // ── S04 ABOUT ────────────────────────────────────────────────
 $about_owner_img          = '/wp-content/uploads/2026/06/CEO_AR_Roofing.png';   // Foto de Antonio CEO de la Empresa
 
 // ── S05 SERVICES ─────────────────────────────────────────────
-$service_installation_img = '/wp-content/uploads/2026/06/Roof_Installation_ARRC-scaled.jpg';   // Roof Installation
+$service_installation_img = ar_jobsite_img(6);   // Roof Installation
 $service_repair_img       = '/wp-content/uploads/2026/06/Roof_Repair_ARRC-scaled.jpg';   // Roof Repair
 $service_emergency_img    = '/wp-content/uploads/2026/06/Emergency_Roofing_ARRC-scaled.jpg';   // Emergency Roofing
 $service_maintenance_img  = '/wp-content/uploads/2026/06/Roof_Maintenance_ARRC-scaled.jpg';   // Roof Maintenance
@@ -26,7 +26,7 @@ $service_maintenance_img  = '/wp-content/uploads/2026/06/Roof_Maintenance_ARRC-s
 // ── S07 PROCESS ──────────────────────────────────────────────
 $process_inspection_img   = '/wp-content/uploads/2026/06/Roof_Inspection-scaled.jpg';   // Paso 01 — Inspección
 $process_estimate_img     = '/wp-content/uploads/2026/06/EstimateRecomendation-scaled.jpg';   // Paso 02 — Estimado
-$process_execution_img    = '/wp-content/uploads/2026/06/Execution-scaled.jpg';   // Paso 03 — Ejecución
+$process_execution_img    = ar_jobsite_img(10);   // Paso 03 — Ejecución
 $process_walkthrough_img  = '/wp-content/uploads/2026/06/Callback-scaled.jpg';   // Paso 04 — Walkthrough
 
 // ── S08 PORTFOLIO ─────────────────────────────────────────────

@@ -4,7 +4,7 @@ import React, { useState } from "react"
    Edita link/imagen aquí, o pásalos por props.
    ──────────────────────────────────────────────────────────── */
 const DEFAULT_LINK  = "https://www.hfsfinancial.net/promo/6ab436cc7a506a7cf9542b68/"
-const DEFAULT_IMAGE = "/wp-content/uploads/2026/06/Roof_Installation_ARRC-768x512.jpg"
+const DEFAULT_IMAGE = "/wp-content/uploads/2026/10/4-768x432.jpg"
 
 /* ─── ICONS ────────────────────────────────────────────────────── */
 const DollarIcon = ({ size = 16 }) => (

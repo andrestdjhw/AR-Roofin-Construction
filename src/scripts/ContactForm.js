@@ -309,6 +309,7 @@ function ContactForm({
   theme = "dark",       // "dark" | "light"
   title = "Get a Free Inspection",
   showTitle = true,
+  redirectTo = "",      // ej. "/thank-you/1/" — si viene vacío se muestra el mensaje en línea
 }) {
   const isLight = theme === "light"
   const cls = (base) => isLight ? `${base} light` : base
@@ -387,6 +388,11 @@ function ContactForm({
         templateParams
       )
 
+      if (redirectTo) {
+        window.location.assign(redirectTo + (isEmergency ? "?emergency=1" : ""))
+        return
+      }
+
       setStatus("success")
     } catch (err) {
       console.error("Form submission error:", err)
@@ -406,8 +412,8 @@ function ContactForm({
           </h3>
           <p className={isLight ? "light" : ""}>
             {isEmergency
-              ? <>For immediate help, call <a href="tel:5416750577" className={isLight ? "light" : ""}>541-645-0577</a> now. We respond to emergencies 24/7.</>
-              : <>We'll get back to you within 24 hours. For immediate help call <a href="tel:5416750577" className={isLight ? "light" : ""}>541-645-0577</a>.</>
+              ? <>For immediate help, call <a href="tel:5416450577" className={isLight ? "light" : ""}>541-645-0577</a> now. We respond to emergencies 24/7.</>
+              : <>We'll get back to you within 24 hours. For immediate help call <a href="tel:5416450577" className={isLight ? "light" : ""}>541-645-0577</a>.</>
             }
           </p>
         </div>

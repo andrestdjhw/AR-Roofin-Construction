@@ -11,7 +11,7 @@ get_header(); ?>
    ════════════════════════════════════════════════════════════ */
 
 // ── HERO ─────────────────────────────────────────────────────
-$hero_bg_img      = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png';   // Antonio y crew en el techo, mañana, Oregon
+$hero_bg_img      = ar_jobsite_img(6, 1536);   // Antonio y crew en el techo, mañana, Oregon
 
 // ── OUR STORY ────────────────────────────────────────────────
 $story_photo_img  = '/wp-content/uploads/2026/06/About_Home_AR_Roofing_Construction-scaled.jpg';   // Antonio en work gear, mirando a cámara
@@ -383,6 +383,27 @@ $crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Fot
     gap: 14px; justify-content: center;
   }
 
+  /* ── ON THE JOB (GALLERY) ──────────────────────────────────── */
+  .ab-jobsite { background: var(--light); padding: 100px 0; }
+  .ab-jobsite__header { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .ab-jobsite__header h2 { font-size: clamp(26px, 3vw, 42px); color: var(--slate); margin: 0 0 16px; }
+  .ab-jobsite__header p { font-size: 16px; line-height: 1.7; color: #5a6b6a; margin: 0; }
+  .ab-jobsite__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ab-jobsite__card {
+    display: block; position: relative; border-radius: 12px; overflow: hidden;
+    aspect-ratio: 4/3; background: var(--slate);
+  }
+  .ab-jobsite__card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+  .ab-jobsite__card:hover img { transform: scale(1.07); }
+  .ab-jobsite__card-overlay {
+    position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 20px;
+    background: linear-gradient(to top, rgba(15,35,34,0.85) 0%, transparent 55%);
+  }
+  .ab-jobsite__info { display: flex; flex-direction: column; gap: 4px; }
+  .ab-jobsite__label { color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .3px; }
+  .ab-jobsite__location { display: flex; align-items: center; gap: 6px; color: var(--mist); font-size: 12px; }
+  .ab-jobsite__location svg { color: var(--aqua); }
+
   /* ── RESPONSIVE ────────────────────────────────────────────── */
   @media (max-width: 1024px) {
     .ab-story__grid { grid-template-columns: 1fr; gap: 48px; }
@@ -393,6 +414,7 @@ $crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Fot
     .ab-stats__item:nth-child(3) { border-right: none; }
   }
   @media (max-width: 768px) {
+    .ab-jobsite__grid { grid-template-columns: repeat(2, 1fr); }
     .ab-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
     .ab-stats__item:nth-child(2) { border-right: none; }
     .ab-stats__item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.07); }
@@ -402,6 +424,7 @@ $crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Fot
     .ab-values__num { font-size: 36px; margin-bottom: 8px; }
   }
   @media (max-width: 480px) {
+    .ab-jobsite__grid { grid-template-columns: 1fr; }
     .ab-stats__grid { grid-template-columns: 1fr 1fr; }
     .ab-stats__item:nth-child(3) { border-right: none; }
   }
@@ -624,6 +647,47 @@ $crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Fot
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       ON THE JOB — galería de obra
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="ab-jobsite">
+    <div class="section-inner">
+      <div class="ab-jobsite__header">
+        <span class="eyebrow">On the Job</span>
+        <h2>Real crews. Real roofs.</h2>
+        <p>From decking and underlayment to the final panel, this is what our work looks like up close — no stock photos.</p>
+      </div>
+      <div class="ab-jobsite__grid">
+        <?php
+        // Ubicaciones de ejemplo (genéricas) — reemplazar por las reales cuando se tengan
+        $jobsite = [
+          ['img' => '8', 'label' => 'Installing new roof decking', 'location' => 'Hood River, OR'],
+          ['img' => '9', 'label' => 'Laying out metal panels', 'location' => 'The Dalles, OR'],
+          ['img' => '5', 'label' => 'Sheathing & underlayment', 'location' => 'Mosier, OR'],
+          ['img' => '3', 'label' => 'Finished standing seam metal', 'location' => 'White Salmon, WA'],
+          ['img' => '7', 'label' => 'Full roof system in progress', 'location' => 'Hood River, OR'],
+          ['img' => '2', 'label' => 'Completed metal roof — aerial view', 'location' => 'Dufur, OR'],
+        ];
+        foreach ($jobsite as $j) :
+          $thumb = ar_jobsite_img($j['img']);
+          $full  = ar_jobsite_img($j['img'], 1536); ?>
+          <a class="ab-jobsite__card" href="<?= esc_url($full) ?>" data-lightbox="ab-jobsite" data-caption="<?= esc_attr($j['label']) ?> — <?= esc_attr($j['location']) ?>">
+            <img src="<?= esc_url($thumb) ?>" alt="<?= esc_attr($j['label']) ?> — <?= esc_attr($j['location']) ?> — AR Roofing" loading="lazy">
+            <div class="ab-jobsite__card-overlay">
+              <div class="ab-jobsite__info">
+                <span class="ab-jobsite__label"><?= esc_html($j['label']) ?></span>
+                <span class="ab-jobsite__location">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <?= esc_html($j['location']) ?>
+                </span>
+              </div>
+            </div>
+          </a>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>

@@ -11,11 +11,11 @@ get_header(); ?>
    ════════════════════════════════════════════════════════════ */
 
 // ── HERO ─────────────────────────────────────────────────────
-$hero_bg_img          = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Drone shot de techo instalado, paisaje del Gorge
+$hero_bg_img          = ar_jobsite_img(11, 1536);   // Drone shot de techo instalado, paisaje del Gorge
 
 // ── MATERIALES ───────────────────────────────────────────────
-$material_asphalt_img = '/wp-content/uploads/2026/06/AsphaltShingles-scaled.jpg';   // Foto de techo de asphalt shingles
-$material_metal_img   = '/wp-content/uploads/2026/06/MetalRoofing-scaled.jpg';   // Foto de techo de metal
+$material_asphalt_img = ar_jobsite_img(14);   // Foto de techo de asphalt shingles
+$material_metal_img   = ar_jobsite_img(4);   // Foto de techo de metal
 $material_tpo_img     = '/wp-content/uploads/2026/06/TPOSystem-scaled.jpg';   // Foto de sistema TPO
 $material_pvc_img     = '/wp-content/uploads/2026/06/PVCSystem.jpg';   // Foto de sistema PVC
 
@@ -26,12 +26,6 @@ $process_3_img        = '/wp-content/uploads/2026/06/Illustration-of-Man-Install
 $process_4_img        = '/wp-content/uploads/2026/06/Repairing-the-roof-with-dad-scaled.png';   // Paso 04 — Limpieza y walkthrough
 
 // ── GALERÍA ───────────────────────────────────────────────────
-$gallery_1_img        = '/wp-content/uploads/2026/06/Project1ARRC.jpg';   // Proyecto 1
-$gallery_2_img        = '/wp-content/uploads/2026/06/Project2ARRC-scaled.jpg';   // Proyecto 2
-$gallery_3_img        = '/wp-content/uploads/2026/06/Project3ARRC-scaled.jpg';   // Proyecto 3
-$gallery_4_img        = '/wp-content/uploads/2026/06/Project4ARRC-scaled.jpg';   // Proyecto 4
-$gallery_5_img        = '/wp-content/uploads/2026/06/Project5ARRC-scaled.jpg';   // Proyecto 5
-$gallery_6_img        = '/wp-content/uploads/2026/06/Project6ARRC-scaled.jpg';   // Proyecto 6
 
 // ── FINAL CTA ────────────────────────────────────────────────
 $cta_bg_img           = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.png';   // Estampado de fondo del CTA final
@@ -287,7 +281,7 @@ $cta_bg_img           = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.pn
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
   }
   .ri-gallery__card {
-    position: relative; border-radius: 12px; overflow: hidden;
+    display: block; position: relative; border-radius: 12px; overflow: hidden;
     aspect-ratio: 4/3; background: var(--slate); cursor: pointer;
   }
   .ri-gallery__card img {
@@ -307,6 +301,11 @@ $cta_bg_img           = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.pn
     display: flex; align-items: center; gap: 6px;
   }
   .ri-gallery__location svg { color: var(--aqua); }
+  .ri-gallery__info { display: flex; flex-direction: column; gap: 4px; }
+  .ri-gallery__type {
+    font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--mist);
+  }
   .ri-gallery__placeholder {
     width: 100%; height: 100%;
     display: flex; flex-direction: column;
@@ -586,33 +585,36 @@ $cta_bg_img           = '/wp-content/uploads/2026/06/Estampados_1_ARRC-scaled.pn
       </div>
       <div class="ri-gallery__grid">
         <?php
+        // Ubicaciones de ejemplo (genéricas) — reemplazar por las reales cuando se tengan
         $gallery = [
-          ['img' => $gallery_1_img, 'location' => 'Hood River, OR'],
-          ['img' => $gallery_2_img, 'location' => 'The Dalles, OR'],
-          ['img' => $gallery_3_img, 'location' => 'Dufur, OR'],
-          ['img' => $gallery_4_img, 'location' => 'White Salmon, WA'],
-          ['img' => $gallery_5_img, 'location' => 'Mosier, OR'],
-          ['img' => $gallery_6_img, 'location' => 'Goldendale, WA'],
+          ['img' => '11', 'label' => 'Standing Seam Metal Roof', 'location' => 'Hood River, OR'],
+          ['img' => '14', 'label' => 'Architectural Shingle Roof', 'location' => 'White Salmon, WA'],
+          ['img' => '1',  'label' => 'Standing Seam Metal Roof', 'location' => 'Mosier, OR'],
+          ['img' => '13', 'label' => 'Asphalt Shingle Replacement', 'location' => 'The Dalles, OR'],
+          ['img' => '10', 'label' => 'Metal Panel Installation', 'location' => 'Hood River, OR'],
+          ['img' => '4',  'label' => 'Standing Seam Metal Roof', 'location' => 'Dufur, OR'],
+          ['img' => '6',  'label' => 'Decking & Underlayment', 'location' => 'Goldendale, WA'],
+          ['img' => '12', 'label' => 'Metal Panel Installation', 'location' => 'The Dalles, OR'],
+          ['img' => '15', 'label' => 'Shingle Tear-Off & Replacement', 'location' => 'Hood River, OR'],
         ];
-        foreach ($gallery as $g) : ?>
-          <div class="ri-gallery__card">
-            <?php if($g['img']): ?>
-              <img src="<?= esc_url($g['img']) ?>"
-                   alt="Roof installation <?= esc_attr($g['location']) ?> — AR Roofing"
-                   loading="lazy">
-            <?php else: ?>
-              <div class="ri-gallery__placeholder">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                <span><?= esc_html($g['location']) ?></span>
-              </div>
-            <?php endif; ?>
+        foreach ($gallery as $g) :
+          $thumb = ar_jobsite_img($g['img']);
+          $full  = ar_jobsite_img($g['img'], 1536);
+          $label = $g['label']; ?>
+          <a class="ri-gallery__card" href="<?= esc_url($full) ?>" data-lightbox="ri-gallery" data-caption="<?= esc_attr($label) ?> — <?= esc_attr($g['location']) ?>">
+            <img src="<?= esc_url($thumb) ?>"
+                 alt="<?= esc_attr($label) ?> — <?= esc_attr($g['location']) ?> — AR Roofing"
+                 loading="lazy">
             <div class="ri-gallery__card-overlay">
-              <span class="ri-gallery__location">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                <?= esc_html($g['location']) ?>
-              </span>
+              <div class="ri-gallery__info">
+                <span class="ri-gallery__type"><?= esc_html($label) ?></span>
+                <span class="ri-gallery__location">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <?= esc_html($g['location']) ?>
+                </span>
+              </div>
             </div>
-          </div>
+          </a>
         <?php endforeach; ?>
       </div>
     </div>

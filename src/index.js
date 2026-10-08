@@ -7,6 +7,7 @@ import Person from "./scripts/Person"
 import ExampleReactComponent from "./scripts/ExampleReactComponent"
 import CertificateBadges from "./scripts/CertificateBadges"
 import FinanceTab from "./scripts/FinanceTab"
+import initLightbox from "./scripts/Lightbox"
 
 
 
@@ -37,6 +38,7 @@ if (document.querySelector("#hero-contact-form")) {
       <ContactForm
         theme="dark"
         title="Get a Free Inspection"
+        redirectTo="/thank-you/1/"
         showTitle={true}
       />
     )
@@ -49,6 +51,7 @@ if (document.querySelector("#final-contact-form")) {
       <ContactForm
         theme="dark"
         title="Send Us a Message"
+        redirectTo="/thank-you/2/"
         showTitle={true}
       />
     )
@@ -61,6 +64,7 @@ if (document.querySelector("#ct-react-form")) {
       <ContactForm
         theme="light"
         title="Get your free estimate today."
+        redirectTo="/contact/thank-you/3/"
         showTitle={true}
       />
     )
@@ -78,3 +82,6 @@ if (document.querySelector("#finance-tab")) {
   ReactDOM.createRoot(document.querySelector("#finance-tab"))
     .render(<FinanceTab title="Finance" />)
 }
+
+// Lightbox para galerías (cualquier elemento con data-lightbox)
+initLightbox()

@@ -11,7 +11,7 @@ get_header(); ?>
    ════════════════════════════════════════════════════════════ */
 
 // ── HERO ─────────────────────────────────────────────────────
-$hero_bg_img   = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';   // Antonio inspeccionando techo con herramientas
+$hero_bg_img   = ar_jobsite_img(14, 1536);   // Antonio inspeccionando techo con herramientas
 
 // ── SEASONAL ─────────────────────────────────────────────────
 $spring_img    = '/wp-content/uploads/2026/06/Spring-scaled.jpg';   // Imagen primavera — techo post-invierno

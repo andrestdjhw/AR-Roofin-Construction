@@ -81,6 +81,12 @@ const IconShield = () => (
 const GEOTAG_URL =
   "https://www.google.com/maps/search/?api=1&query=403+Portway+Ave+%23304%2C+Hood+River%2C+OR+97031"
 
+// Enlaces provisionales (búsquedas) — reemplazar por el perfil oficial de GMB y de BBB cuando se tengan
+const GMB_URL =
+  "https://www.google.com/maps/search/?api=1&query=AR+Roofing+%26+Construction+403+Portway+Ave+%23304+Hood+River+OR+97031"
+const BBB_URL =
+  "https://www.bbb.org/search?find_country=USA&find_text=AR%20Roofing%20%26%20Construction&find_loc=Hood%20River%2C%20OR"
+
 const SERVICES = [
   { label: "Roof Installation", href: "/services/roof-installation" },
   { label: "Roof Repair", href: "/services/roof-repair" },
@@ -99,8 +105,8 @@ const SOCIALS = [
   { href: "https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr", icon: <IconFacebook />, label: "Facebook" },
   { href: "https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", icon: <IconInstagram />, label: "Instagram" },
   { href: "https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq", icon: <IconTikTok />, label: "TikTok" },
-  { href: "#", icon: <IconGoogle />, label: "Google My Business" },
-  { href: "#", icon: <IconBBB />, label: "Better Business Bureau" },
+  { href: GMB_URL, icon: <IconGoogle />, label: "Google My Business" },
+  { href: BBB_URL, icon: <IconBBB />, label: "Better Business Bureau" },
 ]
 
 /* ── Link list helper ───────────────────────────────────────────── */
@@ -245,6 +251,8 @@ function Footer() {
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   title={label}
                   style={{
