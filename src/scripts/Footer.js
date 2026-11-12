@@ -349,7 +349,7 @@ function Footer() {
           <p style={{ fontSize: "13px", color: "#555", margin: 0 }}>
             © {year} AR Roofing & Construction. All rights reserved.
           </p>
-          <div style={{ display: "flex", gap: "20px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
             {[
               { label: "Privacy Policy", href: "/privacy-policy" },
               { label: "Terms of Service", href: "/terms" },
@@ -364,6 +364,16 @@ function Footer() {
                 {label}
               </a>
             ))}
+            {/* Abre el modal de CookieConsent.js */}
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event("ar:open-cookie-settings"))}
+              style={{ fontSize: "13px", color: "#555", background: "none", border: "none", padding: 0, cursor: "pointer", fontFamily: "inherit", transition: "color 0.2s ease" }}
+              onMouseEnter={e => e.currentTarget.style.color = "#aaa"}
+              onMouseLeave={e => e.currentTarget.style.color = "#555"}
+            >
+              Cookie Settings
+            </button>
           </div>
         </div>
       </div>

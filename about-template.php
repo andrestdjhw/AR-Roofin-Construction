@@ -18,7 +18,7 @@ $story_photo_img  = '/wp-content/uploads/2026/06/About_Home_AR_Roofing_Construct
 
 // ── MEET THE TEAM ────────────────────────────────────────────
 $antonio_photo_img = '/wp-content/uploads/2026/06/CEO_AR_Roofing.png';  // Headshot o candid de Antonio
-$crew_photo_img    = '/wp-content/uploads/2026/06/ARRC_Crew-scaled.jpg';  // Foto grupal del crew en obra
+$crew_photo_img    = ar_jobsite_img(10, 1536);   // Crew instalando standing seam metal (foto de dron, alta calidad)
 
 /* ══════════════════════════════════════════════════════════════ */
 ?>

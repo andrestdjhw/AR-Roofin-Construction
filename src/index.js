@@ -7,6 +7,7 @@ import Person from "./scripts/Person"
 import ExampleReactComponent from "./scripts/ExampleReactComponent"
 import CertificateBadges from "./scripts/CertificateBadges"
 import FinanceTab from "./scripts/FinanceTab"
+import CookieConsent from "./scripts/CookieConsent"
 import initLightbox from "./scripts/Lightbox"
 
 
@@ -81,6 +82,12 @@ if (document.querySelector("#certificate-badges")) {
 if (document.querySelector("#finance-tab")) {
   ReactDOM.createRoot(document.querySelector("#finance-tab"))
     .render(<FinanceTab title="Finance" />)
+}
+
+// Cookie consent (banner + modal de preferencias; el footer lo abre con "Cookie Settings")
+if (document.querySelector("#cookie-consent")) {
+  ReactDOM.createRoot(document.querySelector("#cookie-consent"))
+    .render(<CookieConsent />)
 }
 
 // Lightbox para galerías (cualquier elemento con data-lightbox)

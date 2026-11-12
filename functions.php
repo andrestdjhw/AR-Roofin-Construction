@@ -28,6 +28,36 @@ function boilerplate_load_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'boilerplate_load_assets' );
 
+/* ── UpdraftPlus: no respaldar node_modules ───────────────────────
+   node_modules pesa ~600 MB y se regenera con `npm install`.
+   Se salta cualquier carpeta node_modules dentro de los backups.  */
+add_filter( 'updraftplus_exclude_directory', function ( $exclude, $fullpath ) {
+  return $exclude || basename( $fullpath ) === 'node_modules';
+}, 10, 2 );
+
+/* ── Google Consent Mode v2 (default) ─────────────────────────────
+   Corre antes que cualquier tag de Google: todo "denied" hasta que el
+   visitante decida en el banner (src/scripts/CookieConsent.js). Si ya
+   decidió, se aplica su elección guardada desde la primera carga.
+   Debe quedar ANTES del snippet de gtag/GTM cuando se agregue.     */
+function ar_consent_mode_default() { ?>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var c = null;
+  try { c = JSON.parse(localStorage.getItem('ar_cookie_consent')); } catch (e) {}
+  var a = c && c.analytics ? 'granted' : 'denied';
+  var m = c && c.marketing ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    analytics_storage: a, ad_storage: m, ad_user_data: m, ad_personalization: m,
+    functionality_storage: 'granted', security_storage: 'granted', wait_for_update: 500
+  });
+})();
+</script>
+<?php }
+add_action( 'wp_head', 'ar_consent_mode_default', 1 );
+
 function boilerplate_add_support() {
   add_theme_support( 'title-tag' );
   add_theme_support( 'post-thumbnails' );
