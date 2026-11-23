@@ -1,1 +1,3563 @@
-(()=>{"use strict";var e={n:r=>{var n=r&&r.__esModule?()=>r.default:()=>r;return e.d(n,{a:n}),n},d:(r,n)=>{for(var t in n)e.o(n,t)&&!e.o(r,t)&&Object.defineProperty(r,t,{enumerable:!0,get:n[t]})},o:(e,r)=>Object.prototype.hasOwnProperty.call(e,r)};const r=window.React,n=window.ReactDOM;var t=e.n(n);const a=window.ReactJSXRuntime,o=[{label:"Home",href:"/"},{label:"About",href:"/about"},{label:"Services",href:"#",dropdown:[{label:"Roof Installation",href:"/services/roof-installation"},{label:"Roof Repair",href:"/services/roof-repair"},{label:"Emergency Roofing",href:"/services/emergency-roofing"},{label:"Roof Maintenance",href:"/services/roof-maintenance"}]},{label:"Location",href:"/location"},{label:"Contact",href:"/contact"}],i="https://www.google.com/maps/search/?api=1&query=403+Portway+Ave+%23304%2C+Hood+River%2C+OR+97031",s="https://www.google.com/maps/search/?api=1&query=AR+Roofing+%26+Construction+403+Portway+Ave+%23304+Hood+River+OR+97031",l="https://www.bbb.org/search?find_country=USA&find_text=AR%20Roofing%20%26%20Construction&find_loc=Hood%20River%2C%20OR",c=()=>(0,a.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("rect",{x:"2",y:"4",width:"20",height:"16",rx:"2"}),(0,a.jsx)("path",{d:"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"})]}),d=()=>(0,a.jsx)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"})}),p=()=>(0,a.jsxs)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("path",{d:"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"}),(0,a.jsx)("circle",{cx:"12",cy:"10",r:"3"})]}),x=({open:e})=>(0,a.jsx)("svg",{width:"12",height:"12",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.5",strokeLinecap:"round",strokeLinejoin:"round",style:{transition:"transform 0.25s ease",transform:e?"rotate(180deg)":"rotate(0deg)"},children:(0,a.jsx)("path",{d:"m6 9 6 6 6-6"})}),f=()=>(0,a.jsxs)("svg",{width:"22",height:"22",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("line",{x1:"4",y1:"6",x2:"20",y2:"6"}),(0,a.jsx)("line",{x1:"4",y1:"12",x2:"20",y2:"12"}),(0,a.jsx)("line",{x1:"4",y1:"18",x2:"20",y2:"18"})]}),h=()=>(0,a.jsx)("svg",{width:"22",height:"22",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"M18 6 6 18M6 6l12 12"})}),u=()=>(0,a.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 24 24",fill:"currentColor","aria-hidden":"true",children:(0,a.jsx)("path",{d:"M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"})}),g=()=>(0,a.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 24 24",fill:"currentColor","aria-hidden":"true",children:(0,a.jsx)("path",{d:"M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 00-2.13 1.38A5.88 5.88 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13a5.88 5.88 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 002.13-1.38 5.88 5.88 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 00-1.38-2.13A5.88 5.88 0 0019.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"})}),m=()=>(0,a.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 24 24",fill:"currentColor","aria-hidden":"true",children:(0,a.jsx)("path",{d:"M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.36a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.4z"})}),b=()=>(0,a.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 50 50",fill:"currentColor","aria-hidden":"true",children:(0,a.jsx)("path",{d:"M 9.2832031 4 C 7.488935 4 5.9052102 5.2051958 5.4277344 6.9355469 L 2 19.365234 L 2 19.5 C 2 23.078268 4.9217323 26 8.5 26 C 10.813035 26 12.845511 24.77516 13.998047 22.945312 C 15.146939 24.778014 17.180833 26 19.5 26 C 21.819167 26 23.853061 24.778014 25.001953 22.945312 C 26.154489 24.77516 28.186965 26 30.5 26 C 32.813993 26 34.847721 24.77447 36 22.943359 C 37.152279 24.77447 39.186007 26 41.5 26 C 45.078268 26 48 23.078268 48 19.5 L 48 19.365234 L 44.570312 6.9355469 C 44.092963 5.2056548 42.509782 4 40.714844 4 L 9.2832031 4 z M 9.2832031 6 L 14.851562 6 L 13.197266 18 L 4.4511719 18 L 7.3554688 7.46875 C 7.5959929 6.597101 8.3794712 6 9.2832031 6 z M 26 6 L 33.128906 6 L 34.783203 18 L 26 18 L 26 6 z M 15 18 L 24 18 L 24 19.5 C 24 19.668891 24.012611 19.834272 24.025391 20 L 15 20 L 15 19.5 L 15 18 z M 36.802734 18 L 45.548828 18 L 45.984375 19.580078 C 45.981749 19.724009 45.951091 19.859765 45.935547 20 L 37.050781 20 C 37.032383 19.833631 37 19.67153 37 19.5 L 37 19.431641 L 36.802734 18 z M 4.0644531 20 L 12.949219 20 C 12.699714 22.256206 10.826202 24 8.5 24 C 6.175282 24 4.3143567 22.254621 4.0644531 20 z M 26.099609 20 L 34.900391 20 C 34.642986 22.247621 32.820142 24 30.5 24 C 28.179858 24 26.357014 22.247621 26.099609 20 z M 14 25.974609 C 12.517 27.235609 10.599 28 8.5 28 C 6.845 28 5.306 27.519172 4 26.701172 L 4 43 C 4 44.654 5.346 46 7 46 L 43 46 C 44.654 46 46 44.654 46 43 L 46 26.701172 C 44.694 27.519172 43.155 28 41.5 28 C 39.401 28 37.483 27.235609 36 25.974609 C 34.517 27.235609 32.599 28 30.5 28 C 28.401 28 26.483 27.235609 25 25.974609 C 23.517 27.235609 21.599 28 19.5 28 C 17.401 28 15.483 27.235609 14 25.974609 z M 35.5 29 C 37.546 29 39.372453 29.952547 40.564453 31.435547 L 39.132812 32.867188 C 38.314813 31.740187 36.996 31 35.5 31 C 33.019 31 31 33.019 31 35.5 C 31 37.981 33.019 40 35.5 40 C 37.453 40 39.102609 38.742 39.724609 37 L 36 37 L 36 35 L 41.974609 35 C 41.986609 35.166 42 35.331 42 35.5 C 42 39.084 39.084 42 35.5 42 C 31.916 42 29 39.084 29 35.5 C 29 31.916 31.916 29 35.5 29 z"})}),y=()=>(0,a.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 30 30",fill:"currentColor","aria-hidden":"true",children:(0,a.jsx)("path",{d:"M11.166 20.194c.806.577 2.809 1.923 3.222 2.358.412.435.023 1.099.023 1.099l.618.252c.137-.298.962-1.397 1.511-2.084.496-.62.926-1.706.941-2.503.047-2.572-3.367-3.794-4.949-5.237-.778-.71-.16-1.122-.16-1.122l-.527-.343C9.808 14.926 7.662 17.686 11.166 20.194zM12.922 11.605c1.969 1.74 5.435 3.548 5.679 4.717.318 1.523-.412 2.382-.412 2.382l.394.321c.213-.304.451-.591.67-.891.892-1.222 1.752-2.463 2.629-3.695 2.004-2.818 1.254-5.49-1.765-7.648-1.537-1.098-3.032-2.26-4.584-3.339-.871-.733-.275-2.107-.275-2.107l-.367-.32c0 0-3.286 3.984-3.573 5.588C11.045 8.148 10.953 9.865 12.922 11.605zM23 27L22.341 25 7.659 25 7 27 11.19 27 11.822 29 18.217 29 18.816 27z"})}),k=function(){const[e,n]=(0,r.useState)(!1),[t,k]=(0,r.useState)(!1),[w,j]=(0,r.useState)(!1),[v,_]=(0,r.useState)(!1),[C,N]=(0,r.useState)(!0),[S,L]=(0,r.useState)(0),[R,z]=(0,r.useState)(0),M=(0,r.useRef)(null),E=(0,r.useRef)(null),T=(0,r.useRef)(null),A=(0,r.useRef)(null),B=(0,r.useRef)(0);(0,r.useLayoutEffect)(()=>{const e=()=>{T.current&&L(T.current.offsetHeight),z(A.current?A.current.offsetHeight:0)};return e(),window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[]),(0,r.useEffect)(()=>{const e=()=>{const e=window.scrollY<0?0:window.scrollY,r=A.current?A.current.offsetHeight:0;_(e>10);const n=B.current;Math.abs(e-n)<4||(N(e<=r||!(e>n)),B.current=e)};return e(),window.addEventListener("scroll",e,{passive:!0}),()=>window.removeEventListener("scroll",e)},[]);const W=()=>{M.current&&clearTimeout(M.current),k(!0)},I=()=>{M.current=setTimeout(()=>k(!1),150)};return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)("div",{"aria-hidden":"true",style:{height:S}}),(0,a.jsxs)("header",{ref:T,style:{position:"fixed",top:0,left:0,right:0,zIndex:999,transform:`translateY(${C?0:-R}px)`,transition:"transform 0.3s ease",willChange:"transform"},children:[(0,a.jsx)("div",{ref:A,style:{backgroundColor:"#0f2322"},className:"hidden md:block",children:(0,a.jsxs)("div",{className:"max-w-7xl mx-auto px-6 py-3 flex items-center justify-between",children:[(0,a.jsxs)("div",{className:"flex items-center gap-5 text-xs",style:{color:"#aaa"},children:[(0,a.jsxs)("a",{href:"mailto:info@arroofingus.com",className:"flex items-center gap-1.5 hover:text-white transition-colors duration-200",children:[(0,a.jsx)("span",{style:{color:"#6a9a9a"},children:(0,a.jsx)(c,{})}),"info@arroofingus.com"]}),(0,a.jsxs)("a",{href:"tel:5416450577",className:"flex items-center gap-1.5 hover:text-white transition-colors duration-200",children:[(0,a.jsx)("span",{style:{color:"#6a9a9a"},children:(0,a.jsx)(d,{})}),"(541) 645 0577"]})]}),(0,a.jsxs)("a",{href:i,target:"_blank",rel:"noopener noreferrer","aria-label":"403 Portway Ave #304, Hood River, OR 97031",className:"flex items-center gap-1.5 text-xs hover:text-white transition-colors duration-200",style:{color:"#aaa"},children:[(0,a.jsx)("span",{style:{color:"#6a9a9a"},children:(0,a.jsx)(p,{})}),"403 Portway Ave #304, Hood River, OR 97031"]}),(0,a.jsx)("div",{className:"flex items-center gap-3",children:[{href:"https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",icon:(0,a.jsx)(u,{}),label:"Facebook"},{href:"https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",icon:(0,a.jsx)(g,{}),label:"Instagram"},{href:"https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq",icon:(0,a.jsx)(m,{}),label:"TikTok"},{href:s,icon:(0,a.jsx)(b,{}),label:"Google My Business"},{href:l,icon:(0,a.jsx)(y,{}),label:"Better Business Bureau"}].map(({href:e,icon:r,label:n})=>(0,a.jsx)("a",{href:e,target:"_blank",rel:"noopener noreferrer","aria-label":n,title:n,style:{color:"#aaa"},className:"hover:text-white transition-colors duration-200",children:r},n))})]})}),(0,a.jsxs)("nav",{style:{backgroundColor:v?"rgba(255,255,255,0.98)":"#ffffff",boxShadow:v?"0 2px 20px rgba(0,0,0,0.10)":"0 1px 0 rgba(0,0,0,0.06)",transition:"box-shadow 0.3s ease, background-color 0.3s ease"},children:[(0,a.jsxs)("div",{className:"max-w-7xl mx-auto px-6 grid items-center",style:{height:"68px",gridTemplateColumns:"1fr auto 1fr"},children:[(0,a.jsx)("a",{href:"/",style:{textDecoration:"none",display:"flex",alignItems:"center"},children:(0,a.jsx)("img",{src:"/wp-content/uploads/2026/06/AR_Simplificado-scaled.png",alt:"AR Roofing & Construction",style:{height:"36px",width:"auto",display:"block"}})}),(0,a.jsx)("div",{className:"hidden md:flex items-center justify-center gap-1",children:o.map(e=>e.dropdown?(0,a.jsxs)("div",{ref:E,className:"relative",onMouseEnter:W,onMouseLeave:I,children:[(0,a.jsxs)("button",{style:{display:"flex",alignItems:"center",gap:"5px",padding:"8px 14px",fontSize:"14px",fontWeight:"500",color:t?"#6a9a9a":"#1a2e2d",background:"none",border:"none",cursor:"pointer",borderRadius:"6px",transition:"color 0.2s ease"},children:[e.label,(0,a.jsx)(x,{open:t})]}),(0,a.jsxs)("div",{style:{position:"absolute",top:"calc(100% + 8px)",left:"50%",backgroundColor:"#fff",borderRadius:"10px",boxShadow:"0 8px 32px rgba(0,0,0,0.13)",border:"1px solid rgba(0,0,0,0.07)",minWidth:"210px",padding:"6px",opacity:t?1:0,visibility:t?"visible":"hidden",transform:t?"translateX(-50%) translateY(0)":"translateX(-50%) translateY(-6px)",transition:"opacity 0.2s ease, transform 0.2s ease, visibility 0.2s",zIndex:1e3},children:[(0,a.jsx)("div",{style:{position:"absolute",top:"-6px",left:"50%",transform:"translateX(-50%)",width:"12px",height:"12px",backgroundColor:"#fff",border:"1px solid rgba(0,0,0,0.07)",borderRight:"none",borderBottom:"none",rotate:"45deg"}}),e.dropdown.map(e=>(0,a.jsxs)("a",{href:e.href,style:{display:"flex",alignItems:"center",gap:"10px",padding:"9px 14px",fontSize:"13.5px",color:"#1a2e2d",textDecoration:"none",borderRadius:"7px",transition:"background 0.15s ease, color 0.15s ease"},onMouseEnter:e=>{e.currentTarget.style.backgroundColor="#eaf4f4",e.currentTarget.style.color="#6a9a9a"},onMouseLeave:e=>{e.currentTarget.style.backgroundColor="transparent",e.currentTarget.style.color="#1a2e2d"},children:[(0,a.jsx)("span",{style:{width:"6px",height:"6px",borderRadius:"50%",backgroundColor:"#6a9a9a",flexShrink:0}}),e.label]},e.label))]})]},e.label):(0,a.jsx)("a",{href:e.href,style:{padding:"8px 14px",fontSize:"14px",fontWeight:"500",color:"#1a2e2d",textDecoration:"none",borderRadius:"6px",transition:"color 0.2s ease"},onMouseEnter:e=>e.currentTarget.style.color="#6a9a9a",onMouseLeave:e=>e.currentTarget.style.color="#1a2e2d",children:e.label},e.label))}),(0,a.jsxs)("div",{style:{display:"flex",alignItems:"center",justifyContent:"flex-end",gap:"12px"},children:[(0,a.jsx)("a",{href:"/contact",className:"hidden md:inline-block",style:{padding:"9px 20px",backgroundColor:"#e8253a",color:"#fff",fontSize:"14px",fontWeight:"600",textDecoration:"none",borderRadius:"7px",transition:"background-color 0.2s ease, transform 0.15s ease",letterSpacing:"0.2px"},onMouseEnter:e=>{e.currentTarget.style.backgroundColor="#8b0a1a",e.currentTarget.style.transform="translateY(-1px)"},onMouseLeave:e=>{e.currentTarget.style.backgroundColor="#e8253a",e.currentTarget.style.transform="translateY(0)"},children:"Get a Free Quote"}),(0,a.jsx)("button",{className:"md:hidden",onClick:()=>n(!e),"aria-label":"Toggle menu",style:{background:"none",border:"none",cursor:"pointer",color:"#1a2e2d",padding:"4px"},children:e?(0,a.jsx)(h,{}):(0,a.jsx)(f,{})})]})]}),(0,a.jsx)("div",{style:{maxHeight:e?"600px":"0",overflow:"hidden",transition:"max-height 0.35s ease",backgroundColor:"#fff",borderTop:e?"1px solid #f0f0f0":"none"},children:(0,a.jsxs)("div",{className:"px-6 py-4 flex flex-col gap-1",children:[(0,a.jsxs)("div",{className:"flex flex-col gap-2 pb-4 mb-2",style:{borderBottom:"1px solid #f0f0f0"},children:[(0,a.jsxs)("a",{href:"mailto:info@arroofingus.com",className:"flex items-center gap-2 text-xs",style:{color:"#666",textDecoration:"none"},children:[(0,a.jsx)("span",{style:{color:"#6a9a9a"},children:(0,a.jsx)(c,{})})," info@arroofingus.com"]}),(0,a.jsxs)("a",{href:"tel:5416450577",className:"flex items-center gap-2 text-xs",style:{color:"#666",textDecoration:"none"},children:[(0,a.jsx)("span",{style:{color:"#6a9a9a"},children:(0,a.jsx)(d,{})})," (541) 645 0577"]}),(0,a.jsxs)("a",{href:i,target:"_blank",rel:"noopener noreferrer",className:"flex items-center gap-2 text-xs",style:{color:"#666",textDecoration:"none"},children:[(0,a.jsx)("span",{style:{color:"#6a9a9a"},children:(0,a.jsx)(p,{})})," 403 Portway Ave #304, Hood River, OR 97031"]})]}),o.map(e=>e.dropdown?(0,a.jsxs)("div",{children:[(0,a.jsxs)("button",{onClick:()=>j(!w),style:{width:"100%",display:"flex",justifyContent:"space-between",alignItems:"center",padding:"10px 12px",fontSize:"15px",fontWeight:"500",color:"#1a2e2d",background:"none",border:"none",cursor:"pointer",borderRadius:"7px",textAlign:"left"},children:[e.label,(0,a.jsx)(x,{open:w})]}),(0,a.jsx)("div",{style:{maxHeight:w?"300px":"0",overflow:"hidden",transition:"max-height 0.3s ease"},children:e.dropdown.map(e=>(0,a.jsx)("a",{href:e.href,style:{display:"block",padding:"9px 12px 9px 28px",fontSize:"14px",color:"#555",textDecoration:"none",borderRadius:"7px"},onMouseEnter:e=>e.currentTarget.style.color="#6a9a9a",onMouseLeave:e=>e.currentTarget.style.color="#555",children:e.label},e.label))})]},e.label):(0,a.jsx)("a",{href:e.href,style:{display:"block",padding:"10px 12px",fontSize:"15px",fontWeight:"500",color:"#1a2e2d",textDecoration:"none",borderRadius:"7px"},onMouseEnter:e=>e.currentTarget.style.color="#6a9a9a",onMouseLeave:e=>e.currentTarget.style.color="#1a2e2d",children:e.label},e.label)),(0,a.jsx)("a",{href:"/contact",style:{display:"block",marginTop:"8px",padding:"12px",backgroundColor:"#e8253a",color:"#fff",fontSize:"14px",fontWeight:"600",textDecoration:"none",borderRadius:"7px",textAlign:"center"},children:"Get a Free Quote"}),(0,a.jsx)("div",{className:"flex items-center gap-4 pt-4 mt-2",style:{borderTop:"1px solid #f0f0f0"},children:[{href:"https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",icon:(0,a.jsx)(u,{}),label:"Facebook"},{href:"https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",icon:(0,a.jsx)(g,{}),label:"Instagram"},{href:"https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq",icon:(0,a.jsx)(m,{}),label:"TikTok"},{href:s,icon:(0,a.jsx)(b,{}),label:"Google My Business"},{href:l,icon:(0,a.jsx)(y,{}),label:"Better Business Bureau"}].map(({href:e,icon:r,label:n})=>(0,a.jsx)("a",{href:e,target:"_blank",rel:"noopener noreferrer","aria-label":n,style:{color:"#666"},children:r},n))})]})})]})]})]})},w=()=>(0,a.jsxs)("svg",{width:"15",height:"15",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("rect",{x:"2",y:"4",width:"20",height:"16",rx:"2"}),(0,a.jsx)("path",{d:"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"})]}),j=()=>(0,a.jsx)("svg",{width:"15",height:"15",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"})}),v=()=>(0,a.jsxs)("svg",{width:"15",height:"15",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("path",{d:"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"}),(0,a.jsx)("circle",{cx:"12",cy:"10",r:"3"})]}),_=()=>(0,a.jsxs)("svg",{width:"15",height:"15",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("circle",{cx:"12",cy:"12",r:"10"}),(0,a.jsx)("polyline",{points:"12 6 12 12 16 14"})]}),C=()=>(0,a.jsx)("svg",{width:"12",height:"12",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.5",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"m9 18 6-6-6-6"})}),N=()=>(0,a.jsx)("svg",{width:"17",height:"17",viewBox:"0 0 24 24",fill:"currentColor",children:(0,a.jsx)("path",{d:"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"})}),S=()=>(0,a.jsxs)("svg",{width:"17",height:"17",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("rect",{x:"2",y:"2",width:"20",height:"20",rx:"5",ry:"5"}),(0,a.jsx)("circle",{cx:"12",cy:"12",r:"3"}),(0,a.jsx)("circle",{cx:"17.5",cy:"6.5",r:"1",fill:"currentColor",stroke:"none"})]}),L=()=>(0,a.jsx)("svg",{width:"17",height:"17",viewBox:"0 0 24 24",fill:"currentColor",children:(0,a.jsx)("path",{d:"M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.22 8.22 0 0 0 4.83 1.56V6.79a4.85 4.85 0 0 1-1.06-.1z"})}),R=()=>(0,a.jsxs)("svg",{width:"17",height:"17",viewBox:"0 0 24 24",fill:"currentColor",children:[(0,a.jsx)("path",{d:"M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z",fill:"#4285F4"}),(0,a.jsx)("path",{d:"M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z",fill:"#34A853"}),(0,a.jsx)("path",{d:"M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z",fill:"#FBBC05"}),(0,a.jsx)("path",{d:"M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.47 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z",fill:"#EA4335"})]}),z=()=>(0,a.jsxs)("svg",{width:"17",height:"17",viewBox:"0 0 24 24",fill:"currentColor",children:[(0,a.jsx)("rect",{x:"2",y:"2",width:"20",height:"20",rx:"3",fill:"#003f87"}),(0,a.jsx)("text",{x:"12",y:"16",textAnchor:"middle",fill:"white",fontSize:"10",fontWeight:"bold",fontFamily:"serif",children:"BBB"})]}),M=()=>(0,a.jsxs)("svg",{width:"28",height:"28",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("path",{d:"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"}),(0,a.jsx)("polyline",{points:"9 12 11 14 15 10"})]}),E=[{label:"Roof Installation",href:"/services/roof-installation"},{label:"Roof Repair",href:"/services/roof-repair"},{label:"Emergency Roofing",href:"/services/emergency-roofing"},{label:"Roof Maintenance",href:"/services/roof-maintenance"}],T=[{label:"Home",href:"/"},{label:"About Us",href:"/about"},{label:"Location",href:"/location"},{label:"Contact",href:"/contact"}],A=[{href:"https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",icon:(0,a.jsx)(N,{}),label:"Facebook"},{href:"https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",icon:(0,a.jsx)(S,{}),label:"Instagram"},{href:"https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq",icon:(0,a.jsx)(L,{}),label:"TikTok"},{href:"https://www.google.com/maps/search/?api=1&query=AR+Roofing+%26+Construction+403+Portway+Ave+%23304+Hood+River+OR+97031",icon:(0,a.jsx)(R,{}),label:"Google My Business"},{href:"https://www.bbb.org/search?find_country=USA&find_text=AR%20Roofing%20%26%20Construction&find_loc=Hood%20River%2C%20OR",icon:(0,a.jsx)(z,{}),label:"Better Business Bureau"}];function B({items:e}){return(0,a.jsx)("ul",{style:{listStyle:"none",margin:0,padding:0,display:"flex",flexDirection:"column",gap:"10px"},children:e.map(({label:e,href:r})=>(0,a.jsx)("li",{children:(0,a.jsxs)("a",{href:r,style:{display:"flex",alignItems:"center",gap:"7px",color:"#aaa",textDecoration:"none",fontSize:"14px",transition:"color 0.2s ease"},onMouseEnter:e=>e.currentTarget.style.color="#fff",onMouseLeave:e=>e.currentTarget.style.color="#aaa",children:[(0,a.jsx)("span",{style:{color:"#6a9a9a",flexShrink:0},children:(0,a.jsx)(C,{})}),e]})},e))})}function W({children:e}){return(0,a.jsxs)("div",{style:{marginBottom:"20px"},children:[(0,a.jsx)("h4",{style:{color:"#fff",fontSize:"15px",fontWeight:"700",margin:"0 0 10px 0",letterSpacing:"0.2px"},children:e}),(0,a.jsx)("div",{style:{width:"32px",height:"3px",backgroundColor:"#6a9a9a",borderRadius:"2px"}})]})}const I="/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png",q=function(){const e=(new Date).getFullYear(),r={backgroundColor:"#0a1e1d",color:"#aaa",...I&&{backgroundImage:`url(${I})`,backgroundSize:"cover",backgroundPosition:"center",position:"relative"}};return(0,a.jsxs)("footer",{style:r,children:[I&&(0,a.jsx)("div",{style:{position:"absolute",inset:0,backgroundColor:"rgba(10,28,27,0.93)",zIndex:0,pointerEvents:"none"}}),(0,a.jsxs)("div",{style:{position:"relative",zIndex:1},children:[(0,a.jsx)("div",{style:{backgroundColor:"#e8253a"},children:(0,a.jsxs)("div",{className:"max-w-7xl mx-auto px-6 py-8",style:{display:"flex",flexWrap:"wrap",alignItems:"center",justifyContent:"space-between",gap:"16px"},children:[(0,a.jsxs)("div",{style:{display:"flex",alignItems:"center",gap:"16px"},children:[(0,a.jsx)("div",{style:{color:"rgba(255,255,255,0.85)"},children:(0,a.jsx)(M,{})}),(0,a.jsxs)("div",{children:[(0,a.jsx)("p",{style:{color:"#fff",fontWeight:"700",fontSize:"18px",margin:0,lineHeight:1.3},children:"Ready for a new roof? Get your free estimate today."}),(0,a.jsx)("p",{style:{color:"rgba(255,255,255,0.8)",fontSize:"13px",margin:"4px 0 0 0"},children:"Licensed & insured — Serving Portland, Oregon"})]})]}),(0,a.jsx)("a",{href:"/contact",style:{display:"inline-block",padding:"11px 28px",backgroundColor:"#fff",color:"#e8253a",fontWeight:"700",fontSize:"14px",textDecoration:"none",borderRadius:"7px",whiteSpace:"nowrap",transition:"transform 0.15s ease, box-shadow 0.15s ease"},onMouseEnter:e=>{e.currentTarget.style.transform="translateY(-2px)",e.currentTarget.style.boxShadow="0 6px 20px rgba(0,0,0,0.2)"},onMouseLeave:e=>{e.currentTarget.style.transform="translateY(0)",e.currentTarget.style.boxShadow="none"},children:"Get a Free Quote"})]})}),(0,a.jsx)("div",{className:"max-w-7xl mx-auto px-6 py-14",children:(0,a.jsxs)("div",{style:{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(210px, 1fr))",gap:"48px"},children:[(0,a.jsxs)("div",{children:[(0,a.jsx)("a",{href:"/",style:{textDecoration:"none",display:"inline-flex",marginBottom:"18px"},children:(0,a.jsx)("img",{src:"/wp-content/uploads/2026/06/AR_Logotipo.png",alt:"AR Roofing & Construction",style:{height:"52px",width:"auto",display:"block",filter:"brightness(0) invert(1)"}})}),(0,a.jsx)("p",{style:{fontSize:"13.5px",lineHeight:"1.75",color:"#999",margin:"0 0 20px 0"},children:"Professional roofing solutions for residential and commercial properties across Portland, Oregon. Quality workmanship guaranteed."}),(0,a.jsx)("div",{style:{display:"flex",alignItems:"center",gap:"10px"},children:A.map(({href:e,icon:r,label:n})=>(0,a.jsx)("a",{href:e,target:"_blank",rel:"noopener noreferrer","aria-label":n,title:n,style:{width:"34px",height:"34px",backgroundColor:"#1a3332",borderRadius:"7px",display:"flex",alignItems:"center",justifyContent:"center",color:"#aaa",textDecoration:"none",transition:"background-color 0.2s ease, color 0.2s ease"},onMouseEnter:e=>{e.currentTarget.style.backgroundColor="#6a9a9a",e.currentTarget.style.color="#fff"},onMouseLeave:e=>{e.currentTarget.style.backgroundColor="#222",e.currentTarget.style.color="#aaa"},children:r},n))})]}),(0,a.jsxs)("div",{children:[(0,a.jsx)(W,{children:"Our Services"}),(0,a.jsx)(B,{items:E})]}),(0,a.jsxs)("div",{children:[(0,a.jsx)(W,{children:"Quick Links"}),(0,a.jsx)(B,{items:T})]}),(0,a.jsxs)("div",{children:[(0,a.jsx)(W,{children:"Contact Us"}),(0,a.jsxs)("ul",{style:{listStyle:"none",margin:0,padding:0,display:"flex",flexDirection:"column",gap:"14px"},children:[(0,a.jsx)("li",{children:(0,a.jsxs)("a",{href:"mailto:info@arroofingus.com",style:{display:"flex",alignItems:"flex-start",gap:"10px",color:"#aaa",textDecoration:"none",fontSize:"14px",transition:"color 0.2s ease"},onMouseEnter:e=>e.currentTarget.style.color="#fff",onMouseLeave:e=>e.currentTarget.style.color="#aaa",children:[(0,a.jsx)("span",{style:{color:"#6a9a9a",marginTop:"1px",flexShrink:0},children:(0,a.jsx)(w,{})}),"info@arroofingus.com"]})}),(0,a.jsx)("li",{children:(0,a.jsxs)("a",{href:"tel:5416450577",style:{display:"flex",alignItems:"flex-start",gap:"10px",color:"#aaa",textDecoration:"none",fontSize:"14px",transition:"color 0.2s ease"},onMouseEnter:e=>e.currentTarget.style.color="#fff",onMouseLeave:e=>e.currentTarget.style.color="#aaa",children:[(0,a.jsx)("span",{style:{color:"#6a9a9a",marginTop:"1px",flexShrink:0},children:(0,a.jsx)(j,{})}),"(541) 645 0577"]})}),(0,a.jsx)("li",{children:(0,a.jsxs)("a",{href:"https://www.google.com/maps/search/?api=1&query=403+Portway+Ave+%23304%2C+Hood+River%2C+OR+97031",target:"_blank",rel:"noopener noreferrer",style:{display:"flex",alignItems:"flex-start",gap:"10px",color:"#aaa",textDecoration:"none",fontSize:"14px",transition:"color 0.2s ease"},onMouseEnter:e=>e.currentTarget.style.color="#fff",onMouseLeave:e=>e.currentTarget.style.color="#aaa",children:[(0,a.jsx)("span",{style:{color:"#6a9a9a",marginTop:"1px",flexShrink:0},children:(0,a.jsx)(v,{})}),(0,a.jsx)("span",{children:"403 Portway Ave #304, Hood River, OR 97031"})]})}),(0,a.jsxs)("li",{style:{display:"flex",alignItems:"flex-start",gap:"10px",fontSize:"14px"},children:[(0,a.jsx)("span",{style:{color:"#6a9a9a",marginTop:"1px",flexShrink:0},children:(0,a.jsx)(_,{})}),(0,a.jsx)("span",{children:"Mon – Sat: 7:00 AM – 6:00 PM"})]})]})]})]})}),(0,a.jsx)("div",{style:{borderTop:"1px solid #222"},children:(0,a.jsxs)("div",{className:"max-w-7xl mx-auto px-6 py-5",style:{display:"flex",flexWrap:"wrap",alignItems:"center",justifyContent:"space-between",gap:"10px"},children:[(0,a.jsxs)("p",{style:{fontSize:"13px",color:"#555",margin:0},children:["© ",e," AR Roofing & Construction. All rights reserved."]}),(0,a.jsxs)("div",{style:{display:"flex",flexWrap:"wrap",gap:"20px"},children:[[{label:"Privacy Policy",href:"/privacy-policy"},{label:"Terms of Service",href:"/terms"}].map(({label:e,href:r})=>(0,a.jsx)("a",{href:r,style:{fontSize:"13px",color:"#555",textDecoration:"none",transition:"color 0.2s ease"},onMouseEnter:e=>e.currentTarget.style.color="#aaa",onMouseLeave:e=>e.currentTarget.style.color="#555",children:e},e)),(0,a.jsx)("button",{type:"button",onClick:()=>window.dispatchEvent(new Event("ar:open-cookie-settings")),style:{fontSize:"13px",color:"#555",background:"none",border:"none",padding:0,cursor:"pointer",fontFamily:"inherit",transition:"color 0.2s ease"},onMouseEnter:e=>e.currentTarget.style.color="#aaa",onMouseLeave:e=>e.currentTarget.style.color="#555",children:"Cookie Settings"})]})]})})]})]})},F="6LctUw0tAAAAANOWE5Ouqf46G8z7C3RQ4QBykSIT",P=["Portland","The Dalles","Hood River","Gresham","Troutdale","Cascade Locks","Mosier","Wasco","Dufur"],D=["Stevenson","White Salmon","North Bonneville","Bingen","Goldendale","Dallesport","Lyle","Carson","Wishram"],H=[{value:"shingles",label:"Asphalt Shingles"},{value:"metal",label:"Metal Roofing"},{value:"flat",label:"Flat Roof (TPO / PVC)"},{value:"unsure",label:"Not Sure"}],Y=[{value:"inspection",label:"Free Inspection"},{value:"installation",label:"Roof Installation"},{value:"repair",label:"Roof Repair"},{value:"emergency",label:"Emergency Roofing"},{value:"maintenance",label:"Roof Maintenance"},{value:"commercial",label:"Commercial Roofing"}],O=()=>(0,a.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.5",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"})}),G=()=>(0,a.jsxs)("svg",{width:"16",height:"16",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.5",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("line",{x1:"22",y1:"2",x2:"11",y2:"13"}),(0,a.jsx)("polygon",{points:"22 2 15 22 11 13 2 9 22 2"})]}),$=()=>(0,a.jsx)("svg",{width:"28",height:"28",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.5",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("polyline",{points:"20 6 9 17 4 12"})}),V=()=>(0,a.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.5",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("polygon",{points:"13 2 3 14 12 14 11 22 21 10 12 10 13 2"})}),X=()=>(0,a.jsx)("svg",{width:"18",height:"18",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.5",strokeLinecap:"round",strokeLinejoin:"round",style:{animation:"arSpin 0.8s linear infinite"},children:(0,a.jsx)("path",{d:"M21 12a9 9 0 1 1-6.219-8.56"})});(()=>{if(document.getElementById("ar-contact-form-styles"))return;const e=document.createElement("style");e.id="ar-contact-form-styles",e.textContent="\n    @keyframes arSpin { to { transform: rotate(360deg); } }\n    @keyframes arFadeUp {\n      from { opacity: 0; transform: translateY(14px); }\n      to   { opacity: 1; transform: translateY(0); }\n    }\n    @keyframes arSuccessPop {\n      0%   { transform: scale(0.85); opacity: 0; }\n      70%  { transform: scale(1.05); }\n      100% { transform: scale(1);    opacity: 1; }\n    }\n    @keyframes arPulseRed {\n      0%, 100% { box-shadow: 0 0 0 0 rgba(232,37,58,0.35); }\n      50%      { box-shadow: 0 0 0 8px rgba(232,37,58,0); }\n    }\n\n    .ar-cf-wrap * { box-sizing: border-box; }\n    .ar-cf-wrap {\n      font-family: 'GT America', 'DM Sans', sans-serif;\n      color: #0f2322;\n      animation: arFadeUp .4s ease both;\n      display: flex;\n      flex-direction: column;\n      height: 100%;\n    }\n\n    /* Emergency toggle */\n    .ar-cf-emergency-bar {\n      display: flex; align-items: center; justify-content: space-between;\n      padding: 10px 16px; border-radius: 10px; margin-bottom: 14px;\n      border: 1.5px solid #dde8e8;\n      background: #f5f6f5;\n      cursor: pointer; transition: background .2s, border-color .2s;\n      user-select: none;\n    }\n    .ar-cf-emergency-bar.active {\n      background: rgba(232,37,58,0.15);\n      border-color: rgba(232,37,58,0.6);\n      animation: arPulseRed 2s ease-in-out infinite;\n    }\n    .ar-cf-emergency-bar__left {\n      display: flex; align-items: center; gap: 10px;\n    }\n    .ar-cf-emergency-bar__dot {\n      width: 9px; height: 9px; border-radius: 50%;\n      background: #bbc; transition: background .2s;\n    }\n    .ar-cf-emergency-bar.active .ar-cf-emergency-bar__dot {\n      background: #e8253a;\n      animation: arPulseRed 1.2s ease-in-out infinite;\n    }\n    .ar-cf-emergency-bar__label {\n      font-size: 13px; font-weight: 700; color: #334;\n    }\n    .ar-cf-emergency-bar.active .ar-cf-emergency-bar__label { color: #e8253a; }\n    .ar-cf-emergency-bar__sub {\n      font-size: 12px; color: #aab; font-weight: 400; margin-left: 4px;\n    }\n    /* Dark theme overrides */\n    .ar-cf-wrap--dark .ar-cf-emergency-bar {\n      border-color: rgba(255,255,255,0.12);\n      background: rgba(255,255,255,0.05);\n    }\n    .ar-cf-wrap--dark .ar-cf-emergency-bar__label { color: rgba(255,255,255,0.85); }\n    .ar-cf-wrap--dark .ar-cf-emergency-bar.active .ar-cf-emergency-bar__label { color: #ff8a95; }\n    .ar-cf-wrap--dark .ar-cf-emergency-bar__sub { color: rgba(255,255,255,0.4); }\n    .ar-cf-wrap--dark .ar-cf-emergency-bar__dot { background: rgba(255,255,255,0.3); }\n\n    /* Toggle switch */\n    .ar-cf-toggle {\n      width: 42px; height: 24px; border-radius: 12px;\n      background: #ddd; position: relative;\n      transition: background .2s; flex-shrink: 0;\n    }\n    .ar-cf-toggle.on { background: #e8253a; }\n    .ar-cf-toggle__knob {\n      width: 18px; height: 18px; border-radius: 50%;\n      background: #fff; position: absolute; top: 3px; left: 3px;\n      transition: transform .2s; box-shadow: 0 1px 4px rgba(0,0,0,0.2);\n    }\n    .ar-cf-toggle.on .ar-cf-toggle__knob { transform: translateX(18px); }\n\n    /* Emergency phone bar */\n    .ar-cf-phone-banner {\n      background: #e8253a; border-radius: 10px;\n      padding: 12px 20px; margin-bottom: 14px;\n      display: flex; align-items: center; justify-content: space-between;\n      gap: 12px; flex-wrap: wrap;\n      animation: arFadeUp .3s ease both;\n    }\n    .ar-cf-phone-banner span {\n      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85);\n    }\n    .ar-cf-phone-banner a {\n      display: inline-flex; align-items: center; gap: 8px;\n      padding: 9px 20px; background: #fff; color: #e8253a;\n      font-size: 15px; font-weight: 900; text-decoration: none;\n      border-radius: 7px; transition: transform .15s;\n      white-space: nowrap;\n    }\n    .ar-cf-phone-banner a:hover { transform: translateY(-1px); }\n\n    /* Row */\n    .ar-cf-row {\n      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;\n    }\n\n    /* Field */\n    .ar-cf-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }\n    .ar-cf-field:last-of-type { margin-bottom: 0; }\n    /* Fields inside a row don't add their own bottom margin — the row handles it */\n    .ar-cf-row .ar-cf-field { margin-bottom: 0; }\n    .ar-cf-label {\n      font-size: 11px; font-weight: 700; letter-spacing: 1px;\n      text-transform: uppercase;\n      color: rgba(255,255,255,0.45);\n    }\n    .ar-cf-label.dark { color: #889; }\n    .ar-cf-label .req { color: #e8253a; margin-left: 2px; }\n\n    .ar-cf-input, .ar-cf-select, .ar-cf-textarea {\n      background: rgba(255,255,255,0.07);\n      border: 1.5px solid rgba(255,255,255,0.12);\n      border-radius: 8px; padding: 9px 13px;\n      color: #fff; font-family: inherit; font-size: 14px;\n      outline: none; width: 100%;\n      transition: border-color .2s, background .2s;\n    }\n    .ar-cf-input.light, .ar-cf-select.light, .ar-cf-textarea.light {\n      background: #f5f6f5; border-color: #dde8e8; color: #0f2322;\n    }\n    .ar-cf-input::placeholder, .ar-cf-textarea::placeholder { color: rgba(255,255,255,0.3); }\n    .ar-cf-input.light::placeholder, .ar-cf-textarea.light::placeholder { color: #bbc; }\n    .ar-cf-input:focus, .ar-cf-select:focus, .ar-cf-textarea:focus {\n      border-color: #6a9a9a; background: rgba(255,255,255,0.11);\n    }\n    .ar-cf-input.light:focus, .ar-cf-select.light:focus, .ar-cf-textarea.light:focus {\n      border-color: #6a9a9a; background: #fff;\n    }\n    .ar-cf-input.error, .ar-cf-select.error, .ar-cf-textarea.error {\n      border-color: #e8253a !important;\n    }\n    .ar-cf-select option { background: #0f2322; color: #fff; }\n    .ar-cf-select.light option { background: #fff; color: #0f2322; }\n    .ar-cf-textarea { resize: vertical; min-height: 68px; }\n\n    /* Field error message */\n    .ar-cf-error-msg {\n      font-size: 11px; color: #ff6b7a; margin-top: 2px;\n    }\n\n    /* Submit button */\n    .ar-cf-submit {\n      width: 100%; padding: 13px; margin-top: 6px;\n      background: #e8253a; color: #fff;\n      font-family: inherit; font-size: 15px; font-weight: 700;\n      border: none; border-radius: 8px; cursor: pointer;\n      display: flex; align-items: center; justify-content: center; gap: 10px;\n      transition: background .2s, transform .15s;\n      letter-spacing: 0.3px;\n    }\n    .ar-cf-submit:hover:not(:disabled) { background: #8b0a1a; transform: translateY(-2px); }\n    .ar-cf-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }\n\n    /* Note */\n    .ar-cf-note {\n      text-align: center; margin-top: 10px;\n      font-size: 11.5px; color: rgba(255,255,255,0.35); line-height: 1.5;\n    }\n    .ar-cf-note.light { color: #aab; }\n\n    /* Success */\n    .ar-cf-success {\n      text-align: center; padding: 40px 24px;\n      animation: arSuccessPop .4s ease both;\n    }\n    .ar-cf-success__icon {\n      width: 68px; height: 68px; border-radius: 50%;\n      background: rgba(106,154,154,0.15); border: 2px solid rgba(106,154,154,0.3);\n      display: flex; align-items: center; justify-content: center;\n      margin: 0 auto 20px; color: #6a9a9a;\n    }\n    .ar-cf-success h3 {\n      font-size: 22px; font-weight: 900; color: #fff; margin: 0 0 10px;\n    }\n    .ar-cf-success h3.light { color: #0f2322; }\n    .ar-cf-success p { font-size: 14.5px; color: rgba(255,255,255,0.6); line-height: 1.7; margin: 0; }\n    .ar-cf-success p.light { color: #667; }\n    .ar-cf-success a { color: #c8e8e8; font-weight: 600; text-decoration: none; }\n    .ar-cf-success a.light { color: #e8253a; }\n\n    /* General error banner */\n    .ar-cf-error-banner {\n      background: rgba(232,37,58,0.1); border: 1px solid rgba(232,37,58,0.3);\n      border-radius: 8px; padding: 12px 16px; margin-bottom: 14px;\n      font-size: 13px; color: #ff6b7a; display: flex; align-items: center; gap: 10px;\n    }\n\n    @media (max-width: 520px) {\n      .ar-cf-row { grid-template-columns: 1fr; gap: 0; }\n      .ar-cf-row .ar-cf-field { margin-bottom: 12px; }\n    }\n  ",document.head.appendChild(e)})();const Z=(e,r)=>new Promise((n,t)=>{if(document.getElementById(r))return void n();const a=document.createElement("script");a.src=e,a.id=r,a.async=!0,a.onload=n,a.onerror=t,document.head.appendChild(a)});function U({id:e,label:r,required:n,children:t,error:o,isLight:i}){return(0,a.jsxs)("div",{className:"ar-cf-field",children:[(0,a.jsxs)("label",{className:i?"ar-cf-label light":"ar-cf-label",htmlFor:e,children:[r,n&&(0,a.jsx)("span",{className:"req",children:"*"})]}),t,o&&(0,a.jsx)("span",{className:"ar-cf-error-msg",children:o})]})}const Q=function({theme:e="dark",title:n="Get a Free Inspection",showTitle:t=!0,redirectTo:o=""}){const i="light"===e,s=e=>i?`${e} light`:e,[l,c]=(0,r.useState)({name:"",phone:"",email:"",city:"",service:"",roofType:"",message:""}),[d,p]=(0,r.useState)(!1),[x,f]=(0,r.useState)({}),[h,u]=(0,r.useState)("idle"),[g,m]=(0,r.useState)(""),b=(0,r.useRef)(!1);(0,r.useEffect)(()=>{b.current||(b.current=!0,Z("https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js","emailjs-sdk").then(()=>window.emailjs?.init("QEc-kIrnJ6-IWsn3c")).catch(()=>console.warn("EmailJS failed to load")),Z(`https://www.google.com/recaptcha/api.js?render=${F}`,"recaptcha-v3").catch(()=>console.warn("reCAPTCHA failed to load")))},[]);const y=e=>r=>{c(n=>({...n,[e]:r.target.value})),x[e]&&f(r=>({...r,[e]:""}))};return"success"===h?(0,a.jsx)("div",{className:"ar-cf-wrap"+(i?"":" ar-cf-wrap--dark"),children:(0,a.jsxs)("div",{className:"ar-cf-success",children:[(0,a.jsx)("div",{className:"ar-cf-success__icon",children:(0,a.jsx)($,{})}),(0,a.jsx)("h3",{className:i?"light":"",children:d?"We're on it.":"Message sent!"}),(0,a.jsx)("p",{className:i?"light":"",children:d?(0,a.jsxs)(a.Fragment,{children:["For immediate help, call ",(0,a.jsx)("a",{href:"tel:5416450577",className:i?"light":"",children:"541-645-0577"})," now. We respond to emergencies 24/7."]}):(0,a.jsxs)(a.Fragment,{children:["We'll get back to you within 24 hours. For immediate help call ",(0,a.jsx)("a",{href:"tel:5416450577",className:i?"light":"",children:"541-645-0577"}),"."]})})]})}):(0,a.jsxs)("div",{className:"ar-cf-wrap"+(i?"":" ar-cf-wrap--dark"),children:[t&&(0,a.jsx)("h3",{style:{fontFamily:"inherit",fontSize:"17px",fontWeight:700,margin:"0 0 18px",color:i?"#0f2322":"#fff"},children:n}),(0,a.jsxs)("div",{className:"ar-cf-emergency-bar"+(d?" active":""),onClick:()=>p(e=>!e),role:"checkbox","aria-checked":d,tabIndex:0,onKeyDown:e=>" "===e.key&&p(e=>!e),children:[(0,a.jsxs)("div",{className:"ar-cf-emergency-bar__left",children:[(0,a.jsx)("div",{className:"ar-cf-emergency-bar__dot"}),(0,a.jsx)("span",{className:"ar-cf-emergency-bar__label",children:d?"⚡ Emergency":"This is an emergency"}),!d&&(0,a.jsx)("span",{className:"ar-cf-emergency-bar__sub",children:"— tap to flag"})]}),(0,a.jsx)("div",{className:"ar-cf-toggle"+(d?" on":""),children:(0,a.jsx)("div",{className:"ar-cf-toggle__knob"})})]}),d&&(0,a.jsxs)("div",{className:"ar-cf-phone-banner",children:[(0,a.jsx)("span",{children:"For immediate help, call us now:"}),(0,a.jsxs)("a",{href:"tel:5416450577",children:[(0,a.jsx)(O,{}),"541-645-0577"]})]}),"error"===h&&(0,a.jsxs)("div",{className:"ar-cf-error-banner",children:[(0,a.jsx)(V,{}),g]}),(0,a.jsxs)("div",{className:"ar-cf-row",children:[(0,a.jsx)(U,{id:"cf-name",label:"Full Name",required:!0,error:x.name,isLight:i,children:(0,a.jsx)("input",{id:"cf-name",type:"text",className:s("ar-cf-input")+(x.name?" error":""),placeholder:"Your name",value:l.name,onChange:y("name")})}),(0,a.jsx)(U,{id:"cf-phone",label:"Phone",required:!0,error:x.phone,isLight:i,children:(0,a.jsx)("input",{id:"cf-phone",type:"tel",className:s("ar-cf-input")+(x.phone?" error":""),placeholder:"(541) 000-0000",value:l.phone,onChange:y("phone")})})]}),(0,a.jsxs)("div",{className:"ar-cf-row",children:[(0,a.jsx)(U,{id:"cf-email",label:"Email",isLight:i,children:(0,a.jsx)("input",{id:"cf-email",type:"email",className:s("ar-cf-input"),placeholder:"you@email.com",value:l.email,onChange:y("email")})}),(0,a.jsx)(U,{id:"cf-city",label:"City",required:!0,error:x.city,isLight:i,children:(0,a.jsxs)("select",{id:"cf-city",className:s("ar-cf-select")+(x.city?" error":""),value:l.city,onChange:y("city"),children:[(0,a.jsx)("option",{value:"",children:"Select city..."}),(0,a.jsx)("optgroup",{label:"Oregon",children:P.map(e=>(0,a.jsx)("option",{value:e,children:e},e))}),(0,a.jsx)("optgroup",{label:"Washington",children:D.map(e=>(0,a.jsx)("option",{value:e,children:e},e))}),(0,a.jsx)("option",{value:"other",children:"Other / Not sure"})]})})]}),(0,a.jsxs)("div",{className:"ar-cf-row",children:[(0,a.jsx)(U,{id:"cf-service",label:"Service Needed",isLight:i,children:(0,a.jsxs)("select",{id:"cf-service",className:s("ar-cf-select"),value:l.service,onChange:y("service"),children:[(0,a.jsx)("option",{value:"",children:"Select service..."}),Y.map(e=>(0,a.jsx)("option",{value:e.value,children:e.label},e.value))]})}),(0,a.jsx)(U,{id:"cf-roof-type",label:"Roof Type",isLight:i,children:(0,a.jsxs)("select",{id:"cf-roof-type",className:s("ar-cf-select"),value:l.roofType,onChange:y("roofType"),children:[(0,a.jsx)("option",{value:"",children:"Select roof type..."}),H.map(e=>(0,a.jsx)("option",{value:e.value,children:e.label},e.value))]})})]}),(0,a.jsx)(U,{id:"cf-message",label:"Message",isLight:i,children:(0,a.jsx)("textarea",{id:"cf-message",className:s("ar-cf-textarea"),placeholder:"Tell us about your roof — any issues, age, material, or details that might help...",value:l.message,onChange:y("message")})}),(0,a.jsx)("button",{className:"ar-cf-submit",onClick:async()=>{if((()=>{const e={};return l.name.trim()||(e.name="Name is required"),l.phone.trim()||(e.phone="Phone is required"),l.city||(e.city="Please select a city"),f(e),0===Object.keys(e).length})()){u("sending"),m("");try{const e=await new Promise((e,r)=>{window.grecaptcha?window.grecaptcha.ready(()=>{window.grecaptcha.execute(F,{action:"contact_form"}).then(e).catch(r)}):r(new Error("reCAPTCHA not loaded"))}).catch(()=>"unavailable"),r={from_name:l.name,phone:l.phone,email:l.email||"Not provided",city:l.city,service:l.service||"Not specified",roof_type:l.roofType||"Not specified",is_emergency:d?"YES — EMERGENCY":"No",emergency_banner_bg:d?"#e8253a":"#0f2322",emergency_banner_padding:d?"14px 36px":"0 36px",emergency_banner_text:d?"⚡ EMERGENCY REQUEST — Respond immediately":"",emergency_badge_bg:d?"#fde8ea":"#f0f7f6",emergency_badge_color:d?"#e8253a":"#6a9a9a",message:l.message||"No message provided",recaptcha:e};if(await window.emailjs.send("service_99yzkzs","template_uoyikp2",r),o)return void window.location.assign(o+(d?"?emergency=1":""));u("success")}catch(e){console.error("Form submission error:",e),u("error"),m("Something went wrong. Please call us directly at 541-645-0577.")}}},disabled:"sending"===h,children:"sending"===h?(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(X,{})," Sending..."]}):d?(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(V,{})," Send Emergency Request"]}):(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(G,{})," Send My Request"]})}),(0,a.jsx)("p",{className:s("ar-cf-note"),children:"Protected by Google reCAPTCHA v3. No spam. We respond within 24 hours — emergencies same day."})]})},J=function(){const[e,n]=(0,r.useState)(0);return(0,a.jsxs)("div",{className:"bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 rounded-md",onClick:()=>n(e=>e+1),children:[(0,a.jsx)("h1",{className:"text-xl",children:"Hello from React!"}),(0,a.jsxs)("p",{className:"text-sm",children:["You have clicked on this component"," ",(0,a.jsx)("span",{className:"text-yellow-200 font-bold",children:e})," times."]})]})},K=[{id:"residential",label:"Residential Certified",caption:"Residential Certification",image:"/wp-content/uploads/2026/06/Certified-scaled.png"},{id:"commercial",label:"Commercial Certified",caption:"Commercial Certification",image:"/wp-content/uploads/2026/06/COMMERCIAL_CERTIFIED.png"}],ee=({size:e=16})=>(0,a.jsxs)("svg",{width:e,height:e,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("path",{d:"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"}),(0,a.jsx)("polyline",{points:"9 12 11 14 15 10"})]}),re=()=>(0,a.jsx)("svg",{width:"13",height:"13",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.4",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"})}),ne=()=>(0,a.jsx)("svg",{width:"18",height:"18",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.5",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"M18 6 6 18M6 6l12 12"})}),te=()=>(0,a.jsx)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.6",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("line",{x1:"5",y1:"12",x2:"19",y2:"12"})});(()=>{if(document.getElementById("ar-cert-styles"))return;const e=document.createElement("style");e.id="ar-cert-styles",e.textContent="\n    @keyframes arCertFade { from { opacity:0; } to { opacity:1; } }\n    @keyframes arCertZoom { from { opacity:0; transform:scale(.94); } to { opacity:1; transform:scale(1); } }\n    @keyframes arCertSlideR { from { opacity:0; transform:translateX(16px); } to { opacity:1; transform:translateX(0); } }\n\n    .ar-cert-wrap, .ar-cert-wrap * { box-sizing:border-box; font-family:'GT America','DM Sans',sans-serif; }\n\n    /* ── Floating shell ───────────────────────── */\n    .ar-cert-float { position:fixed; z-index:900; }\n    .ar-cert-float--rm { right:0; top:30%; transform:translateY(-50%); }\n    .ar-cert-float--bl { left:22px; bottom:22px; }\n    .ar-cert-float--br { right:22px; bottom:22px; }\n\n    /* Pestaña / etiqueta (estado plegado en modo borde derecho) */\n    .ar-cert-tab {\n      display:flex; flex-direction:column; align-items:center; gap:11px;\n      padding:18px 11px; border:none; cursor:pointer;\n      background:#e8253a; color:#fff; border-radius:12px 0 0 12px;\n      box-shadow:-6px 8px 28px rgba(15,35,34,0.22);\n      transition:padding-right .18s, background .2s; animation:arCertSlideR .22s ease both;\n    }\n    .ar-cert-tab:hover { background:#8b0a1a; padding-right:16px; }\n    .ar-cert-tab__text { writing-mode:vertical-rl; text-orientation:mixed; font-size:11px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; }\n\n    /* Botón redondo (estado plegado en modo esquina) */\n    .ar-cert-launch {\n      width:54px; height:54px; border-radius:50%; border:none; cursor:pointer;\n      background:#e8253a; color:#fff; display:flex; align-items:center; justify-content:center;\n      box-shadow:0 10px 30px rgba(232,37,58,0.42); transition:transform .18s, background .2s; animation:arCertZoom .2s ease both;\n    }\n    .ar-cert-launch:hover { transform:translateY(-2px); background:#8b0a1a; }\n\n    /* Panel desplegado */\n    .ar-cert-panel {\n      background:#fff; border:1px solid #eef2f2; border-radius:16px; padding:12px;\n      box-shadow:0 14px 44px rgba(15,35,34,0.18);\n      display:flex; flex-direction:column; gap:10px; width:max-content; max-width:280px;\n      animation:arCertSlideR .22s ease both;\n    }\n    .ar-cert-panel--rm { border-radius:16px 0 0 16px; box-shadow:-10px 10px 44px rgba(15,35,34,0.2); }\n    .ar-cert-panel__head { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:2px 4px 0; }\n    .ar-cert-panel__title { font-size:10.5px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#6a9a9a; }\n    .ar-cert-panel__min { width:24px; height:24px; border:none; border-radius:7px; background:#f5f6f5; color:#0f2322; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s; }\n    .ar-cert-panel__min:hover { background:#dde8e8; }\n\n    /* ── Badges ───────────────────────────────── */\n    .ar-cert-list { display:flex; flex-direction:column; gap:8px; }\n    .ar-cert-row  { display:flex; flex-wrap:wrap; gap:14px; }   /* modo inline */\n    .ar-cert-eyebrow { font-size:11px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:#6a9a9a; margin:0 0 14px; display:block; }\n\n    .ar-cert-badge {\n      position:relative; display:inline-flex; align-items:center; gap:10px; width:100%;\n      padding:10px 15px; border-radius:10px; cursor:pointer; font-family:inherit; text-align:left;\n      border:1.5px solid #dde8e8; background:#fff; color:#0f2322;\n      transition:border-color .2s, background .2s, transform .18s, box-shadow .2s;\n    }\n    .ar-cert-badge:hover { border-color:#6a9a9a; background:#f7fbfb; }\n    .ar-cert-badge:focus-visible { outline:2px solid #6a9a9a; outline-offset:2px; }\n    .ar-cert-badge__icon { display:flex; color:#e8253a; flex-shrink:0; }\n    .ar-cert-badge__label { font-size:13px; font-weight:700; letter-spacing:.3px; flex:1; white-space:nowrap; }\n    .ar-cert-badge__expand { display:flex; color:#6a9a9a; opacity:.65; transition:opacity .2s; }\n    .ar-cert-badge:hover .ar-cert-badge__expand { opacity:1; }\n\n    .ar-cert-row .ar-cert-badge { width:auto; border-radius:100px; padding:11px 18px; box-shadow:0 1px 8px rgba(15,35,34,0.05); }\n    .ar-cert-row .ar-cert-badge:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(15,35,34,0.12); }\n\n    /* ── Hover preview ────────────────────────── */\n    .ar-cert-pop {\n      position:absolute; z-index:40; background:#fff; border-radius:12px; padding:10px; width:240px;\n      box-shadow:0 16px 48px rgba(15,35,34,0.25); pointer-events:none; animation:arCertFade .15s ease both;\n    }\n    .ar-cert-pop img { display:block; width:100%; height:auto; max-height:280px; object-fit:contain; border-radius:6px; }\n    .ar-cert-pop__hint { display:block; text-align:center; font-size:10px; font-weight:600; letter-spacing:.5px; text-transform:uppercase; color:#889; margin-top:8px; }\n    .ar-cert-pop::after { content:''; position:absolute; border:7px solid transparent; }\n\n    .ar-cert-pop--left  { right:calc(100% + 14px); top:50%; transform:translateY(-50%); }\n    .ar-cert-pop--left::after  { left:100%; top:50%; transform:translateY(-50%); border-left-color:#fff; }\n    .ar-cert-pop--right { left:calc(100% + 14px); top:50%; transform:translateY(-50%); }\n    .ar-cert-pop--right::after { right:100%; top:50%; transform:translateY(-50%); border-right-color:#fff; }\n    .ar-cert-pop--up    { bottom:calc(100% + 12px); left:50%; transform:translateX(-50%); }\n    .ar-cert-pop--up::after { top:100%; left:50%; transform:translateX(-50%); border-top-color:#fff; }\n\n    /* ── Lightbox ─────────────────────────────── */\n    .ar-cert-modal {\n      position:fixed; inset:0; z-index:9999; background:rgba(10,20,20,0.85); backdrop-filter:blur(6px);\n      display:flex; align-items:center; justify-content:center; padding:24px; animation:arCertFade .2s ease both;\n    }\n    .ar-cert-modal__inner {\n      position:relative; background:#fff; border-radius:16px; overflow:hidden;\n      max-width:760px; width:100%; max-height:90vh; display:flex; flex-direction:column;\n      box-shadow:0 24px 80px rgba(0,0,0,0.45); animation:arCertZoom .22s ease both;\n    }\n    .ar-cert-modal__head { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #eee; flex-shrink:0; }\n    .ar-cert-modal__title { display:flex; align-items:center; gap:9px; font-size:15px; font-weight:700; color:#0f2322; }\n    .ar-cert-modal__title svg { color:#e8253a; }\n    .ar-cert-modal__close { width:34px; height:34px; border:none; border-radius:9px; cursor:pointer; background:#f5f6f5; color:#0f2322; display:flex; align-items:center; justify-content:center; transition:background .15s; }\n    .ar-cert-modal__close:hover { background:#dde8e8; }\n    .ar-cert-modal__body { padding:22px; overflow:auto; background:#f5f6f5; display:flex; justify-content:center; }\n    .ar-cert-modal__body img { max-width:100%; max-height:72vh; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.12); }\n\n    @media (max-width:600px) {\n      .ar-cert-pop { display:none; }                 /* en móvil: solo lightbox por click */\n    }\n  ",document.head.appendChild(e)})();const ae=function({floating:e=!0,position:n="right-middle",title:t="Certifications",certificates:o=K}){const[i,s]=(0,r.useState)(null),[l,c]=(0,r.useState)(null),[d,p]=(0,r.useState)(!1),x=(0,r.useRef)(null);(0,r.useEffect)(()=>{if(!l)return;const e=document.body.style.overflow;document.body.style.overflow="hidden";const r=e=>{"Escape"===e.key&&c(null)};return document.addEventListener("keydown",r),x.current?.focus(),()=>{document.body.style.overflow=e,document.removeEventListener("keydown",r)}},[l]);const f="right-middle"===n,h="bottom-right"===n,u=f?"ar-cert-float--rm":h?"ar-cert-float--br":"ar-cert-float--bl",g=e?f||h?"left":"right":"up",m=e=>(0,a.jsxs)("button",{type:"button",className:"ar-cert-badge",onMouseEnter:()=>s(e.id),onMouseLeave:()=>s(null),onFocus:()=>s(e.id),onBlur:()=>s(null),onClick:()=>c(e),"aria-label":`Ver ${e.label}`,children:[(0,a.jsx)("span",{className:"ar-cert-badge__icon",children:(0,a.jsx)(ee,{})}),(0,a.jsx)("span",{className:"ar-cert-badge__label",children:e.label}),(0,a.jsx)("span",{className:"ar-cert-badge__expand",children:(0,a.jsx)(re,{})}),i===e.id&&(0,a.jsxs)("span",{className:`ar-cert-pop ar-cert-pop--${g}`,children:[(0,a.jsx)("img",{src:e.image,alt:e.caption||e.label}),(0,a.jsx)("span",{className:"ar-cert-pop__hint",children:"Click para ampliar"})]})]},e.id),b=l&&(0,a.jsx)("div",{className:"ar-cert-modal",onClick:e=>{e.target===e.currentTarget&&c(null)},role:"dialog","aria-modal":"true","aria-label":l.caption||l.label,children:(0,a.jsxs)("div",{className:"ar-cert-modal__inner",children:[(0,a.jsxs)("div",{className:"ar-cert-modal__head",children:[(0,a.jsxs)("span",{className:"ar-cert-modal__title",children:[(0,a.jsx)(ee,{}),l.caption||l.label]}),(0,a.jsx)("button",{ref:x,type:"button",className:"ar-cert-modal__close",onClick:()=>c(null),"aria-label":"Cerrar",children:(0,a.jsx)(ne,{})})]}),(0,a.jsx)("div",{className:"ar-cert-modal__body",children:(0,a.jsx)("img",{src:l.image,alt:l.caption||l.label})})]})});if(!e)return(0,a.jsxs)("div",{className:"ar-cert-wrap",children:[t?(0,a.jsx)("span",{className:"ar-cert-eyebrow",children:t}):null,(0,a.jsx)("div",{className:"ar-cert-row",children:o.map(m)}),b]});const y=f?(0,a.jsxs)("button",{type:"button",className:"ar-cert-tab",onClick:()=>p(!0),"aria-label":"Ver certificaciones",children:[(0,a.jsx)(ee,{size:20}),(0,a.jsx)("span",{className:"ar-cert-tab__text",children:t||"Certifications"})]}):(0,a.jsx)("button",{type:"button",className:"ar-cert-launch",onClick:()=>p(!0),"aria-label":"Ver certificaciones",children:(0,a.jsx)(ee,{size:22})});return(0,a.jsxs)("div",{className:"ar-cert-wrap",children:[(0,a.jsx)("div",{className:`ar-cert-float ${u}`,children:d?(0,a.jsxs)("div",{className:"ar-cert-panel"+(f?" ar-cert-panel--rm":""),children:[(0,a.jsxs)("div",{className:"ar-cert-panel__head",children:[t?(0,a.jsx)("span",{className:"ar-cert-panel__title",children:t}):(0,a.jsx)("span",{}),(0,a.jsx)("button",{type:"button",className:"ar-cert-panel__min",onClick:()=>p(!1),"aria-label":"Minimizar",children:(0,a.jsx)(te,{})})]}),(0,a.jsx)("div",{className:"ar-cert-list",children:o.map(m)})]}):y}),b]})},oe=({size:e=16})=>(0,a.jsxs)("svg",{width:e,height:e,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("line",{x1:"12",y1:"1",x2:"12",y2:"23"}),(0,a.jsx)("path",{d:"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"})]}),ie=()=>(0,a.jsx)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.6",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"M5 12h14M13 6l6 6-6 6"})}),se=()=>(0,a.jsx)("svg",{width:"14",height:"14",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.6",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("line",{x1:"5",y1:"12",x2:"19",y2:"12"})});(()=>{if(document.getElementById("ar-fin-styles"))return;const e=document.createElement("style");e.id="ar-fin-styles",e.textContent="\n    @keyframes arFinSlideR { from { opacity:0; transform:translateX(16px); } to { opacity:1; transform:translateX(0); } }\n\n    .ar-fin-wrap, .ar-fin-wrap * { box-sizing:border-box; font-family:'GT America','DM Sans',sans-serif; }\n\n    /* Pegada debajo de la pestaña de Certifications (centrada en top:30%, ~196px de alto).\n       Se ancla por el borde superior para que el panel abierto crezca hacia abajo. */\n    .ar-fin-float { position:fixed; z-index:900; right:0; top:calc(30% + 106px); }\n\n    /* Pestaña (estado plegado) — mismo estilo que Certifications */\n    .ar-fin-tab {\n      display:flex; flex-direction:column; align-items:center; gap:11px;\n      padding:18px 11px; border:none; cursor:pointer;\n      background:#6a9a9a; color:#fff; border-radius:12px 0 0 12px;\n      box-shadow:-6px 8px 28px rgba(15,35,34,0.22);\n      transition:padding-right .18s, background .2s; animation:arFinSlideR .22s ease both;\n    }\n    .ar-fin-tab:hover { background:#0f2322; padding-right:16px; }\n    .ar-fin-tab__text { writing-mode:vertical-rl; text-orientation:mixed; font-size:11px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; }\n\n    /* Panel desplegado */\n    .ar-fin-panel {\n      background:#fff; border:1px solid #eef2f2; border-radius:16px 0 0 16px; padding:12px;\n      box-shadow:-10px 10px 44px rgba(15,35,34,0.2);\n      display:flex; flex-direction:column; gap:10px; width:260px;\n      animation:arFinSlideR .22s ease both;\n    }\n    .ar-fin-panel__head { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:2px 4px 0; }\n    .ar-fin-panel__title { font-size:10.5px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#6a9a9a; }\n    .ar-fin-panel__min { width:24px; height:24px; border:none; border-radius:7px; background:#f5f6f5; color:#0f2322; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s; }\n    .ar-fin-panel__min:hover { background:#dde8e8; }\n\n    /* Tarjeta con foto (link) */\n    .ar-fin-card {\n      position:relative; display:block; border-radius:12px; overflow:hidden; aspect-ratio:4/3;\n      text-decoration:none; color:#fff; background:#0f2322;\n    }\n    .ar-fin-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .35s ease; }\n    .ar-fin-card:hover img { transform:scale(1.05); }\n    .ar-fin-card:focus-visible { outline:2px solid #6a9a9a; outline-offset:2px; }\n    .ar-fin-card__overlay {\n      position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; gap:10px; padding:16px;\n      background:linear-gradient(to top, rgba(10,20,20,0.88) 0%, rgba(10,20,20,0.45) 55%, rgba(10,20,20,0.1) 100%);\n    }\n    .ar-fin-card__title { font-size:19px; font-weight:800; line-height:1.15; margin:0; text-shadow:0 2px 10px rgba(0,0,0,0.35); }\n    .ar-fin-card__cta {\n      align-self:flex-start; display:inline-flex; align-items:center; gap:7px;\n      padding:8px 14px; border-radius:100px; background:#6a9a9a; color:#fff;\n      font-size:12px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; transition:background .2s;\n    }\n    .ar-fin-card:hover .ar-fin-card__cta { background:#0f2322; }\n  ",document.head.appendChild(e)})();const le=function({title:e="Finance",link:n="https://www.hfsfinancial.net/promo/6ab436cc7a506a7cf9542b68/",image:t="/wp-content/uploads/2026/10/4-768x432.jpg"}){const[o,i]=(0,r.useState)(!1);return(0,a.jsx)("div",{className:"ar-fin-wrap",children:(0,a.jsx)("div",{className:"ar-fin-float",children:o?(0,a.jsxs)("div",{className:"ar-fin-panel",children:[(0,a.jsxs)("div",{className:"ar-fin-panel__head",children:[(0,a.jsx)("span",{className:"ar-fin-panel__title",children:e}),(0,a.jsx)("button",{type:"button",className:"ar-fin-panel__min",onClick:()=>i(!1),"aria-label":"Minimizar",children:(0,a.jsx)(se,{})})]}),(0,a.jsxs)("a",{className:"ar-fin-card",href:n,target:"_blank",rel:"noopener noreferrer",children:[(0,a.jsx)("img",{src:t,alt:"Finance your roofing services"}),(0,a.jsxs)("span",{className:"ar-fin-card__overlay",children:[(0,a.jsx)("span",{className:"ar-fin-card__title",children:"Finance your Roofing Services"}),(0,a.jsxs)("span",{className:"ar-fin-card__cta",children:["Click Here ",(0,a.jsx)(ie,{})]})]})]})]}):(0,a.jsxs)("button",{type:"button",className:"ar-fin-tab",onClick:()=>i(!0),"aria-label":"Ver opciones de financiamiento",children:[(0,a.jsx)(oe,{size:20}),(0,a.jsx)("span",{className:"ar-fin-tab__text",children:e})]})})})},ce="ar_cookie_consent",de="/privacy-policy#cookies",pe=[{key:"necessary",title:"Strictly necessary",desc:"Required for the site to work: page delivery, security, and spam protection on our contact forms (reCAPTCHA). These can't be turned off.",locked:!0},{key:"analytics",title:"Analytics",desc:"Help us understand how visitors use the site — which pages are visited and how people find us — so we can improve it. Data is aggregated."},{key:"marketing",title:"Marketing",desc:"Used to measure our ads (for example, Google Ads calls and form conversions) and show you relevant offers on other platforms."}];function xe(){try{const e=localStorage.getItem(ce);if(!e)return null;const r=JSON.parse(e);return 1!==r.v||Date.now()-r.ts>15552e6?null:r}catch(e){return null}}function fe(e){if("function"==typeof window.gtag){const r=e=>e?"granted":"denied";window.gtag("consent","update",{analytics_storage:r(e.analytics),ad_storage:r(e.marketing),ad_user_data:r(e.marketing),ad_personalization:r(e.marketing)})}window.dispatchEvent(new CustomEvent("ar:cookie-consent",{detail:{necessary:!0,analytics:e.analytics,marketing:e.marketing}}))}const he=()=>(0,a.jsxs)("svg",{width:"22",height:"22",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"1.8",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("path",{d:"M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"}),(0,a.jsx)("path",{d:"M8.5 8.5v.01"}),(0,a.jsx)("path",{d:"M16 15.5v.01"}),(0,a.jsx)("path",{d:"M12 12v.01"}),(0,a.jsx)("path",{d:"M11 17v.01"}),(0,a.jsx)("path",{d:"M7 14v.01"})]}),ue=()=>(0,a.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2.4",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("path",{d:"M18 6 6 18M6 6l12 12"})});(()=>{if(document.getElementById("ar-ck-styles"))return;const e=document.createElement("style");e.id="ar-ck-styles",e.textContent="\n    @keyframes arCkUp   { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }\n    @keyframes arCkFade { from { opacity:0; } to { opacity:1; } }\n    @keyframes arCkPop  { from { opacity:0; transform:translateY(12px) scale(.98); } to { opacity:1; transform:none; } }\n\n    .ar-ck, .ar-ck * { box-sizing:border-box; font-family:'GT America','DM Sans',sans-serif; }\n\n    /* Banner (primera visita) */\n    .ar-ck-banner {\n      position:fixed; z-index:1000; left:20px; bottom:20px; width:min(420px, calc(100vw - 32px));\n      background:#0f2322; color:#d6e2e1; border-radius:16px; padding:22px;\n      box-shadow:0 18px 50px rgba(5,15,15,0.35); border:1px solid rgba(106,154,154,0.25);\n      animation:arCkUp .3s ease both;\n    }\n    .ar-ck-banner__head { display:flex; align-items:center; gap:10px; margin-bottom:10px; color:#fff; }\n    .ar-ck-banner__icon { width:38px; height:38px; border-radius:10px; background:#1a3332; color:#6a9a9a; display:flex; align-items:center; justify-content:center; flex-shrink:0; }\n    .ar-ck-banner__title { font-size:16px; font-weight:700; margin:0; }\n    .ar-ck-banner__text { font-size:13px; line-height:1.65; margin:0 0 18px; color:#a9bcbb; }\n    .ar-ck a.ar-ck-link { color:#fff; text-decoration:underline; text-underline-offset:2px; }\n    .ar-ck a.ar-ck-link:hover { color:#6a9a9a; }\n    .ar-ck-banner__actions { display:flex; flex-wrap:wrap; gap:8px; }\n    .ar-ck-banner__actions .ar-ck-btn { flex:1 1 auto; }\n\n    /* Botones */\n    .ar-ck-btn {\n      appearance:none; border:1px solid transparent; cursor:pointer; border-radius:8px;\n      padding:10px 16px; font-size:13px; font-weight:700; line-height:1.2; white-space:nowrap;\n      transition:background .18s, color .18s, border-color .18s, transform .15s;\n    }\n    .ar-ck-btn:hover { transform:translateY(-1px); }\n    .ar-ck-btn:focus-visible { outline:2px solid #6a9a9a; outline-offset:2px; }\n    .ar-ck-btn--primary { background:#e8253a; color:#fff; }\n    .ar-ck-btn--primary:hover { background:#c91d30; }\n    .ar-ck-btn--ghost { background:transparent; color:#fff; border-color:rgba(255,255,255,0.28); }\n    .ar-ck-btn--ghost:hover { border-color:#fff; }\n    .ar-ck-btn--outline { background:#fff; color:#0f2322; border-color:#d5dfde; }\n    .ar-ck-btn--outline:hover { border-color:#0f2322; }\n    .ar-ck-btn--dark { background:#0f2322; color:#fff; }\n    .ar-ck-btn--dark:hover { background:#1e3e3d; }\n\n    /* Modal de preferencias */\n    .ar-ck-overlay {\n      position:fixed; inset:0; z-index:1001; background:rgba(8,20,19,0.6);\n      display:flex; align-items:center; justify-content:center; padding:16px;\n      animation:arCkFade .2s ease both;\n    }\n    .ar-ck-modal {\n      background:#fff; color:#0f2322; border-radius:18px; width:min(560px, 100%);\n      max-height:calc(100vh - 32px); display:flex; flex-direction:column; overflow:hidden;\n      box-shadow:0 24px 70px rgba(5,15,15,0.35); animation:arCkPop .25s ease both;\n    }\n    .ar-ck-modal__head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:24px 24px 0; }\n    .ar-ck-modal__eyebrow { font-size:10.5px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#6a9a9a; margin:0 0 6px; }\n    .ar-ck-modal__title { font-size:22px; font-weight:800; margin:0; line-height:1.2; }\n    .ar-ck-modal__close { width:34px; height:34px; flex-shrink:0; border:none; border-radius:9px; background:#f5f6f5; color:#0f2322; cursor:pointer; display:flex; align-items:center; justify-content:center; }\n    .ar-ck-modal__close:hover { background:#dde8e8; }\n    .ar-ck-modal__body { padding:14px 24px 8px; overflow-y:auto; }\n    .ar-ck-modal__intro { font-size:13.5px; line-height:1.65; color:#4d5f5e; margin:0 0 16px; }\n    .ar-ck-modal__intro a.ar-ck-link { color:#0f2322; }\n    .ar-ck-modal__intro a.ar-ck-link:hover { color:#6a9a9a; }\n\n    .ar-ck-cat { display:flex; gap:16px; align-items:flex-start; justify-content:space-between; padding:16px 0; border-top:1px solid #eef2f2; }\n    .ar-ck-cat__title { font-size:14.5px; font-weight:700; margin:0 0 4px; display:flex; align-items:center; gap:8px; }\n    .ar-ck-cat__badge { font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:#6a9a9a; background:#eef4f4; padding:3px 7px; border-radius:100px; }\n    .ar-ck-cat__desc { font-size:12.5px; line-height:1.6; color:#5d6e6d; margin:0; }\n\n    /* Switch */\n    .ar-ck-switch { position:relative; width:46px; height:26px; flex-shrink:0; margin-top:2px; }\n    .ar-ck-switch input { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:pointer; z-index:1; }\n    .ar-ck-switch input:disabled { cursor:not-allowed; }\n    .ar-ck-switch__track { position:absolute; inset:0; border-radius:100px; background:#cfd9d8; transition:background .2s; }\n    .ar-ck-switch__track::after { content:\"\"; position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.2); transition:transform .2s; }\n    .ar-ck-switch input:checked + .ar-ck-switch__track { background:#6a9a9a; }\n    .ar-ck-switch input:checked + .ar-ck-switch__track::after { transform:translateX(20px); }\n    .ar-ck-switch input:disabled + .ar-ck-switch__track { opacity:.6; }\n    .ar-ck-switch input:focus-visible + .ar-ck-switch__track { outline:2px solid #0f2322; outline-offset:2px; }\n\n    .ar-ck-modal__foot { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; padding:16px 24px 22px; border-top:1px solid #eef2f2; }\n\n    @media (max-width:520px) {\n      .ar-ck-banner { left:16px; bottom:16px; padding:18px; }\n      .ar-ck-modal__foot .ar-ck-btn { flex:1 1 100%; }\n    }\n    @media (prefers-reduced-motion:reduce) {\n      .ar-ck-banner, .ar-ck-overlay, .ar-ck-modal { animation:none; }\n      .ar-ck-btn:hover { transform:none; }\n    }\n  ",document.head.appendChild(e)})();const ge=function(){const[e,n]=(0,r.useState)(()=>xe()),[t,o]=(0,r.useState)(!1),[i,s]=(0,r.useState)(()=>{const e=xe();return{analytics:!!e&&e.analytics,marketing:!!e&&e.marketing}}),l=(0,r.useRef)(null),c=(0,r.useRef)(null);(0,r.useEffect)(()=>{e&&fe(e)},[]),(0,r.useEffect)(()=>{const e=()=>{const e=xe();s({analytics:!!e&&e.analytics,marketing:!!e&&e.marketing}),c.current=document.activeElement,o(!0)};return window.arOpenCookieSettings=e,window.addEventListener("ar:open-cookie-settings",e),()=>{window.removeEventListener("ar:open-cookie-settings",e),window.arOpenCookieSettings===e&&delete window.arOpenCookieSettings}},[]),(0,r.useEffect)(()=>{if(!t)return;const e=l.current,r=document.body.style.overflow;document.body.style.overflow="hidden";const n=()=>e.querySelectorAll("button, input:not([disabled]), a[href]");n()[0]?.focus();const a=e=>{if("Escape"===e.key)return void p();if("Tab"!==e.key)return;const r=n(),t=r[0],a=r[r.length-1];e.shiftKey&&document.activeElement===t?(e.preventDefault(),a.focus()):e.shiftKey||document.activeElement!==a||(e.preventDefault(),t.focus())};return document.addEventListener("keydown",a),()=>{document.removeEventListener("keydown",a),document.body.style.overflow=r}},[t]);const d=e=>{n(function(e){const r={v:1,ts:Date.now(),necessary:!0,analytics:!!e.analytics,marketing:!!e.marketing};try{localStorage.setItem(ce,JSON.stringify(r))}catch(e){}const n=`a${r.analytics?1:0}m${r.marketing?1:0}`;return document.cookie=`${ce}=${n}; max-age=15552000; path=/; SameSite=Lax`,fe(r),r}(e)),p()};function p(){o(!1);const e=c.current;c.current=null,e&&"function"==typeof e.focus&&e.focus()}const x=()=>d({analytics:!0,marketing:!0}),f=()=>d({analytics:!1,marketing:!1});return(0,a.jsxs)("div",{className:"ar-ck",children:[!e&&!t&&(0,a.jsxs)("div",{className:"ar-ck-banner",role:"region","aria-label":"Cookie consent",children:[(0,a.jsxs)("div",{className:"ar-ck-banner__head",children:[(0,a.jsx)("span",{className:"ar-ck-banner__icon",children:(0,a.jsx)(he,{})}),(0,a.jsx)("p",{className:"ar-ck-banner__title",children:"We value your privacy"})]}),(0,a.jsxs)("p",{className:"ar-ck-banner__text",children:["We use cookies to keep this site secure, understand how it's used, and measure our ads. You can accept all, reject the optional ones, or choose what to allow."," ",(0,a.jsx)("a",{className:"ar-ck-link",href:de,children:"Read our Privacy Policy"}),"."]}),(0,a.jsxs)("div",{className:"ar-ck-banner__actions",children:[(0,a.jsx)("button",{type:"button",className:"ar-ck-btn ar-ck-btn--ghost",onClick:()=>{c.current=null,o(!0)},children:"Customize"}),(0,a.jsx)("button",{type:"button",className:"ar-ck-btn ar-ck-btn--ghost",onClick:f,children:"Reject all"}),(0,a.jsx)("button",{type:"button",className:"ar-ck-btn ar-ck-btn--primary",onClick:x,children:"Accept all"})]})]}),t&&(0,a.jsx)("div",{className:"ar-ck-overlay",onMouseDown:e=>{e.target===e.currentTarget&&p()},children:(0,a.jsxs)("div",{ref:l,className:"ar-ck-modal",role:"dialog","aria-modal":"true","aria-labelledby":"ar-ck-title",children:[(0,a.jsxs)("div",{className:"ar-ck-modal__head",children:[(0,a.jsxs)("div",{children:[(0,a.jsx)("p",{className:"ar-ck-modal__eyebrow",children:"Cookie Settings"}),(0,a.jsx)("h2",{id:"ar-ck-title",className:"ar-ck-modal__title",children:"Manage your preferences"})]}),(0,a.jsx)("button",{type:"button",className:"ar-ck-modal__close",onClick:p,"aria-label":"Close cookie settings",children:(0,a.jsx)(ue,{})})]}),(0,a.jsxs)("div",{className:"ar-ck-modal__body",children:[(0,a.jsxs)("p",{className:"ar-ck-modal__intro",children:['Choose which cookies AR Roofing & Construction can use. You can change this anytime from the "Cookie Settings" link in the footer. See our ',(0,a.jsx)("a",{className:"ar-ck-link",href:de,children:"Privacy Policy"})," for details."]}),pe.map(e=>{const r=`ar-ck-${e.key}`,n=!!e.locked||i[e.key];return(0,a.jsxs)("div",{className:"ar-ck-cat",children:[(0,a.jsxs)("div",{children:[(0,a.jsxs)("p",{className:"ar-ck-cat__title",children:[(0,a.jsx)("label",{htmlFor:r,children:e.title}),e.locked&&(0,a.jsx)("span",{className:"ar-ck-cat__badge",children:"Always on"})]}),(0,a.jsx)("p",{className:"ar-ck-cat__desc",children:e.desc})]}),(0,a.jsxs)("span",{className:"ar-ck-switch",children:[(0,a.jsx)("input",{id:r,type:"checkbox",role:"switch",checked:n,disabled:e.locked,onChange:r=>s(n=>({...n,[e.key]:r.target.checked}))}),(0,a.jsx)("span",{className:"ar-ck-switch__track","aria-hidden":"true"})]})]},e.key)})]}),(0,a.jsxs)("div",{className:"ar-ck-modal__foot",children:[(0,a.jsx)("button",{type:"button",className:"ar-ck-btn ar-ck-btn--outline",onClick:f,children:"Reject all"}),(0,a.jsx)("button",{type:"button",className:"ar-ck-btn ar-ck-btn--outline",onClick:()=>d(i),children:"Save preferences"}),(0,a.jsx)("button",{type:"button",className:"ar-ck-btn ar-ck-btn--dark",onClick:x,children:"Accept all"})]})]})})]})},me=e=>`<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${e}</svg>`;new class{constructor(e){this.name=e,this.greet()}greet(){console.log(`Hello, my name is ${this.name}.`)}}("Brad"),document.querySelector("#render-react-example-here")&&t().createRoot(document.querySelector("#render-react-example-here")).render((0,a.jsx)(J,{})),document.querySelector("#navbar")&&t().createRoot(document.querySelector("#navbar")).render((0,a.jsx)(k,{})),document.querySelector("#footer")&&t().createRoot(document.querySelector("#footer")).render((0,a.jsx)(q,{})),document.querySelector("#hero-contact-form")&&t().createRoot(document.querySelector("#hero-contact-form")).render((0,a.jsx)(Q,{theme:"dark",title:"Get a Free Inspection",redirectTo:"/thank-you/1/",showTitle:!0})),document.querySelector("#final-contact-form")&&t().createRoot(document.querySelector("#final-contact-form")).render((0,a.jsx)(Q,{theme:"dark",title:"Send Us a Message",redirectTo:"/thank-you/2/",showTitle:!0})),document.querySelector("#ct-react-form")&&t().createRoot(document.querySelector("#ct-react-form")).render((0,a.jsx)(Q,{theme:"light",title:"Get your free estimate today.",redirectTo:"/contact/thank-you/3/",showTitle:!0})),document.querySelector("#certificate-badges")&&t().createRoot(document.querySelector("#certificate-badges")).render((0,a.jsx)(ae,{title:"Certifications"})),document.querySelector("#finance-tab")&&t().createRoot(document.querySelector("#finance-tab")).render((0,a.jsx)(le,{title:"Finance"})),document.querySelector("#cookie-consent")&&t().createRoot(document.querySelector("#cookie-consent")).render((0,a.jsx)(ge,{})),function(){const e=document.querySelectorAll("[data-lightbox]");if(!e.length)return;(()=>{if(document.getElementById("ar-lb-styles"))return;const e=document.createElement("style");e.id="ar-lb-styles",e.textContent="\n    .ar-lb { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center;\n      background: rgba(10,24,23,0.94); opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s; }\n    .ar-lb.is-open { opacity: 1; visibility: visible; }\n    .ar-lb__figure { margin: 0; max-width: min(1200px, 92vw); text-align: center; }\n    .ar-lb__img { display: block; max-width: 100%; max-height: 80vh; margin: 0 auto; border-radius: 8px;\n      box-shadow: 0 20px 60px rgba(0,0,0,0.5); }\n    .ar-lb__caption { margin-top: 14px; color: rgba(255,255,255,0.8); font-size: 14px; letter-spacing: .3px; }\n    .ar-lb__count { color: rgba(255,255,255,0.45); margin-left: 10px; font-size: 12px; }\n    .ar-lb__btn { position: absolute; display: flex; align-items: center; justify-content: center;\n      width: 48px; height: 48px; border: 0; border-radius: 50%; cursor: pointer;\n      background: rgba(255,255,255,0.1); color: #fff; transition: background .2s; }\n    .ar-lb__btn:hover { background: rgba(255,255,255,0.22); }\n    .ar-lb__close { top: 20px; right: 20px; }\n    .ar-lb__prev { left: 20px; top: 50%; transform: translateY(-50%); }\n    .ar-lb__next { right: 20px; top: 50%; transform: translateY(-50%); }\n    @media (max-width: 640px) {\n      .ar-lb__prev, .ar-lb__next { top: auto; bottom: 20px; transform: none; }\n    }\n  ",document.head.appendChild(e)})();const r=document.createElement("div");r.className="ar-lb",r.setAttribute("role","dialog"),r.setAttribute("aria-modal","true"),r.setAttribute("aria-label","Project photo"),r.innerHTML=`\n    <button type="button" class="ar-lb__btn ar-lb__close" aria-label="Close">${me('<path d="M18 6 6 18M6 6l12 12"/>')}</button>\n    <button type="button" class="ar-lb__btn ar-lb__prev" aria-label="Previous photo">${me('<path d="m15 18-6-6 6-6"/>')}</button>\n    <figure class="ar-lb__figure">\n      <img class="ar-lb__img" alt="">\n      <figcaption class="ar-lb__caption"></figcaption>\n    </figure>\n    <button type="button" class="ar-lb__btn ar-lb__next" aria-label="Next photo">${me('<path d="m9 18 6-6-6-6"/>')}</button>\n  `,document.body.appendChild(r);const n=r.querySelector(".ar-lb__img"),t=r.querySelector(".ar-lb__caption"),a=r.querySelector(".ar-lb__prev"),o=r.querySelector(".ar-lb__next");let i=[],s=0,l=null;const c=e=>{s=(e+i.length)%i.length;const r=i[s],l=r.dataset.caption||"";if(n.src=r.getAttribute("href"),n.alt=l,t.innerHTML="",t.textContent=l,i.length>1){const e=document.createElement("span");e.className="ar-lb__count",e.textContent=`${s+1} / ${i.length}`,t.appendChild(e)}a.style.display=o.style.display=i.length>1?"":"none"},d=()=>{r.classList.remove("is-open"),document.body.style.overflow="",l&&l.focus()};e.forEach(e=>{e.addEventListener("click",n=>{n.preventDefault(),(e=>{i=Array.from(document.querySelectorAll(`[data-lightbox="${e.dataset.lightbox}"]`)),l=document.activeElement,c(i.indexOf(e)),r.classList.add("is-open"),document.body.style.overflow="hidden",r.querySelector(".ar-lb__close").focus()})(e)})}),r.querySelector(".ar-lb__close").addEventListener("click",d),a.addEventListener("click",()=>c(s-1)),o.addEventListener("click",()=>c(s+1)),r.addEventListener("click",e=>{e.target===r&&d()}),document.addEventListener("keydown",e=>{r.classList.contains("is-open")&&("Escape"===e.key&&d(),"ArrowLeft"===e.key&&i.length>1&&c(s-1),"ArrowRight"===e.key&&i.length>1&&c(s+1))})}()})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/scripts/CertificateBadges.js"
+/*!******************************************!*\
+  !*** ./src/scripts/CertificateBadges.js ***!
+  \******************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* ─── DATA ─────────────────────────────────────────────────────
+   Edita labels/imágenes aquí, o pásalos por la prop `certificates`.
+   ──────────────────────────────────────────────────────────── */
+
+const DEFAULT_CERTIFICATES = [{
+  id: "residential",
+  label: "Residential Certified",
+  caption: "Residential Certification",
+  image: "/wp-content/uploads/2026/06/Certified-scaled.png"
+}, {
+  id: "commercial",
+  label: "Commercial Certified",
+  caption: "Commercial Certification",
+  image: "/wp-content/uploads/2026/06/COMMERCIAL_CERTIFIED.png"
+}];
+
+/* ─── ICONS ────────────────────────────────────────────────────── */
+const ShieldIcon = ({
+  size = 16
+}) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: size,
+  height: size,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("polyline", {
+    points: "9 12 11 14 15 10"
+  })]
+});
+const ExpandIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "13",
+  height: "13",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.4",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"
+  })
+});
+const CloseIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "18",
+  height: "18",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M18 6 6 18M6 6l12 12"
+  })
+});
+const MinIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "14",
+  height: "14",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.6",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+    x1: "5",
+    y1: "12",
+    x2: "19",
+    y2: "12"
+  })
+});
+
+/* ─── STYLES (inyectados una sola vez) ────────────────────────── */
+const injectStyles = () => {
+  if (document.getElementById("ar-cert-styles")) return;
+  const style = document.createElement("style");
+  style.id = "ar-cert-styles";
+  style.textContent = `
+    @keyframes arCertFade { from { opacity:0; } to { opacity:1; } }
+    @keyframes arCertZoom { from { opacity:0; transform:scale(.94); } to { opacity:1; transform:scale(1); } }
+    @keyframes arCertSlideR { from { opacity:0; transform:translateX(16px); } to { opacity:1; transform:translateX(0); } }
+
+    .ar-cert-wrap, .ar-cert-wrap * { box-sizing:border-box; font-family:'GT America','DM Sans',sans-serif; }
+
+    /* ── Floating shell ───────────────────────── */
+    .ar-cert-float { position:fixed; z-index:900; }
+    .ar-cert-float--rm { right:0; top:30%; transform:translateY(-50%); }
+    .ar-cert-float--bl { left:22px; bottom:22px; }
+    .ar-cert-float--br { right:22px; bottom:22px; }
+
+    /* Pestaña / etiqueta (estado plegado en modo borde derecho) */
+    .ar-cert-tab {
+      display:flex; flex-direction:column; align-items:center; gap:11px;
+      padding:18px 11px; border:none; cursor:pointer;
+      background:#e8253a; color:#fff; border-radius:12px 0 0 12px;
+      box-shadow:-6px 8px 28px rgba(15,35,34,0.22);
+      transition:padding-right .18s, background .2s; animation:arCertSlideR .22s ease both;
+    }
+    .ar-cert-tab:hover { background:#8b0a1a; padding-right:16px; }
+    .ar-cert-tab__text { writing-mode:vertical-rl; text-orientation:mixed; font-size:11px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; }
+
+    /* Botón redondo (estado plegado en modo esquina) */
+    .ar-cert-launch {
+      width:54px; height:54px; border-radius:50%; border:none; cursor:pointer;
+      background:#e8253a; color:#fff; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 10px 30px rgba(232,37,58,0.42); transition:transform .18s, background .2s; animation:arCertZoom .2s ease both;
+    }
+    .ar-cert-launch:hover { transform:translateY(-2px); background:#8b0a1a; }
+
+    /* Panel desplegado */
+    .ar-cert-panel {
+      background:#fff; border:1px solid #eef2f2; border-radius:16px; padding:12px;
+      box-shadow:0 14px 44px rgba(15,35,34,0.18);
+      display:flex; flex-direction:column; gap:10px; width:max-content; max-width:280px;
+      animation:arCertSlideR .22s ease both;
+    }
+    .ar-cert-panel--rm { border-radius:16px 0 0 16px; box-shadow:-10px 10px 44px rgba(15,35,34,0.2); }
+    .ar-cert-panel__head { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:2px 4px 0; }
+    .ar-cert-panel__title { font-size:10.5px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#6a9a9a; }
+    .ar-cert-panel__min { width:24px; height:24px; border:none; border-radius:7px; background:#f5f6f5; color:#0f2322; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s; }
+    .ar-cert-panel__min:hover { background:#dde8e8; }
+
+    /* ── Badges ───────────────────────────────── */
+    .ar-cert-list { display:flex; flex-direction:column; gap:8px; }
+    .ar-cert-row  { display:flex; flex-wrap:wrap; gap:14px; }   /* modo inline */
+    .ar-cert-eyebrow { font-size:11px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:#6a9a9a; margin:0 0 14px; display:block; }
+
+    .ar-cert-badge {
+      position:relative; display:inline-flex; align-items:center; gap:10px; width:100%;
+      padding:10px 15px; border-radius:10px; cursor:pointer; font-family:inherit; text-align:left;
+      border:1.5px solid #dde8e8; background:#fff; color:#0f2322;
+      transition:border-color .2s, background .2s, transform .18s, box-shadow .2s;
+    }
+    .ar-cert-badge:hover { border-color:#6a9a9a; background:#f7fbfb; }
+    .ar-cert-badge:focus-visible { outline:2px solid #6a9a9a; outline-offset:2px; }
+    .ar-cert-badge__icon { display:flex; color:#e8253a; flex-shrink:0; }
+    .ar-cert-badge__label { font-size:13px; font-weight:700; letter-spacing:.3px; flex:1; white-space:nowrap; }
+    .ar-cert-badge__expand { display:flex; color:#6a9a9a; opacity:.65; transition:opacity .2s; }
+    .ar-cert-badge:hover .ar-cert-badge__expand { opacity:1; }
+
+    .ar-cert-row .ar-cert-badge { width:auto; border-radius:100px; padding:11px 18px; box-shadow:0 1px 8px rgba(15,35,34,0.05); }
+    .ar-cert-row .ar-cert-badge:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(15,35,34,0.12); }
+
+    /* ── Hover preview ────────────────────────── */
+    .ar-cert-pop {
+      position:absolute; z-index:40; background:#fff; border-radius:12px; padding:10px; width:240px;
+      box-shadow:0 16px 48px rgba(15,35,34,0.25); pointer-events:none; animation:arCertFade .15s ease both;
+    }
+    .ar-cert-pop img { display:block; width:100%; height:auto; max-height:280px; object-fit:contain; border-radius:6px; }
+    .ar-cert-pop__hint { display:block; text-align:center; font-size:10px; font-weight:600; letter-spacing:.5px; text-transform:uppercase; color:#889; margin-top:8px; }
+    .ar-cert-pop::after { content:''; position:absolute; border:7px solid transparent; }
+
+    .ar-cert-pop--left  { right:calc(100% + 14px); top:50%; transform:translateY(-50%); }
+    .ar-cert-pop--left::after  { left:100%; top:50%; transform:translateY(-50%); border-left-color:#fff; }
+    .ar-cert-pop--right { left:calc(100% + 14px); top:50%; transform:translateY(-50%); }
+    .ar-cert-pop--right::after { right:100%; top:50%; transform:translateY(-50%); border-right-color:#fff; }
+    .ar-cert-pop--up    { bottom:calc(100% + 12px); left:50%; transform:translateX(-50%); }
+    .ar-cert-pop--up::after { top:100%; left:50%; transform:translateX(-50%); border-top-color:#fff; }
+
+    /* ── Lightbox ─────────────────────────────── */
+    .ar-cert-modal {
+      position:fixed; inset:0; z-index:9999; background:rgba(10,20,20,0.85); backdrop-filter:blur(6px);
+      display:flex; align-items:center; justify-content:center; padding:24px; animation:arCertFade .2s ease both;
+    }
+    .ar-cert-modal__inner {
+      position:relative; background:#fff; border-radius:16px; overflow:hidden;
+      max-width:760px; width:100%; max-height:90vh; display:flex; flex-direction:column;
+      box-shadow:0 24px 80px rgba(0,0,0,0.45); animation:arCertZoom .22s ease both;
+    }
+    .ar-cert-modal__head { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #eee; flex-shrink:0; }
+    .ar-cert-modal__title { display:flex; align-items:center; gap:9px; font-size:15px; font-weight:700; color:#0f2322; }
+    .ar-cert-modal__title svg { color:#e8253a; }
+    .ar-cert-modal__close { width:34px; height:34px; border:none; border-radius:9px; cursor:pointer; background:#f5f6f5; color:#0f2322; display:flex; align-items:center; justify-content:center; transition:background .15s; }
+    .ar-cert-modal__close:hover { background:#dde8e8; }
+    .ar-cert-modal__body { padding:22px; overflow:auto; background:#f5f6f5; display:flex; justify-content:center; }
+    .ar-cert-modal__body img { max-width:100%; max-height:72vh; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.12); }
+
+    @media (max-width:600px) {
+      .ar-cert-pop { display:none; }                 /* en móvil: solo lightbox por click */
+    }
+  `;
+  document.head.appendChild(style);
+};
+injectStyles();
+
+/* ─── COMPONENT ────────────────────────────────────────────────── */
+function CertificateBadges({
+  floating = true,
+  // true = widget fijo; false = fila inline
+  position = "right-middle",
+  // "right-middle" | "bottom-left" | "bottom-right"
+  title = "Certifications",
+  // "" para ocultar
+  certificates = DEFAULT_CERTIFICATES
+}) {
+  const [hovered, setHovered] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  const [active, setActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null); // certificado en el lightbox
+  const [open, setOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false); // panel desplegado
+  const closeBtnRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+
+  // Lightbox: bloquear scroll + cerrar con ESC
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!active) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = e => {
+      if (e.key === "Escape") setActive(null);
+    };
+    document.addEventListener("keydown", onKey);
+    closeBtnRef.current?.focus();
+    return () => {
+      document.body.style.overflow = prev;
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [active]);
+  const isRightMid = position === "right-middle";
+  const isBottomR = position === "bottom-right";
+  const floatClass = isRightMid ? "ar-cert-float--rm" : isBottomR ? "ar-cert-float--br" : "ar-cert-float--bl";
+  const popDir = !floating ? "up" : isRightMid || isBottomR ? "left" : "right";
+  const renderBadge = cert => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+    type: "button",
+    className: "ar-cert-badge",
+    onMouseEnter: () => setHovered(cert.id),
+    onMouseLeave: () => setHovered(null),
+    onFocus: () => setHovered(cert.id),
+    onBlur: () => setHovered(null),
+    onClick: () => setActive(cert),
+    "aria-label": `Ver ${cert.label}`,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cert-badge__icon",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ShieldIcon, {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cert-badge__label",
+      children: cert.label
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cert-badge__expand",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ExpandIcon, {})
+    }), hovered === cert.id && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+      className: `ar-cert-pop ar-cert-pop--${popDir}`,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+        src: cert.image,
+        alt: cert.caption || cert.label
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        className: "ar-cert-pop__hint",
+        children: "Click para ampliar"
+      })]
+    })]
+  }, cert.id);
+  const lightbox = active && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "ar-cert-modal",
+    onClick: e => {
+      if (e.target === e.currentTarget) setActive(null);
+    },
+    role: "dialog",
+    "aria-modal": "true",
+    "aria-label": active.caption || active.label,
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cert-modal__inner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "ar-cert-modal__head",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+          className: "ar-cert-modal__title",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ShieldIcon, {}), active.caption || active.label]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          ref: closeBtnRef,
+          type: "button",
+          className: "ar-cert-modal__close",
+          onClick: () => setActive(null),
+          "aria-label": "Cerrar",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(CloseIcon, {})
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "ar-cert-modal__body",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: active.image,
+          alt: active.caption || active.label
+        })
+      })]
+    })
+  });
+
+  /* ── Modo inline ── */
+  if (!floating) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cert-wrap",
+      children: [title ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        className: "ar-cert-eyebrow",
+        children: title
+      }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "ar-cert-row",
+        children: certificates.map(renderBadge)
+      }), lightbox]
+    });
+  }
+
+  /* ── Plegado: etiqueta (borde derecho) o botón redondo (esquina) ── */
+  const collapsed = isRightMid ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+    type: "button",
+    className: "ar-cert-tab",
+    onClick: () => setOpen(true),
+    "aria-label": "Ver certificaciones",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ShieldIcon, {
+      size: 20
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cert-tab__text",
+      children: title || "Certifications"
+    })]
+  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+    type: "button",
+    className: "ar-cert-launch",
+    onClick: () => setOpen(true),
+    "aria-label": "Ver certificaciones",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ShieldIcon, {
+      size: 22
+    })
+  });
+
+  /* ── Desplegado ── */
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "ar-cert-wrap",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: `ar-cert-float ${floatClass}`,
+      children: open ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: `ar-cert-panel${isRightMid ? " ar-cert-panel--rm" : ""}`,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "ar-cert-panel__head",
+          children: [title ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            className: "ar-cert-panel__title",
+            children: title
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "ar-cert-panel__min",
+            onClick: () => setOpen(false),
+            "aria-label": "Minimizar",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MinIcon, {})
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "ar-cert-list",
+          children: certificates.map(renderBadge)
+        })]
+      }) : collapsed
+    }), lightbox]
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CertificateBadges);
+
+/***/ },
+
+/***/ "./src/scripts/ContactForm.js"
+/*!************************************!*\
+  !*** ./src/scripts/ContactForm.js ***!
+  \************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* ─── CONFIG ──────────────────────────────────────────────────── */
+
+const EMAILJS_PUBLIC_KEY = "QEc-kIrnJ6-IWsn3c";
+const EMAILJS_SERVICE_ID = "service_99yzkzs";
+const EMAILJS_TEMPLATE_ID = "template_uoyikp2";
+const RECAPTCHA_SITE_KEY = "6LctUw0tAAAAANOWE5Ouqf46G8z7C3RQ4QBykSIT";
+
+/* ─── DATA ────────────────────────────────────────────────────── */
+const CITIES_OR = ["Portland", "The Dalles", "Hood River", "Gresham", "Troutdale", "Cascade Locks", "Mosier", "Wasco", "Dufur"];
+const CITIES_WA = ["Stevenson", "White Salmon", "North Bonneville", "Bingen", "Goldendale", "Dallesport", "Lyle", "Carson", "Wishram"];
+const ROOF_TYPES = [{
+  value: "shingles",
+  label: "Asphalt Shingles"
+}, {
+  value: "metal",
+  label: "Metal Roofing"
+}, {
+  value: "flat",
+  label: "Flat Roof (TPO / PVC)"
+}, {
+  value: "unsure",
+  label: "Not Sure"
+}];
+const SERVICES = [{
+  value: "inspection",
+  label: "Free Inspection"
+}, {
+  value: "installation",
+  label: "Roof Installation"
+}, {
+  value: "repair",
+  label: "Roof Repair"
+}, {
+  value: "emergency",
+  label: "Emergency Roofing"
+}, {
+  value: "maintenance",
+  label: "Roof Maintenance"
+}, {
+  value: "commercial",
+  label: "Commercial Roofing"
+}];
+
+/* ─── ICONS ───────────────────────────────────────────────────── */
+const PhoneIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+  })
+});
+const SendIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+    x1: "22",
+    y1: "2",
+    x2: "11",
+    y2: "13"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("polygon", {
+    points: "22 2 15 22 11 13 2 9 22 2"
+  })]
+});
+const CheckIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "28",
+  height: "28",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("polyline", {
+    points: "20 6 9 17 4 12"
+  })
+});
+const AlertIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("polygon", {
+    points: "13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+  })
+});
+const SpinnerIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "18",
+  height: "18",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  style: {
+    animation: "arSpin 0.8s linear infinite"
+  },
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M21 12a9 9 0 1 1-6.219-8.56"
+  })
+});
+
+/* ─── STYLES ──────────────────────────────────────────────────── */
+const injectStyles = () => {
+  if (document.getElementById("ar-contact-form-styles")) return;
+  const style = document.createElement("style");
+  style.id = "ar-contact-form-styles";
+  style.textContent = `
+    @keyframes arSpin { to { transform: rotate(360deg); } }
+    @keyframes arFadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes arSuccessPop {
+      0%   { transform: scale(0.85); opacity: 0; }
+      70%  { transform: scale(1.05); }
+      100% { transform: scale(1);    opacity: 1; }
+    }
+    @keyframes arPulseRed {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(232,37,58,0.35); }
+      50%      { box-shadow: 0 0 0 8px rgba(232,37,58,0); }
+    }
+
+    .ar-cf-wrap * { box-sizing: border-box; }
+    .ar-cf-wrap {
+      font-family: 'GT America', 'DM Sans', sans-serif;
+      color: #0f2322;
+      animation: arFadeUp .4s ease both;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Emergency toggle */
+    .ar-cf-emergency-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 16px; border-radius: 10px; margin-bottom: 14px;
+      border: 1.5px solid #dde8e8;
+      background: #f5f6f5;
+      cursor: pointer; transition: background .2s, border-color .2s;
+      user-select: none;
+    }
+    .ar-cf-emergency-bar.active {
+      background: rgba(232,37,58,0.15);
+      border-color: rgba(232,37,58,0.6);
+      animation: arPulseRed 2s ease-in-out infinite;
+    }
+    .ar-cf-emergency-bar__left {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .ar-cf-emergency-bar__dot {
+      width: 9px; height: 9px; border-radius: 50%;
+      background: #bbc; transition: background .2s;
+    }
+    .ar-cf-emergency-bar.active .ar-cf-emergency-bar__dot {
+      background: #e8253a;
+      animation: arPulseRed 1.2s ease-in-out infinite;
+    }
+    .ar-cf-emergency-bar__label {
+      font-size: 13px; font-weight: 700; color: #334;
+    }
+    .ar-cf-emergency-bar.active .ar-cf-emergency-bar__label { color: #e8253a; }
+    .ar-cf-emergency-bar__sub {
+      font-size: 12px; color: #aab; font-weight: 400; margin-left: 4px;
+    }
+    /* Dark theme overrides */
+    .ar-cf-wrap--dark .ar-cf-emergency-bar {
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+    }
+    .ar-cf-wrap--dark .ar-cf-emergency-bar__label { color: rgba(255,255,255,0.85); }
+    .ar-cf-wrap--dark .ar-cf-emergency-bar.active .ar-cf-emergency-bar__label { color: #ff8a95; }
+    .ar-cf-wrap--dark .ar-cf-emergency-bar__sub { color: rgba(255,255,255,0.4); }
+    .ar-cf-wrap--dark .ar-cf-emergency-bar__dot { background: rgba(255,255,255,0.3); }
+
+    /* Toggle switch */
+    .ar-cf-toggle {
+      width: 42px; height: 24px; border-radius: 12px;
+      background: #ddd; position: relative;
+      transition: background .2s; flex-shrink: 0;
+    }
+    .ar-cf-toggle.on { background: #e8253a; }
+    .ar-cf-toggle__knob {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: #fff; position: absolute; top: 3px; left: 3px;
+      transition: transform .2s; box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+    .ar-cf-toggle.on .ar-cf-toggle__knob { transform: translateX(18px); }
+
+    /* Emergency phone bar */
+    .ar-cf-phone-banner {
+      background: #e8253a; border-radius: 10px;
+      padding: 12px 20px; margin-bottom: 14px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
+      animation: arFadeUp .3s ease both;
+    }
+    .ar-cf-phone-banner span {
+      font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.85);
+    }
+    .ar-cf-phone-banner a {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 20px; background: #fff; color: #e8253a;
+      font-size: 15px; font-weight: 900; text-decoration: none;
+      border-radius: 7px; transition: transform .15s;
+      white-space: nowrap;
+    }
+    .ar-cf-phone-banner a:hover { transform: translateY(-1px); }
+
+    /* Row */
+    .ar-cf-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
+    }
+
+    /* Field */
+    .ar-cf-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
+    .ar-cf-field:last-of-type { margin-bottom: 0; }
+    /* Fields inside a row don't add their own bottom margin — the row handles it */
+    .ar-cf-row .ar-cf-field { margin-bottom: 0; }
+    .ar-cf-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+    .ar-cf-label.dark { color: #889; }
+    .ar-cf-label .req { color: #e8253a; margin-left: 2px; }
+
+    .ar-cf-input, .ar-cf-select, .ar-cf-textarea {
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: 8px; padding: 9px 13px;
+      color: #fff; font-family: inherit; font-size: 14px;
+      outline: none; width: 100%;
+      transition: border-color .2s, background .2s;
+    }
+    .ar-cf-input.light, .ar-cf-select.light, .ar-cf-textarea.light {
+      background: #f5f6f5; border-color: #dde8e8; color: #0f2322;
+    }
+    .ar-cf-input::placeholder, .ar-cf-textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .ar-cf-input.light::placeholder, .ar-cf-textarea.light::placeholder { color: #bbc; }
+    .ar-cf-input:focus, .ar-cf-select:focus, .ar-cf-textarea:focus {
+      border-color: #6a9a9a; background: rgba(255,255,255,0.11);
+    }
+    .ar-cf-input.light:focus, .ar-cf-select.light:focus, .ar-cf-textarea.light:focus {
+      border-color: #6a9a9a; background: #fff;
+    }
+    .ar-cf-input.error, .ar-cf-select.error, .ar-cf-textarea.error {
+      border-color: #e8253a !important;
+    }
+    .ar-cf-select option { background: #0f2322; color: #fff; }
+    .ar-cf-select.light option { background: #fff; color: #0f2322; }
+    .ar-cf-textarea { resize: vertical; min-height: 68px; }
+
+    /* Field error message */
+    .ar-cf-error-msg {
+      font-size: 11px; color: #ff6b7a; margin-top: 2px;
+    }
+
+    /* Submit button */
+    .ar-cf-submit {
+      width: 100%; padding: 13px; margin-top: 6px;
+      background: #e8253a; color: #fff;
+      font-family: inherit; font-size: 15px; font-weight: 700;
+      border: none; border-radius: 8px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      transition: background .2s, transform .15s;
+      letter-spacing: 0.3px;
+    }
+    .ar-cf-submit:hover:not(:disabled) { background: #8b0a1a; transform: translateY(-2px); }
+    .ar-cf-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    /* Note */
+    .ar-cf-note {
+      text-align: center; margin-top: 10px;
+      font-size: 11.5px; color: rgba(255,255,255,0.35); line-height: 1.5;
+    }
+    .ar-cf-note.light { color: #aab; }
+
+    /* Success */
+    .ar-cf-success {
+      text-align: center; padding: 40px 24px;
+      animation: arSuccessPop .4s ease both;
+    }
+    .ar-cf-success__icon {
+      width: 68px; height: 68px; border-radius: 50%;
+      background: rgba(106,154,154,0.15); border: 2px solid rgba(106,154,154,0.3);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; color: #6a9a9a;
+    }
+    .ar-cf-success h3 {
+      font-size: 22px; font-weight: 900; color: #fff; margin: 0 0 10px;
+    }
+    .ar-cf-success h3.light { color: #0f2322; }
+    .ar-cf-success p { font-size: 14.5px; color: rgba(255,255,255,0.6); line-height: 1.7; margin: 0; }
+    .ar-cf-success p.light { color: #667; }
+    .ar-cf-success a { color: #c8e8e8; font-weight: 600; text-decoration: none; }
+    .ar-cf-success a.light { color: #e8253a; }
+
+    /* General error banner */
+    .ar-cf-error-banner {
+      background: rgba(232,37,58,0.1); border: 1px solid rgba(232,37,58,0.3);
+      border-radius: 8px; padding: 12px 16px; margin-bottom: 14px;
+      font-size: 13px; color: #ff6b7a; display: flex; align-items: center; gap: 10px;
+    }
+
+    @media (max-width: 520px) {
+      .ar-cf-row { grid-template-columns: 1fr; gap: 0; }
+      .ar-cf-row .ar-cf-field { margin-bottom: 12px; }
+    }
+  `;
+  document.head.appendChild(style);
+};
+
+// Run once at module load — NOT inside the component
+injectStyles();
+
+/* ─── HELPERS ─────────────────────────────────────────────────── */
+const loadScript = (src, id) => new Promise((resolve, reject) => {
+  if (document.getElementById(id)) {
+    resolve();
+    return;
+  }
+  const s = document.createElement("script");
+  s.src = src;
+  s.id = id;
+  s.async = true;
+  s.onload = resolve;
+  s.onerror = reject;
+  document.head.appendChild(s);
+});
+const getRecaptchaToken = action => new Promise((resolve, reject) => {
+  if (!window.grecaptcha) {
+    reject(new Error("reCAPTCHA not loaded"));
+    return;
+  }
+  window.grecaptcha.ready(() => {
+    window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+      action
+    }).then(resolve).catch(reject);
+  });
+});
+
+/* ─── FIELD COMPONENT (outside ContactForm to prevent re-mount on state change) ── */
+function Field({
+  id,
+  label,
+  required,
+  children,
+  error,
+  isLight
+}) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "ar-cf-field",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
+      className: isLight ? "ar-cf-label light" : "ar-cf-label",
+      htmlFor: id,
+      children: [label, required && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        className: "req",
+        children: "*"
+      })]
+    }), children, error && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+      className: "ar-cf-error-msg",
+      children: error
+    })]
+  });
+}
+
+/* ─── MAIN COMPONENT ──────────────────────────────────────────── */
+function ContactForm({
+  theme = "dark",
+  // "dark" | "light"
+  title = "Get a Free Inspection",
+  showTitle = true,
+  redirectTo = "" // ej. "/thank-you/1/" — si viene vacío se muestra el mensaje en línea
+}) {
+  const isLight = theme === "light";
+  const cls = base => isLight ? `${base} light` : base;
+  const [form, setForm] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    name: "",
+    phone: "",
+    email: "",
+    city: "",
+    service: "",
+    roofType: "",
+    message: ""
+  });
+  const [isEmergency, setIsEmergency] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [errors, setErrors] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({});
+  const [status, setStatus] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("idle"); // idle | sending | success | error
+  const [errorMsg, setErrorMsg] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("");
+  const initialized = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(false);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (initialized.current) return;
+    initialized.current = true;
+
+    // Load EmailJS
+    loadScript("https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js", "emailjs-sdk").then(() => window.emailjs?.init(EMAILJS_PUBLIC_KEY)).catch(() => console.warn("EmailJS failed to load"));
+
+    // Load reCAPTCHA v3
+    loadScript(`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`, "recaptcha-v3").catch(() => console.warn("reCAPTCHA failed to load"));
+  }, []);
+  const set = field => e => {
+    setForm(prev => ({
+      ...prev,
+      [field]: e.target.value
+    }));
+    if (errors[field]) setErrors(prev => ({
+      ...prev,
+      [field]: ""
+    }));
+  };
+  const validate = () => {
+    const e = {};
+    if (!form.name.trim()) e.name = "Name is required";
+    if (!form.phone.trim()) e.phone = "Phone is required";
+    if (!form.city) e.city = "Please select a city";
+    setErrors(e);
+    return Object.keys(e).length === 0;
+  };
+  const handleSubmit = async () => {
+    if (!validate()) return;
+    setStatus("sending");
+    setErrorMsg("");
+    try {
+      // reCAPTCHA v3 token
+      const token = await getRecaptchaToken("contact_form").catch(() => "unavailable");
+      const templateParams = {
+        from_name: form.name,
+        phone: form.phone,
+        email: form.email || "Not provided",
+        city: form.city,
+        service: form.service || "Not specified",
+        roof_type: form.roofType || "Not specified",
+        is_emergency: isEmergency ? "YES — EMERGENCY" : "No",
+        // Banner row: red bg + visible text when emergency, slate bg + empty text when not
+        emergency_banner_bg: isEmergency ? "#e8253a" : "#0f2322",
+        emergency_banner_padding: isEmergency ? "14px 36px" : "0 36px",
+        emergency_banner_text: isEmergency ? "⚡ EMERGENCY REQUEST — Respond immediately" : "",
+        // Badge colors
+        emergency_badge_bg: isEmergency ? "#fde8ea" : "#f0f7f6",
+        emergency_badge_color: isEmergency ? "#e8253a" : "#6a9a9a",
+        message: form.message || "No message provided",
+        recaptcha: token
+      };
+      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams);
+      if (redirectTo) {
+        window.location.assign(redirectTo + (isEmergency ? "?emergency=1" : ""));
+        return;
+      }
+      setStatus("success");
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setStatus("error");
+      setErrorMsg("Something went wrong. Please call us directly at 541-645-0577.");
+    }
+  };
+
+  /* ── SUCCESS STATE ─── */
+  if (status === "success") {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: `ar-cf-wrap${!isLight ? " ar-cf-wrap--dark" : ""}`,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "ar-cf-success",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "ar-cf-success__icon",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(CheckIcon, {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+          className: isLight ? "light" : "",
+          children: isEmergency ? "We're on it." : "Message sent!"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          className: isLight ? "light" : "",
+          children: isEmergency ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+            children: ["For immediate help, call ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: "tel:5416450577",
+              className: isLight ? "light" : "",
+              children: "541-645-0577"
+            }), " now. We respond to emergencies 24/7."]
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+            children: ["We'll get back to you within 24 hours. For immediate help call ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: "tel:5416450577",
+              className: isLight ? "light" : "",
+              children: "541-645-0577"
+            }), "."]
+          })
+        })]
+      })
+    });
+  }
+
+  /* ── FORM ─── */
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: `ar-cf-wrap${!isLight ? " ar-cf-wrap--dark" : ""}`,
+    children: [showTitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+      style: {
+        fontFamily: "inherit",
+        fontSize: "17px",
+        fontWeight: 700,
+        margin: "0 0 18px",
+        color: isLight ? "#0f2322" : "#fff"
+      },
+      children: title
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: `ar-cf-emergency-bar${isEmergency ? " active" : ""}`,
+      onClick: () => setIsEmergency(v => !v),
+      role: "checkbox",
+      "aria-checked": isEmergency,
+      tabIndex: 0,
+      onKeyDown: e => e.key === " " && setIsEmergency(v => !v),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "ar-cf-emergency-bar__left",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "ar-cf-emergency-bar__dot"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          className: "ar-cf-emergency-bar__label",
+          children: isEmergency ? "⚡ Emergency" : "This is an emergency"
+        }), !isEmergency && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          className: "ar-cf-emergency-bar__sub",
+          children: "\u2014 tap to flag"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: `ar-cf-toggle${isEmergency ? " on" : ""}`,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "ar-cf-toggle__knob"
+        })
+      })]
+    }), isEmergency && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cf-phone-banner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        children: "For immediate help, call us now:"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+        href: "tel:5416450577",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(PhoneIcon, {}), "541-645-0577"]
+      })]
+    }), status === "error" && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cf-error-banner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(AlertIcon, {}), errorMsg]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cf-row",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+        id: "cf-name",
+        label: "Full Name",
+        required: true,
+        error: errors.name,
+        isLight: isLight,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+          id: "cf-name",
+          type: "text",
+          className: cls("ar-cf-input") + (errors.name ? " error" : ""),
+          placeholder: "Your name",
+          value: form.name,
+          onChange: set("name")
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+        id: "cf-phone",
+        label: "Phone",
+        required: true,
+        error: errors.phone,
+        isLight: isLight,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+          id: "cf-phone",
+          type: "tel",
+          className: cls("ar-cf-input") + (errors.phone ? " error" : ""),
+          placeholder: "(541) 000-0000",
+          value: form.phone,
+          onChange: set("phone")
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cf-row",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+        id: "cf-email",
+        label: "Email",
+        isLight: isLight,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+          id: "cf-email",
+          type: "email",
+          className: cls("ar-cf-input"),
+          placeholder: "you@email.com",
+          value: form.email,
+          onChange: set("email")
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+        id: "cf-city",
+        label: "City",
+        required: true,
+        error: errors.city,
+        isLight: isLight,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("select", {
+          id: "cf-city",
+          className: cls("ar-cf-select") + (errors.city ? " error" : ""),
+          value: form.city,
+          onChange: set("city"),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+            value: "",
+            children: "Select city..."
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("optgroup", {
+            label: "Oregon",
+            children: CITIES_OR.map(c => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+              value: c,
+              children: c
+            }, c))
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("optgroup", {
+            label: "Washington",
+            children: CITIES_WA.map(c => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+              value: c,
+              children: c
+            }, c))
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+            value: "other",
+            children: "Other / Not sure"
+          })]
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-cf-row",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+        id: "cf-service",
+        label: "Service Needed",
+        isLight: isLight,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("select", {
+          id: "cf-service",
+          className: cls("ar-cf-select"),
+          value: form.service,
+          onChange: set("service"),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+            value: "",
+            children: "Select service..."
+          }), SERVICES.map(s => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+            value: s.value,
+            children: s.label
+          }, s.value))]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+        id: "cf-roof-type",
+        label: "Roof Type",
+        isLight: isLight,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("select", {
+          id: "cf-roof-type",
+          className: cls("ar-cf-select"),
+          value: form.roofType,
+          onChange: set("roofType"),
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+            value: "",
+            children: "Select roof type..."
+          }), ROOF_TYPES.map(r => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("option", {
+            value: r.value,
+            children: r.label
+          }, r.value))]
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Field, {
+      id: "cf-message",
+      label: "Message",
+      isLight: isLight,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("textarea", {
+        id: "cf-message",
+        className: cls("ar-cf-textarea"),
+        placeholder: "Tell us about your roof \u2014 any issues, age, material, or details that might help...",
+        value: form.message,
+        onChange: set("message")
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+      className: "ar-cf-submit",
+      onClick: handleSubmit,
+      disabled: status === "sending",
+      children: status === "sending" ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(SpinnerIcon, {}), " Sending..."]
+      }) : isEmergency ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(AlertIcon, {}), " Send Emergency Request"]
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(SendIcon, {}), " Send My Request"]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      className: cls("ar-cf-note"),
+      children: "Protected by Google reCAPTCHA v3. No spam. We respond within 24 hours \u2014 emergencies same day."
+    })]
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ContactForm);
+
+/***/ },
+
+/***/ "./src/scripts/CookieConsent.js"
+/*!**************************************!*\
+  !*** ./src/scripts/CookieConsent.js ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* ─── CONFIG ───────────────────────────────────────────────────
+   STORAGE_KEY : dónde se guarda la decisión (localStorage + cookie).
+   VERSION     : súbelo si cambian las categorías → se vuelve a preguntar.
+   El footer abre el panel con window.arOpenCookieSettings() o
+   disparando el evento "ar:open-cookie-settings".
+   Cada vez que el usuario decide se dispara "ar:cookie-consent"
+   con { detail: { necessary, analytics, marketing } } y, si existe
+   gtag, se actualiza Google Consent Mode.
+   ──────────────────────────────────────────────────────────── */
+
+const STORAGE_KEY = "ar_cookie_consent";
+const VERSION = 1;
+const MAX_AGE_DAYS = 180;
+const PRIVACY_URL = "/privacy-policy#cookies";
+const CATEGORIES = [{
+  key: "necessary",
+  title: "Strictly necessary",
+  desc: "Required for the site to work: page delivery, security, and spam protection on our contact forms (reCAPTCHA). These can't be turned off.",
+  locked: true
+}, {
+  key: "analytics",
+  title: "Analytics",
+  desc: "Help us understand how visitors use the site — which pages are visited and how people find us — so we can improve it. Data is aggregated."
+}, {
+  key: "marketing",
+  title: "Marketing",
+  desc: "Used to measure our ads (for example, Google Ads calls and form conversions) and show you relevant offers on other platforms."
+}];
+
+/* ─── STORAGE ──────────────────────────────────────────────────── */
+function readConsent() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    if (data.v !== VERSION) return null;
+    if (Date.now() - data.ts > MAX_AGE_DAYS * 864e5) return null;
+    return data;
+  } catch (e) {
+    return null;
+  }
+}
+function saveConsent(prefs) {
+  const data = {
+    v: VERSION,
+    ts: Date.now(),
+    necessary: true,
+    analytics: !!prefs.analytics,
+    marketing: !!prefs.marketing
+  };
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  } catch (e) {}
+  // Cookie legible desde PHP por si algún día se condicionan scripts en el servidor
+  const value = `a${data.analytics ? 1 : 0}m${data.marketing ? 1 : 0}`;
+  document.cookie = `${STORAGE_KEY}=${value}; max-age=${MAX_AGE_DAYS * 86400}; path=/; SameSite=Lax`;
+  applyConsent(data);
+  return data;
+}
+function applyConsent(data) {
+  if (typeof window.gtag === "function") {
+    const g = v => v ? "granted" : "denied";
+    window.gtag("consent", "update", {
+      analytics_storage: g(data.analytics),
+      ad_storage: g(data.marketing),
+      ad_user_data: g(data.marketing),
+      ad_personalization: g(data.marketing)
+    });
+  }
+  window.dispatchEvent(new CustomEvent("ar:cookie-consent", {
+    detail: {
+      necessary: true,
+      analytics: data.analytics,
+      marketing: data.marketing
+    }
+  }));
+}
+
+/* ─── ICONS ────────────────────────────────────────────────────── */
+const CookieIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "22",
+  height: "22",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "1.8",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M8.5 8.5v.01"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M16 15.5v.01"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 12v.01"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M11 17v.01"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M7 14v.01"
+  })]
+});
+const CloseIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.4",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M18 6 6 18M6 6l12 12"
+  })
+});
+
+/* ─── STYLES (inyectados una sola vez) ────────────────────────── */
+const injectStyles = () => {
+  if (document.getElementById("ar-ck-styles")) return;
+  const style = document.createElement("style");
+  style.id = "ar-ck-styles";
+  style.textContent = `
+    @keyframes arCkUp   { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes arCkFade { from { opacity:0; } to { opacity:1; } }
+    @keyframes arCkPop  { from { opacity:0; transform:translateY(12px) scale(.98); } to { opacity:1; transform:none; } }
+
+    .ar-ck, .ar-ck * { box-sizing:border-box; font-family:'GT America','DM Sans',sans-serif; }
+
+    /* Banner (primera visita) */
+    .ar-ck-banner {
+      position:fixed; z-index:1000; left:20px; bottom:20px; width:min(420px, calc(100vw - 32px));
+      background:#0f2322; color:#d6e2e1; border-radius:16px; padding:22px;
+      box-shadow:0 18px 50px rgba(5,15,15,0.35); border:1px solid rgba(106,154,154,0.25);
+      animation:arCkUp .3s ease both;
+    }
+    .ar-ck-banner__head { display:flex; align-items:center; gap:10px; margin-bottom:10px; color:#fff; }
+    .ar-ck-banner__icon { width:38px; height:38px; border-radius:10px; background:#1a3332; color:#6a9a9a; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .ar-ck-banner__title { font-size:16px; font-weight:700; margin:0; }
+    .ar-ck-banner__text { font-size:13px; line-height:1.65; margin:0 0 18px; color:#a9bcbb; }
+    .ar-ck a.ar-ck-link { color:#fff; text-decoration:underline; text-underline-offset:2px; }
+    .ar-ck a.ar-ck-link:hover { color:#6a9a9a; }
+    .ar-ck-banner__actions { display:flex; flex-wrap:wrap; gap:8px; }
+    .ar-ck-banner__actions .ar-ck-btn { flex:1 1 auto; }
+
+    /* Botones */
+    .ar-ck-btn {
+      appearance:none; border:1px solid transparent; cursor:pointer; border-radius:8px;
+      padding:10px 16px; font-size:13px; font-weight:700; line-height:1.2; white-space:nowrap;
+      transition:background .18s, color .18s, border-color .18s, transform .15s;
+    }
+    .ar-ck-btn:hover { transform:translateY(-1px); }
+    .ar-ck-btn:focus-visible { outline:2px solid #6a9a9a; outline-offset:2px; }
+    .ar-ck-btn--primary { background:#e8253a; color:#fff; }
+    .ar-ck-btn--primary:hover { background:#c91d30; }
+    .ar-ck-btn--ghost { background:transparent; color:#fff; border-color:rgba(255,255,255,0.28); }
+    .ar-ck-btn--ghost:hover { border-color:#fff; }
+    .ar-ck-btn--outline { background:#fff; color:#0f2322; border-color:#d5dfde; }
+    .ar-ck-btn--outline:hover { border-color:#0f2322; }
+    .ar-ck-btn--dark { background:#0f2322; color:#fff; }
+    .ar-ck-btn--dark:hover { background:#1e3e3d; }
+
+    /* Modal de preferencias */
+    .ar-ck-overlay {
+      position:fixed; inset:0; z-index:1001; background:rgba(8,20,19,0.6);
+      display:flex; align-items:center; justify-content:center; padding:16px;
+      animation:arCkFade .2s ease both;
+    }
+    .ar-ck-modal {
+      background:#fff; color:#0f2322; border-radius:18px; width:min(560px, 100%);
+      max-height:calc(100vh - 32px); display:flex; flex-direction:column; overflow:hidden;
+      box-shadow:0 24px 70px rgba(5,15,15,0.35); animation:arCkPop .25s ease both;
+    }
+    .ar-ck-modal__head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:24px 24px 0; }
+    .ar-ck-modal__eyebrow { font-size:10.5px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#6a9a9a; margin:0 0 6px; }
+    .ar-ck-modal__title { font-size:22px; font-weight:800; margin:0; line-height:1.2; }
+    .ar-ck-modal__close { width:34px; height:34px; flex-shrink:0; border:none; border-radius:9px; background:#f5f6f5; color:#0f2322; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+    .ar-ck-modal__close:hover { background:#dde8e8; }
+    .ar-ck-modal__body { padding:14px 24px 8px; overflow-y:auto; }
+    .ar-ck-modal__intro { font-size:13.5px; line-height:1.65; color:#4d5f5e; margin:0 0 16px; }
+    .ar-ck-modal__intro a.ar-ck-link { color:#0f2322; }
+    .ar-ck-modal__intro a.ar-ck-link:hover { color:#6a9a9a; }
+
+    .ar-ck-cat { display:flex; gap:16px; align-items:flex-start; justify-content:space-between; padding:16px 0; border-top:1px solid #eef2f2; }
+    .ar-ck-cat__title { font-size:14.5px; font-weight:700; margin:0 0 4px; display:flex; align-items:center; gap:8px; }
+    .ar-ck-cat__badge { font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:#6a9a9a; background:#eef4f4; padding:3px 7px; border-radius:100px; }
+    .ar-ck-cat__desc { font-size:12.5px; line-height:1.6; color:#5d6e6d; margin:0; }
+
+    /* Switch */
+    .ar-ck-switch { position:relative; width:46px; height:26px; flex-shrink:0; margin-top:2px; }
+    .ar-ck-switch input { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:pointer; z-index:1; }
+    .ar-ck-switch input:disabled { cursor:not-allowed; }
+    .ar-ck-switch__track { position:absolute; inset:0; border-radius:100px; background:#cfd9d8; transition:background .2s; }
+    .ar-ck-switch__track::after { content:""; position:absolute; top:3px; left:3px; width:20px; height:20px; border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.2); transition:transform .2s; }
+    .ar-ck-switch input:checked + .ar-ck-switch__track { background:#6a9a9a; }
+    .ar-ck-switch input:checked + .ar-ck-switch__track::after { transform:translateX(20px); }
+    .ar-ck-switch input:disabled + .ar-ck-switch__track { opacity:.6; }
+    .ar-ck-switch input:focus-visible + .ar-ck-switch__track { outline:2px solid #0f2322; outline-offset:2px; }
+
+    .ar-ck-modal__foot { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; padding:16px 24px 22px; border-top:1px solid #eef2f2; }
+
+    @media (max-width:520px) {
+      .ar-ck-banner { left:16px; bottom:16px; padding:18px; }
+      .ar-ck-modal__foot .ar-ck-btn { flex:1 1 100%; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .ar-ck-banner, .ar-ck-overlay, .ar-ck-modal { animation:none; }
+      .ar-ck-btn:hover { transform:none; }
+    }
+  `;
+  document.head.appendChild(style);
+};
+injectStyles();
+
+/* ─── COMPONENT ────────────────────────────────────────────────── */
+function CookieConsent() {
+  const [consent, setConsent] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(() => readConsent());
+  const [showModal, setShowModal] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [prefs, setPrefs] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(() => {
+    const c = readConsent();
+    return {
+      analytics: c ? c.analytics : false,
+      marketing: c ? c.marketing : false
+    };
+  });
+  const modalRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const returnRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+
+  // Re-aplica la decisión guardada en cada carga (Consent Mode / listeners)
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (consent) applyConsent(consent);
+  }, []);
+
+  // API pública para el link "Cookie Settings" del footer
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const open = () => {
+      const c = readConsent();
+      setPrefs({
+        analytics: c ? c.analytics : false,
+        marketing: c ? c.marketing : false
+      });
+      returnRef.current = document.activeElement;
+      setShowModal(true);
+    };
+    window.arOpenCookieSettings = open;
+    window.addEventListener("ar:open-cookie-settings", open);
+    return () => {
+      window.removeEventListener("ar:open-cookie-settings", open);
+      if (window.arOpenCookieSettings === open) delete window.arOpenCookieSettings;
+    };
+  }, []);
+
+  // Modal: foco inicial, Escape para cerrar, foco atrapado, sin scroll de fondo
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!showModal) return;
+    const node = modalRef.current;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const focusables = () => node.querySelectorAll("button, input:not([disabled]), a[href]");
+    focusables()[0]?.focus();
+    const onKey = e => {
+      if (e.key === "Escape") {
+        closeModal();
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const els = focusables();
+      const first = els[0],
+        last = els[els.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [showModal]);
+  const decide = p => {
+    setConsent(saveConsent(p));
+    closeModal();
+  };
+  function closeModal() {
+    setShowModal(false);
+    const back = returnRef.current;
+    returnRef.current = null;
+    if (back && typeof back.focus === "function") back.focus();
+  }
+  const openFromBanner = () => {
+    returnRef.current = null;
+    setShowModal(true);
+  };
+  const acceptAll = () => decide({
+    analytics: true,
+    marketing: true
+  });
+  const rejectAll = () => decide({
+    analytics: false,
+    marketing: false
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "ar-ck",
+    children: [!consent && !showModal && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "ar-ck-banner",
+      role: "region",
+      "aria-label": "Cookie consent",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "ar-ck-banner__head",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          className: "ar-ck-banner__icon",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(CookieIcon, {})
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          className: "ar-ck-banner__title",
+          children: "We value your privacy"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+        className: "ar-ck-banner__text",
+        children: ["We use cookies to keep this site secure, understand how it's used, and measure our ads. You can accept all, reject the optional ones, or choose what to allow.", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          className: "ar-ck-link",
+          href: PRIVACY_URL,
+          children: "Read our Privacy Policy"
+        }), "."]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "ar-ck-banner__actions",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          type: "button",
+          className: "ar-ck-btn ar-ck-btn--ghost",
+          onClick: openFromBanner,
+          children: "Customize"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          type: "button",
+          className: "ar-ck-btn ar-ck-btn--ghost",
+          onClick: rejectAll,
+          children: "Reject all"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          type: "button",
+          className: "ar-ck-btn ar-ck-btn--primary",
+          onClick: acceptAll,
+          children: "Accept all"
+        })]
+      })]
+    }), showModal && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "ar-ck-overlay",
+      onMouseDown: e => {
+        if (e.target === e.currentTarget) closeModal();
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        ref: modalRef,
+        className: "ar-ck-modal",
+        role: "dialog",
+        "aria-modal": "true",
+        "aria-labelledby": "ar-ck-title",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "ar-ck-modal__head",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              className: "ar-ck-modal__eyebrow",
+              children: "Cookie Settings"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+              id: "ar-ck-title",
+              className: "ar-ck-modal__title",
+              children: "Manage your preferences"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "ar-ck-modal__close",
+            onClick: closeModal,
+            "aria-label": "Close cookie settings",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(CloseIcon, {})
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "ar-ck-modal__body",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            className: "ar-ck-modal__intro",
+            children: ["Choose which cookies AR Roofing & Construction can use. You can change this anytime from the \"Cookie Settings\" link in the footer. See our ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              className: "ar-ck-link",
+              href: PRIVACY_URL,
+              children: "Privacy Policy"
+            }), " for details."]
+          }), CATEGORIES.map(cat => {
+            const id = `ar-ck-${cat.key}`;
+            const checked = cat.locked ? true : prefs[cat.key];
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              className: "ar-ck-cat",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+                  className: "ar-ck-cat__title",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                    htmlFor: id,
+                    children: cat.title
+                  }), cat.locked && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    className: "ar-ck-cat__badge",
+                    children: "Always on"
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                  className: "ar-ck-cat__desc",
+                  children: cat.desc
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+                className: "ar-ck-switch",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                  id: id,
+                  type: "checkbox",
+                  role: "switch",
+                  checked: checked,
+                  disabled: cat.locked,
+                  onChange: e => setPrefs(p => ({
+                    ...p,
+                    [cat.key]: e.target.checked
+                  }))
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  className: "ar-ck-switch__track",
+                  "aria-hidden": "true"
+                })]
+              })]
+            }, cat.key);
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "ar-ck-modal__foot",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "ar-ck-btn ar-ck-btn--outline",
+            onClick: rejectAll,
+            children: "Reject all"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "ar-ck-btn ar-ck-btn--outline",
+            onClick: () => decide(prefs),
+            children: "Save preferences"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "ar-ck-btn ar-ck-btn--dark",
+            onClick: acceptAll,
+            children: "Accept all"
+          })]
+        })]
+      })
+    })]
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CookieConsent);
+
+/***/ },
+
+/***/ "./src/scripts/ExampleReactComponent.js"
+/*!**********************************************!*\
+  !*** ./src/scripts/ExampleReactComponent.js ***!
+  \**********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function ExampleReactComponent() {
+  const [clickCount, setClickCount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 rounded-md",
+    onClick: () => setClickCount(prev => prev + 1),
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+      className: "text-xl",
+      children: "Hello from React!"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+      className: "text-sm",
+      children: ["You have clicked on this component", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+        className: "text-yellow-200 font-bold",
+        children: clickCount
+      }), " times."]
+    })]
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ExampleReactComponent);
+
+/***/ },
+
+/***/ "./src/scripts/FinanceTab.js"
+/*!***********************************!*\
+  !*** ./src/scripts/FinanceTab.js ***!
+  \***********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* ─── DATA ─────────────────────────────────────────────────────
+   Edita link/imagen aquí, o pásalos por props.
+   ──────────────────────────────────────────────────────────── */
+
+const DEFAULT_LINK = "https://www.hfsfinancial.net/promo/6ab436cc7a506a7cf9542b68/";
+const DEFAULT_IMAGE = "/wp-content/uploads/2026/10/4-768x432.jpg";
+
+/* ─── ICONS ────────────────────────────────────────────────────── */
+const DollarIcon = ({
+  size = 16
+}) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: size,
+  height: size,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+    x1: "12",
+    y1: "1",
+    x2: "12",
+    y2: "23"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+  })]
+});
+const ArrowIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "14",
+  height: "14",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.6",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M5 12h14M13 6l6 6-6 6"
+  })
+});
+const MinIcon = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "14",
+  height: "14",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.6",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+    x1: "5",
+    y1: "12",
+    x2: "19",
+    y2: "12"
+  })
+});
+
+/* ─── STYLES (inyectados una sola vez) ────────────────────────── */
+const injectStyles = () => {
+  if (document.getElementById("ar-fin-styles")) return;
+  const style = document.createElement("style");
+  style.id = "ar-fin-styles";
+  style.textContent = `
+    @keyframes arFinSlideR { from { opacity:0; transform:translateX(16px); } to { opacity:1; transform:translateX(0); } }
+
+    .ar-fin-wrap, .ar-fin-wrap * { box-sizing:border-box; font-family:'GT America','DM Sans',sans-serif; }
+
+    /* Pegada debajo de la pestaña de Certifications (centrada en top:30%, ~196px de alto).
+       Se ancla por el borde superior para que el panel abierto crezca hacia abajo. */
+    .ar-fin-float { position:fixed; z-index:900; right:0; top:calc(30% + 106px); }
+
+    /* Pestaña (estado plegado) — mismo estilo que Certifications */
+    .ar-fin-tab {
+      display:flex; flex-direction:column; align-items:center; gap:11px;
+      padding:18px 11px; border:none; cursor:pointer;
+      background:#6a9a9a; color:#fff; border-radius:12px 0 0 12px;
+      box-shadow:-6px 8px 28px rgba(15,35,34,0.22);
+      transition:padding-right .18s, background .2s; animation:arFinSlideR .22s ease both;
+    }
+    .ar-fin-tab:hover { background:#0f2322; padding-right:16px; }
+    .ar-fin-tab__text { writing-mode:vertical-rl; text-orientation:mixed; font-size:11px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; }
+
+    /* Panel desplegado */
+    .ar-fin-panel {
+      background:#fff; border:1px solid #eef2f2; border-radius:16px 0 0 16px; padding:12px;
+      box-shadow:-10px 10px 44px rgba(15,35,34,0.2);
+      display:flex; flex-direction:column; gap:10px; width:260px;
+      animation:arFinSlideR .22s ease both;
+    }
+    .ar-fin-panel__head { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:2px 4px 0; }
+    .ar-fin-panel__title { font-size:10.5px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:#6a9a9a; }
+    .ar-fin-panel__min { width:24px; height:24px; border:none; border-radius:7px; background:#f5f6f5; color:#0f2322; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .15s; }
+    .ar-fin-panel__min:hover { background:#dde8e8; }
+
+    /* Tarjeta con foto (link) */
+    .ar-fin-card {
+      position:relative; display:block; border-radius:12px; overflow:hidden; aspect-ratio:4/3;
+      text-decoration:none; color:#fff; background:#0f2322;
+    }
+    .ar-fin-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .35s ease; }
+    .ar-fin-card:hover img { transform:scale(1.05); }
+    .ar-fin-card:focus-visible { outline:2px solid #6a9a9a; outline-offset:2px; }
+    .ar-fin-card__overlay {
+      position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; gap:10px; padding:16px;
+      background:linear-gradient(to top, rgba(10,20,20,0.88) 0%, rgba(10,20,20,0.45) 55%, rgba(10,20,20,0.1) 100%);
+    }
+    .ar-fin-card__title { font-size:19px; font-weight:800; line-height:1.15; margin:0; text-shadow:0 2px 10px rgba(0,0,0,0.35); }
+    .ar-fin-card__cta {
+      align-self:flex-start; display:inline-flex; align-items:center; gap:7px;
+      padding:8px 14px; border-radius:100px; background:#6a9a9a; color:#fff;
+      font-size:12px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; transition:background .2s;
+    }
+    .ar-fin-card:hover .ar-fin-card__cta { background:#0f2322; }
+  `;
+  document.head.appendChild(style);
+};
+injectStyles();
+
+/* ─── COMPONENT ────────────────────────────────────────────────── */
+function FinanceTab({
+  title = "Finance",
+  link = DEFAULT_LINK,
+  image = DEFAULT_IMAGE
+}) {
+  const [open, setOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "ar-fin-wrap",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "ar-fin-float",
+      children: open ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "ar-fin-panel",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "ar-fin-panel__head",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            className: "ar-fin-panel__title",
+            children: title
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            type: "button",
+            className: "ar-fin-panel__min",
+            onClick: () => setOpen(false),
+            "aria-label": "Minimizar",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MinIcon, {})
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+          className: "ar-fin-card",
+          href: link,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: image,
+            alt: "Finance your roofing services"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+            className: "ar-fin-card__overlay",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              className: "ar-fin-card__title",
+              children: "Finance your Roofing Services"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+              className: "ar-fin-card__cta",
+              children: ["Click Here ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ArrowIcon, {})]
+            })]
+          })]
+        })]
+      }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+        type: "button",
+        className: "ar-fin-tab",
+        onClick: () => setOpen(true),
+        "aria-label": "Ver opciones de financiamiento",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(DollarIcon, {
+          size: 20
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          className: "ar-fin-tab__text",
+          children: title
+        })]
+      })
+    })
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FinanceTab);
+
+/***/ },
+
+/***/ "./src/scripts/Footer.js"
+/*!*******************************!*\
+  !*** ./src/scripts/Footer.js ***!
+  \*******************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/* ── Icons ─────────────────────────────────────────────────────── */
+
+const IconMail = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "15",
+  height: "15",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+    x: "2",
+    y: "4",
+    width: "20",
+    height: "16",
+    rx: "2"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+  })]
+});
+const IconPhone = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "15",
+  height: "15",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+  })
+});
+const IconPin = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "15",
+  height: "15",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+    cx: "12",
+    cy: "10",
+    r: "3"
+  })]
+});
+const IconClock = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "15",
+  height: "15",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+    cx: "12",
+    cy: "12",
+    r: "10"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("polyline", {
+    points: "12 6 12 12 16 14"
+  })]
+});
+const IconChevronRight = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "12",
+  height: "12",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "m9 18 6-6-6-6"
+  })
+});
+const IconFacebook = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "17",
+  height: "17",
+  viewBox: "0 0 24 24",
+  fill: "currentColor",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+  })
+});
+const IconInstagram = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "17",
+  height: "17",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+    x: "2",
+    y: "2",
+    width: "20",
+    height: "20",
+    rx: "5",
+    ry: "5"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+    cx: "12",
+    cy: "12",
+    r: "3"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+    cx: "17.5",
+    cy: "6.5",
+    r: "1",
+    fill: "currentColor",
+    stroke: "none"
+  })]
+});
+const IconTikTok = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "17",
+  height: "17",
+  viewBox: "0 0 24 24",
+  fill: "currentColor",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.22 8.22 0 0 0 4.83 1.56V6.79a4.85 4.85 0 0 1-1.06-.1z"
+  })
+});
+const IconGoogle = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "17",
+  height: "17",
+  viewBox: "0 0 24 24",
+  fill: "currentColor",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z",
+    fill: "#4285F4"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z",
+    fill: "#34A853"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z",
+    fill: "#FBBC05"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.47 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z",
+    fill: "#EA4335"
+  })]
+});
+const IconBBB = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "17",
+  height: "17",
+  viewBox: "0 0 24 24",
+  fill: "currentColor",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+    x: "2",
+    y: "2",
+    width: "20",
+    height: "20",
+    rx: "3",
+    fill: "#003f87"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("text", {
+    x: "12",
+    y: "16",
+    textAnchor: "middle",
+    fill: "white",
+    fontSize: "10",
+    fontWeight: "bold",
+    fontFamily: "serif",
+    children: "BBB"
+  })]
+});
+const IconShield = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "28",
+  height: "28",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "1.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("polyline", {
+    points: "9 12 11 14 15 10"
+  })]
+});
+
+/* ── Data ───────────────────────────────────────────────────────── */
+const GEOTAG_URL = "https://www.google.com/maps/search/?api=1&query=403+Portway+Ave+%23304%2C+Hood+River%2C+OR+97031";
+
+// Enlaces provisionales (búsquedas) — reemplazar por el perfil oficial de GMB y de BBB cuando se tengan
+const GMB_URL = "https://www.google.com/maps/search/?api=1&query=AR+Roofing+%26+Construction+403+Portway+Ave+%23304+Hood+River+OR+97031";
+const BBB_URL = "https://www.bbb.org/search?find_country=USA&find_text=AR%20Roofing%20%26%20Construction&find_loc=Hood%20River%2C%20OR";
+const SERVICES = [{
+  label: "Roof Installation",
+  href: "/services/roof-installation"
+}, {
+  label: "Roof Repair",
+  href: "/services/roof-repair"
+}, {
+  label: "Emergency Roofing",
+  href: "/services/emergency-roofing"
+}, {
+  label: "Roof Maintenance",
+  href: "/services/roof-maintenance"
+}];
+const QUICK_LINKS = [{
+  label: "Home",
+  href: "/"
+}, {
+  label: "About Us",
+  href: "/about"
+}, {
+  label: "Location",
+  href: "/location"
+}, {
+  label: "Contact",
+  href: "/contact"
+}];
+const SOCIALS = [{
+  href: "https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconFacebook, {}),
+  label: "Facebook"
+}, {
+  href: "https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconInstagram, {}),
+  label: "Instagram"
+}, {
+  href: "https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq",
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconTikTok, {}),
+  label: "TikTok"
+}, {
+  href: GMB_URL,
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconGoogle, {}),
+  label: "Google My Business"
+}, {
+  href: BBB_URL,
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconBBB, {}),
+  label: "Better Business Bureau"
+}];
+
+/* ── Link list helper ───────────────────────────────────────────── */
+function FooterLinkList({
+  items
+}) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
+    style: {
+      listStyle: "none",
+      margin: 0,
+      padding: 0,
+      display: "flex",
+      flexDirection: "column",
+      gap: "10px"
+    },
+    children: items.map(({
+      label,
+      href
+    }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+        href: href,
+        style: {
+          display: "flex",
+          alignItems: "center",
+          gap: "7px",
+          color: "#aaa",
+          textDecoration: "none",
+          fontSize: "14px",
+          transition: "color 0.2s ease"
+        },
+        onMouseEnter: e => e.currentTarget.style.color = "#fff",
+        onMouseLeave: e => e.currentTarget.style.color = "#aaa",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          style: {
+            color: "#6a9a9a",
+            flexShrink: 0
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconChevronRight, {})
+        }), label]
+      })
+    }, label))
+  });
+}
+
+/* ── Column heading ─────────────────────────────────────────────── */
+function FooterHeading({
+  children
+}) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    style: {
+      marginBottom: "20px"
+    },
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+      style: {
+        color: "#fff",
+        fontSize: "15px",
+        fontWeight: "700",
+        margin: "0 0 10px 0",
+        letterSpacing: "0.2px"
+      },
+      children: children
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      style: {
+        width: "32px",
+        height: "3px",
+        backgroundColor: "#6a9a9a",
+        borderRadius: "2px"
+      }
+    })]
+  });
+}
+
+/* ── Main Component ─────────────────────────────────────────────── */
+// ── ESTAMPADO DE FONDO ───────────────────────────────────────────
+// Pega aquí la URL del medio que quieras usar como fondo del footer
+const FOOTER_BG_IMG = "/wp-content/uploads/2026/06/Estampados_2_ARRC-scaled.png";
+// ─────────────────────────────────────────────────────────────────
+
+function Footer() {
+  const year = new Date().getFullYear();
+  const footerStyle = {
+    backgroundColor: "#0a1e1d",
+    color: "#aaa",
+    ...(FOOTER_BG_IMG && {
+      backgroundImage: `url(${FOOTER_BG_IMG})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      position: "relative"
+    })
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("footer", {
+    style: footerStyle,
+    children: [FOOTER_BG_IMG && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      style: {
+        position: "absolute",
+        inset: 0,
+        backgroundColor: "rgba(10,28,27,0.93)",
+        zIndex: 0,
+        pointerEvents: "none"
+      }
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      style: {
+        position: "relative",
+        zIndex: 1
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        style: {
+          backgroundColor: "#e8253a"
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "max-w-7xl mx-auto px-6 py-8",
+          style: {
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "16px"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            style: {
+              display: "flex",
+              alignItems: "center",
+              gap: "16px"
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              style: {
+                color: "rgba(255,255,255,0.85)"
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconShield, {})
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                style: {
+                  color: "#fff",
+                  fontWeight: "700",
+                  fontSize: "18px",
+                  margin: 0,
+                  lineHeight: 1.3
+                },
+                children: "Ready for a new roof? Get your free estimate today."
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                style: {
+                  color: "rgba(255,255,255,0.8)",
+                  fontSize: "13px",
+                  margin: "4px 0 0 0"
+                },
+                children: "Licensed & insured \u2014 Serving Portland, Oregon"
+              })]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "/contact",
+            style: {
+              display: "inline-block",
+              padding: "11px 28px",
+              backgroundColor: "#fff",
+              color: "#e8253a",
+              fontWeight: "700",
+              fontSize: "14px",
+              textDecoration: "none",
+              borderRadius: "7px",
+              whiteSpace: "nowrap",
+              transition: "transform 0.15s ease, box-shadow 0.15s ease"
+            },
+            onMouseEnter: e => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.2)";
+            },
+            onMouseLeave: e => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "none";
+            },
+            children: "Get a Free Quote"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "max-w-7xl mx-auto px-6 py-14",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          style: {
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
+            gap: "48px"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: "/",
+              style: {
+                textDecoration: "none",
+                display: "inline-flex",
+                marginBottom: "18px"
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                src: "/wp-content/uploads/2026/06/AR_Logotipo.png",
+                alt: "AR Roofing & Construction",
+                style: {
+                  height: "52px",
+                  width: "auto",
+                  display: "block",
+                  filter: "brightness(0) invert(1)"
+                }
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              style: {
+                fontSize: "13.5px",
+                lineHeight: "1.75",
+                color: "#999",
+                margin: "0 0 20px 0"
+              },
+              children: "Professional roofing solutions for residential and commercial properties across Portland, Oregon. Quality workmanship guaranteed."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              style: {
+                display: "flex",
+                alignItems: "center",
+                gap: "10px"
+              },
+              children: SOCIALS.map(({
+                href,
+                icon,
+                label
+              }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                href: href,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                "aria-label": label,
+                title: label,
+                style: {
+                  width: "34px",
+                  height: "34px",
+                  backgroundColor: "#1a3332",
+                  borderRadius: "7px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "#aaa",
+                  textDecoration: "none",
+                  transition: "background-color 0.2s ease, color 0.2s ease"
+                },
+                onMouseEnter: e => {
+                  e.currentTarget.style.backgroundColor = "#6a9a9a";
+                  e.currentTarget.style.color = "#fff";
+                },
+                onMouseLeave: e => {
+                  e.currentTarget.style.backgroundColor = "#222";
+                  e.currentTarget.style.color = "#aaa";
+                },
+                children: icon
+              }, label))
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
+              children: "Our Services"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterLinkList, {
+              items: SERVICES
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
+              children: "Quick Links"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterLinkList, {
+              items: QUICK_LINKS
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FooterHeading, {
+              children: "Contact Us"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+              style: {
+                listStyle: "none",
+                margin: 0,
+                padding: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: "14px"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  href: "mailto:info@arroofingus.com",
+                  style: {
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "10px",
+                    color: "#aaa",
+                    textDecoration: "none",
+                    fontSize: "14px",
+                    transition: "color 0.2s ease"
+                  },
+                  onMouseEnter: e => e.currentTarget.style.color = "#fff",
+                  onMouseLeave: e => e.currentTarget.style.color = "#aaa",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    style: {
+                      color: "#6a9a9a",
+                      marginTop: "1px",
+                      flexShrink: 0
+                    },
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
+                  }), "info@arroofingus.com"]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  href: "tel:5416450577",
+                  style: {
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "10px",
+                    color: "#aaa",
+                    textDecoration: "none",
+                    fontSize: "14px",
+                    transition: "color 0.2s ease"
+                  },
+                  onMouseEnter: e => e.currentTarget.style.color = "#fff",
+                  onMouseLeave: e => e.currentTarget.style.color = "#aaa",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    style: {
+                      color: "#6a9a9a",
+                      marginTop: "1px",
+                      flexShrink: 0
+                    },
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
+                  }), "(541) 645 0577"]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  href: GEOTAG_URL,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  style: {
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "10px",
+                    color: "#aaa",
+                    textDecoration: "none",
+                    fontSize: "14px",
+                    transition: "color 0.2s ease"
+                  },
+                  onMouseEnter: e => e.currentTarget.style.color = "#fff",
+                  onMouseLeave: e => e.currentTarget.style.color = "#aaa",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    style: {
+                      color: "#6a9a9a",
+                      marginTop: "1px",
+                      flexShrink: 0
+                    },
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    children: "403 Portway Ave #304, Hood River, OR 97031"
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+                style: {
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "10px",
+                  fontSize: "14px"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  style: {
+                    color: "#6a9a9a",
+                    marginTop: "1px",
+                    flexShrink: 0
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconClock, {})
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  children: "Mon \u2013 Sat: 7:00 AM \u2013 6:00 PM"
+                })]
+              })]
+            })]
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        style: {
+          borderTop: "1px solid #222"
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "max-w-7xl mx-auto px-6 py-5",
+          style: {
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "10px"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            style: {
+              fontSize: "13px",
+              color: "#555",
+              margin: 0
+            },
+            children: ["\xA9 ", year, " AR Roofing & Construction. All rights reserved."]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            style: {
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "20px"
+            },
+            children: [[{
+              label: "Privacy Policy",
+              href: "/privacy-policy"
+            }, {
+              label: "Terms of Service",
+              href: "/terms"
+            }].map(({
+              label,
+              href
+            }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: href,
+              style: {
+                fontSize: "13px",
+                color: "#555",
+                textDecoration: "none",
+                transition: "color 0.2s ease"
+              },
+              onMouseEnter: e => e.currentTarget.style.color = "#aaa",
+              onMouseLeave: e => e.currentTarget.style.color = "#555",
+              children: label
+            }, label)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+              type: "button",
+              onClick: () => window.dispatchEvent(new Event("ar:open-cookie-settings")),
+              style: {
+                fontSize: "13px",
+                color: "#555",
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+                fontFamily: "inherit",
+                transition: "color 0.2s ease"
+              },
+              onMouseEnter: e => e.currentTarget.style.color = "#aaa",
+              onMouseLeave: e => e.currentTarget.style.color = "#555",
+              children: "Cookie Settings"
+            })]
+          })]
+        })
+      })]
+    })]
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ },
+
+/***/ "./src/scripts/Lightbox.js"
+/*!*********************************!*\
+  !*** ./src/scripts/Lightbox.js ***!
+  \*********************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ initLightbox)
+/* harmony export */ });
+/* ─── LIGHTBOX ─────────────────────────────────────────────────
+   Uso en PHP:
+     <a href="FOTO_GRANDE.jpg" data-lightbox="grupo" data-caption="Texto">
+       <img src="FOTO_CHICA.jpg">
+     </a>
+   Los elementos con el mismo data-lightbox se navegan juntos
+   (flechas, teclado ← → y Esc para cerrar).
+   ──────────────────────────────────────────────────────────── */
+
+const injectStyles = () => {
+  if (document.getElementById("ar-lb-styles")) return;
+  const style = document.createElement("style");
+  style.id = "ar-lb-styles";
+  style.textContent = `
+    .ar-lb { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center;
+      background: rgba(10,24,23,0.94); opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s; }
+    .ar-lb.is-open { opacity: 1; visibility: visible; }
+    .ar-lb__figure { margin: 0; max-width: min(1200px, 92vw); text-align: center; }
+    .ar-lb__img { display: block; max-width: 100%; max-height: 80vh; margin: 0 auto; border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .ar-lb__caption { margin-top: 14px; color: rgba(255,255,255,0.8); font-size: 14px; letter-spacing: .3px; }
+    .ar-lb__count { color: rgba(255,255,255,0.45); margin-left: 10px; font-size: 12px; }
+    .ar-lb__btn { position: absolute; display: flex; align-items: center; justify-content: center;
+      width: 48px; height: 48px; border: 0; border-radius: 50%; cursor: pointer;
+      background: rgba(255,255,255,0.1); color: #fff; transition: background .2s; }
+    .ar-lb__btn:hover { background: rgba(255,255,255,0.22); }
+    .ar-lb__close { top: 20px; right: 20px; }
+    .ar-lb__prev { left: 20px; top: 50%; transform: translateY(-50%); }
+    .ar-lb__next { right: 20px; top: 50%; transform: translateY(-50%); }
+    @media (max-width: 640px) {
+      .ar-lb__prev, .ar-lb__next { top: auto; bottom: 20px; transform: none; }
+    }
+  `;
+  document.head.appendChild(style);
+};
+const icon = d => `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+function initLightbox() {
+  const triggers = document.querySelectorAll("[data-lightbox]");
+  if (!triggers.length) return;
+  injectStyles();
+  const lb = document.createElement("div");
+  lb.className = "ar-lb";
+  lb.setAttribute("role", "dialog");
+  lb.setAttribute("aria-modal", "true");
+  lb.setAttribute("aria-label", "Project photo");
+  lb.innerHTML = `
+    <button type="button" class="ar-lb__btn ar-lb__close" aria-label="Close">${icon('<path d="M18 6 6 18M6 6l12 12"/>')}</button>
+    <button type="button" class="ar-lb__btn ar-lb__prev" aria-label="Previous photo">${icon('<path d="m15 18-6-6 6-6"/>')}</button>
+    <figure class="ar-lb__figure">
+      <img class="ar-lb__img" alt="">
+      <figcaption class="ar-lb__caption"></figcaption>
+    </figure>
+    <button type="button" class="ar-lb__btn ar-lb__next" aria-label="Next photo">${icon('<path d="m9 18 6-6-6-6"/>')}</button>
+  `;
+  document.body.appendChild(lb);
+  const img = lb.querySelector(".ar-lb__img");
+  const caption = lb.querySelector(".ar-lb__caption");
+  const prevBtn = lb.querySelector(".ar-lb__prev");
+  const nextBtn = lb.querySelector(".ar-lb__next");
+  let group = [];
+  let index = 0;
+  let lastFocus = null;
+  const show = i => {
+    index = (i + group.length) % group.length;
+    const el = group[index];
+    const text = el.dataset.caption || "";
+    img.src = el.getAttribute("href");
+    img.alt = text;
+    caption.innerHTML = "";
+    caption.textContent = text;
+    if (group.length > 1) {
+      const count = document.createElement("span");
+      count.className = "ar-lb__count";
+      count.textContent = `${index + 1} / ${group.length}`;
+      caption.appendChild(count);
+    }
+    prevBtn.style.display = nextBtn.style.display = group.length > 1 ? "" : "none";
+  };
+  const open = el => {
+    group = Array.from(document.querySelectorAll(`[data-lightbox="${el.dataset.lightbox}"]`));
+    lastFocus = document.activeElement;
+    show(group.indexOf(el));
+    lb.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+    lb.querySelector(".ar-lb__close").focus();
+  };
+  const close = () => {
+    lb.classList.remove("is-open");
+    document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  };
+  triggers.forEach(el => {
+    el.addEventListener("click", e => {
+      e.preventDefault();
+      open(el);
+    });
+  });
+  lb.querySelector(".ar-lb__close").addEventListener("click", close);
+  prevBtn.addEventListener("click", () => show(index - 1));
+  nextBtn.addEventListener("click", () => show(index + 1));
+  lb.addEventListener("click", e => {
+    if (e.target === lb) close();
+  });
+  document.addEventListener("keydown", e => {
+    if (!lb.classList.contains("is-open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft" && group.length > 1) show(index - 1);
+    if (e.key === "ArrowRight" && group.length > 1) show(index + 1);
+  });
+}
+
+/***/ },
+
+/***/ "./src/scripts/Navbar.js"
+/*!*******************************!*\
+  !*** ./src/scripts/Navbar.js ***!
+  \*******************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const NAV_LINKS = [{
+  label: "Home",
+  href: "/"
+}, {
+  label: "About",
+  href: "/about"
+}, {
+  label: "Services",
+  href: "#",
+  dropdown: [{
+    label: "Roof Installation",
+    href: "/services/roof-installation"
+  }, {
+    label: "Roof Repair",
+    href: "/services/roof-repair"
+  }, {
+    label: "Emergency Roofing",
+    href: "/services/emergency-roofing"
+  }, {
+    label: "Roof Maintenance",
+    href: "/services/roof-maintenance"
+  }]
+}, {
+  label: "Location",
+  href: "/location"
+}, {
+  label: "Contact",
+  href: "/contact"
+}];
+const GEOTAG_URL = "https://www.google.com/maps/search/?api=1&query=403+Portway+Ave+%23304%2C+Hood+River%2C+OR+97031";
+
+// Enlaces provisionales (búsquedas) — reemplazar por el perfil oficial de GMB y de BBB cuando se tengan
+const GMB_URL = "https://www.google.com/maps/search/?api=1&query=AR+Roofing+%26+Construction+403+Portway+Ave+%23304+Hood+River+OR+97031";
+const BBB_URL = "https://www.bbb.org/search?find_country=USA&find_text=AR%20Roofing%20%26%20Construction&find_loc=Hood%20River%2C%20OR";
+
+/* ── SVG Icons ─────────────────────────────────────────────────── */
+const IconMail = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "14",
+  height: "14",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+    x: "2",
+    y: "4",
+    width: "20",
+    height: "16",
+    rx: "2"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
+  })]
+});
+const IconPhone = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "14",
+  height: "14",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18a2 2 0 0 1 1.99-2.18H6.5a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+  })
+});
+const IconPin = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "14",
+  height: "14",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+    cx: "12",
+    cy: "10",
+    r: "3"
+  })]
+});
+const IconChevron = ({
+  open
+}) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "12",
+  height: "12",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  style: {
+    transition: "transform 0.25s ease",
+    transform: open ? "rotate(180deg)" : "rotate(0deg)"
+  },
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "m6 9 6 6 6-6"
+  })
+});
+const IconMenu = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: "22",
+  height: "22",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+    x1: "4",
+    y1: "6",
+    x2: "20",
+    y2: "6"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+    x1: "4",
+    y1: "12",
+    x2: "20",
+    y2: "12"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+    x1: "4",
+    y1: "18",
+    x2: "20",
+    y2: "18"
+  })]
+});
+const IconX = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "22",
+  height: "22",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "2",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M18 6 6 18M6 6l12 12"
+  })
+});
+
+/* Social icons */
+const IconFacebook = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 24 24",
+  fill: "currentColor",
+  "aria-hidden": "true",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+  })
+});
+const IconInstagram = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 24 24",
+  fill: "currentColor",
+  "aria-hidden": "true",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 00-2.13 1.38A5.88 5.88 0 00.63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13a5.88 5.88 0 002.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 002.13-1.38 5.88 5.88 0 001.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 00-1.38-2.13A5.88 5.88 0 0019.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zm0 10.16a4 4 0 110-8 4 4 0 010 8zm6.4-11.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"
+  })
+});
+const IconTikTok = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 24 24",
+  fill: "currentColor",
+  "aria-hidden": "true",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.36a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.4z"
+  })
+});
+const IconGoogle = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 50 50",
+  fill: "currentColor",
+  "aria-hidden": "true",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M 9.2832031 4 C 7.488935 4 5.9052102 5.2051958 5.4277344 6.9355469 L 2 19.365234 L 2 19.5 C 2 23.078268 4.9217323 26 8.5 26 C 10.813035 26 12.845511 24.77516 13.998047 22.945312 C 15.146939 24.778014 17.180833 26 19.5 26 C 21.819167 26 23.853061 24.778014 25.001953 22.945312 C 26.154489 24.77516 28.186965 26 30.5 26 C 32.813993 26 34.847721 24.77447 36 22.943359 C 37.152279 24.77447 39.186007 26 41.5 26 C 45.078268 26 48 23.078268 48 19.5 L 48 19.365234 L 44.570312 6.9355469 C 44.092963 5.2056548 42.509782 4 40.714844 4 L 9.2832031 4 z M 9.2832031 6 L 14.851562 6 L 13.197266 18 L 4.4511719 18 L 7.3554688 7.46875 C 7.5959929 6.597101 8.3794712 6 9.2832031 6 z M 26 6 L 33.128906 6 L 34.783203 18 L 26 18 L 26 6 z M 15 18 L 24 18 L 24 19.5 C 24 19.668891 24.012611 19.834272 24.025391 20 L 15 20 L 15 19.5 L 15 18 z M 36.802734 18 L 45.548828 18 L 45.984375 19.580078 C 45.981749 19.724009 45.951091 19.859765 45.935547 20 L 37.050781 20 C 37.032383 19.833631 37 19.67153 37 19.5 L 37 19.431641 L 36.802734 18 z M 4.0644531 20 L 12.949219 20 C 12.699714 22.256206 10.826202 24 8.5 24 C 6.175282 24 4.3143567 22.254621 4.0644531 20 z M 26.099609 20 L 34.900391 20 C 34.642986 22.247621 32.820142 24 30.5 24 C 28.179858 24 26.357014 22.247621 26.099609 20 z M 14 25.974609 C 12.517 27.235609 10.599 28 8.5 28 C 6.845 28 5.306 27.519172 4 26.701172 L 4 43 C 4 44.654 5.346 46 7 46 L 43 46 C 44.654 46 46 44.654 46 43 L 46 26.701172 C 44.694 27.519172 43.155 28 41.5 28 C 39.401 28 37.483 27.235609 36 25.974609 C 34.517 27.235609 32.599 28 30.5 28 C 28.401 28 26.483 27.235609 25 25.974609 C 23.517 27.235609 21.599 28 19.5 28 C 17.401 28 15.483 27.235609 14 25.974609 z M 35.5 29 C 37.546 29 39.372453 29.952547 40.564453 31.435547 L 39.132812 32.867188 C 38.314813 31.740187 36.996 31 35.5 31 C 33.019 31 31 33.019 31 35.5 C 31 37.981 33.019 40 35.5 40 C 37.453 40 39.102609 38.742 39.724609 37 L 36 37 L 36 35 L 41.974609 35 C 41.986609 35.166 42 35.331 42 35.5 C 42 39.084 39.084 42 35.5 42 C 31.916 42 29 39.084 29 35.5 C 29 31.916 31.916 29 35.5 29 z"
+  })
+});
+const IconBBB = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: "16",
+  height: "16",
+  viewBox: "0 0 30 30",
+  fill: "currentColor",
+  "aria-hidden": "true",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M11.166 20.194c.806.577 2.809 1.923 3.222 2.358.412.435.023 1.099.023 1.099l.618.252c.137-.298.962-1.397 1.511-2.084.496-.62.926-1.706.941-2.503.047-2.572-3.367-3.794-4.949-5.237-.778-.71-.16-1.122-.16-1.122l-.527-.343C9.808 14.926 7.662 17.686 11.166 20.194zM12.922 11.605c1.969 1.74 5.435 3.548 5.679 4.717.318 1.523-.412 2.382-.412 2.382l.394.321c.213-.304.451-.591.67-.891.892-1.222 1.752-2.463 2.629-3.695 2.004-2.818 1.254-5.49-1.765-7.648-1.537-1.098-3.032-2.26-4.584-3.339-.871-.733-.275-2.107-.275-2.107l-.367-.32c0 0-3.286 3.984-3.573 5.588C11.045 8.148 10.953 9.865 12.922 11.605zM23 27L22.341 25 7.659 25 7 27 11.19 27 11.822 29 18.217 29 18.816 27z"
+  })
+});
+
+/* ── Main Component ─────────────────────────────────────────────── */
+function Navbar() {
+  const [mobileOpen, setMobileOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [dropdownOpen, setDropdownOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [scrolled, setScrolled] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [showTopbar, setShowTopbar] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true); // visible al inicio y al hacer scroll up
+  const [headerH, setHeaderH] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0); // alto total (topbar + nav) para el espaciador
+  const [topbarH, setTopbarH] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0); // alto del topbar para el desplazamiento
+
+  const closeTimer = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const dropdownRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const headerRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const topbarRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  const lastScrollY = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(0);
+
+  // Mide el alto del header completo y del topbar.
+  // useLayoutEffect para fijar el espaciador antes del primer pintado (sin salto).
+  // Se re-mide en resize (en móvil el topbar está oculto, así que su alto pasa a 0).
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect)(() => {
+    const measure = () => {
+      if (headerRef.current) setHeaderH(headerRef.current.offsetHeight);
+      setTopbarH(topbarRef.current ? topbarRef.current.offsetHeight : 0);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
+  // Mostrar/ocultar el topbar según la dirección del scroll.
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const onScroll = () => {
+      const y = window.scrollY < 0 ? 0 : window.scrollY;
+      const tbH = topbarRef.current ? topbarRef.current.offsetHeight : 0;
+      setScrolled(y > 10);
+      const last = lastScrollY.current;
+      if (Math.abs(y - last) < 4) return; // ignora micro-movimientos (anti-jitter)
+
+      if (y <= tbH) {
+        setShowTopbar(true); // cerca del tope → topbar siempre visible
+      } else if (y > last) {
+        setShowTopbar(false); // scroll down → ocultar topbar
+      } else {
+        setShowTopbar(true); // scroll up → revelar topbar
+      }
+      lastScrollY.current = y;
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, {
+      passive: true
+    });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  const handleMouseEnter = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setDropdownOpen(true);
+  };
+  const handleMouseLeave = () => {
+    closeTimer.current = setTimeout(() => setDropdownOpen(false), 150);
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      "aria-hidden": "true",
+      style: {
+        height: headerH
+      }
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("header", {
+      ref: headerRef,
+      style: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 999,
+        transform: `translateY(${showTopbar ? 0 : -topbarH}px)`,
+        transition: "transform 0.3s ease",
+        willChange: "transform"
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        ref: topbarRef,
+        style: {
+          backgroundColor: "#0f2322"
+        },
+        className: "hidden md:block",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "max-w-7xl mx-auto px-6 py-3 flex items-center justify-between",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "flex items-center gap-5 text-xs",
+            style: {
+              color: "#aaa"
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+              href: "mailto:info@arroofingus.com",
+              className: "flex items-center gap-1.5 hover:text-white transition-colors duration-200",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                style: {
+                  color: "#6a9a9a"
+                },
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
+              }), "info@arroofingus.com"]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+              href: "tel:5416450577",
+              className: "flex items-center gap-1.5 hover:text-white transition-colors duration-200",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                style: {
+                  color: "#6a9a9a"
+                },
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
+              }), "(541) 645 0577"]
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+            href: GEOTAG_URL,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            "aria-label": "403 Portway Ave #304, Hood River, OR 97031",
+            className: "flex items-center gap-1.5 text-xs hover:text-white transition-colors duration-200",
+            style: {
+              color: "#aaa"
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              style: {
+                color: "#6a9a9a"
+              },
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
+            }), "403 Portway Ave #304, Hood River, OR 97031"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "flex items-center gap-3",
+            children: [{
+              href: "https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",
+              icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconFacebook, {}),
+              label: "Facebook"
+            }, {
+              href: "https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+              icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconInstagram, {}),
+              label: "Instagram"
+            }, {
+              href: "https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq",
+              icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconTikTok, {}),
+              label: "TikTok"
+            }, {
+              href: GMB_URL,
+              icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconGoogle, {}),
+              label: "Google My Business"
+            }, {
+              href: BBB_URL,
+              icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconBBB, {}),
+              label: "Better Business Bureau"
+            }].map(({
+              href,
+              icon,
+              label
+            }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: href,
+              target: "_blank",
+              rel: "noopener noreferrer",
+              "aria-label": label,
+              title: label,
+              style: {
+                color: "#aaa"
+              },
+              className: "hover:text-white transition-colors duration-200",
+              children: icon
+            }, label))
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("nav", {
+        style: {
+          backgroundColor: scrolled ? "rgba(255,255,255,0.98)" : "#ffffff",
+          boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.10)" : "0 1px 0 rgba(0,0,0,0.06)",
+          transition: "box-shadow 0.3s ease, background-color 0.3s ease"
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "max-w-7xl mx-auto px-6 grid items-center",
+          style: {
+            height: "68px",
+            gridTemplateColumns: "1fr auto 1fr"
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: "/",
+            style: {
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center"
+            },
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+              src: "/wp-content/uploads/2026/06/AR_Simplificado-scaled.png",
+              alt: "AR Roofing & Construction",
+              style: {
+                height: "36px",
+                width: "auto",
+                display: "block"
+              }
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "hidden md:flex items-center justify-center gap-1",
+            children: NAV_LINKS.map(link => link.dropdown ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              ref: dropdownRef,
+              className: "relative",
+              onMouseEnter: handleMouseEnter,
+              onMouseLeave: handleMouseLeave,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+                style: {
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  padding: "8px 14px",
+                  fontSize: "14px",
+                  fontWeight: "500",
+                  color: dropdownOpen ? "#6a9a9a" : "#1a2e2d",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  borderRadius: "6px",
+                  transition: "color 0.2s ease"
+                },
+                children: [link.label, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconChevron, {
+                  open: dropdownOpen
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                style: {
+                  position: "absolute",
+                  top: "calc(100% + 8px)",
+                  left: "50%",
+                  backgroundColor: "#fff",
+                  borderRadius: "10px",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.13)",
+                  border: "1px solid rgba(0,0,0,0.07)",
+                  minWidth: "210px",
+                  padding: "6px",
+                  opacity: dropdownOpen ? 1 : 0,
+                  visibility: dropdownOpen ? "visible" : "hidden",
+                  transform: dropdownOpen ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(-6px)",
+                  transition: "opacity 0.2s ease, transform 0.2s ease, visibility 0.2s",
+                  zIndex: 1000
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                  style: {
+                    position: "absolute",
+                    top: "-6px",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: "12px",
+                    height: "12px",
+                    backgroundColor: "#fff",
+                    border: "1px solid rgba(0,0,0,0.07)",
+                    borderRight: "none",
+                    borderBottom: "none",
+                    rotate: "45deg"
+                  }
+                }), link.dropdown.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  href: item.href,
+                  style: {
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    padding: "9px 14px",
+                    fontSize: "13.5px",
+                    color: "#1a2e2d",
+                    textDecoration: "none",
+                    borderRadius: "7px",
+                    transition: "background 0.15s ease, color 0.15s ease"
+                  },
+                  onMouseEnter: e => {
+                    e.currentTarget.style.backgroundColor = "#eaf4f4";
+                    e.currentTarget.style.color = "#6a9a9a";
+                  },
+                  onMouseLeave: e => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.color = "#1a2e2d";
+                  },
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    style: {
+                      width: "6px",
+                      height: "6px",
+                      borderRadius: "50%",
+                      backgroundColor: "#6a9a9a",
+                      flexShrink: 0
+                    }
+                  }), item.label]
+                }, item.label))]
+              })]
+            }, link.label) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: link.href,
+              style: {
+                padding: "8px 14px",
+                fontSize: "14px",
+                fontWeight: "500",
+                color: "#1a2e2d",
+                textDecoration: "none",
+                borderRadius: "6px",
+                transition: "color 0.2s ease"
+              },
+              onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
+              onMouseLeave: e => e.currentTarget.style.color = "#1a2e2d",
+              children: link.label
+            }, link.label))
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            style: {
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              gap: "12px"
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: "/contact",
+              className: "hidden md:inline-block",
+              style: {
+                padding: "9px 20px",
+                backgroundColor: "#e8253a",
+                color: "#fff",
+                fontSize: "14px",
+                fontWeight: "600",
+                textDecoration: "none",
+                borderRadius: "7px",
+                transition: "background-color 0.2s ease, transform 0.15s ease",
+                letterSpacing: "0.2px"
+              },
+              onMouseEnter: e => {
+                e.currentTarget.style.backgroundColor = "#8b0a1a";
+                e.currentTarget.style.transform = "translateY(-1px)";
+              },
+              onMouseLeave: e => {
+                e.currentTarget.style.backgroundColor = "#e8253a";
+                e.currentTarget.style.transform = "translateY(0)";
+              },
+              children: "Get a Free Quote"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+              className: "md:hidden",
+              onClick: () => setMobileOpen(!mobileOpen),
+              "aria-label": "Toggle menu",
+              style: {
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: "#1a2e2d",
+                padding: "4px"
+              },
+              children: mobileOpen ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconX, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMenu, {})
+            })]
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          style: {
+            maxHeight: mobileOpen ? "600px" : "0",
+            overflow: "hidden",
+            transition: "max-height 0.35s ease",
+            backgroundColor: "#fff",
+            borderTop: mobileOpen ? "1px solid #f0f0f0" : "none"
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "px-6 py-4 flex flex-col gap-1",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              className: "flex flex-col gap-2 pb-4 mb-2",
+              style: {
+                borderBottom: "1px solid #f0f0f0"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                href: "mailto:info@arroofingus.com",
+                className: "flex items-center gap-2 text-xs",
+                style: {
+                  color: "#666",
+                  textDecoration: "none"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  style: {
+                    color: "#6a9a9a"
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconMail, {})
+                }), " info@arroofingus.com"]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                href: "tel:5416450577",
+                className: "flex items-center gap-2 text-xs",
+                style: {
+                  color: "#666",
+                  textDecoration: "none"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  style: {
+                    color: "#6a9a9a"
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPhone, {})
+                }), " (541) 645 0577"]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                href: GEOTAG_URL,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "flex items-center gap-2 text-xs",
+                style: {
+                  color: "#666",
+                  textDecoration: "none"
+                },
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                  style: {
+                    color: "#6a9a9a"
+                  },
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconPin, {})
+                }), " 403 Portway Ave #304, Hood River, OR 97031"]
+              })]
+            }), NAV_LINKS.map(link => link.dropdown ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+                onClick: () => setMobileServicesOpen(!mobileServicesOpen),
+                style: {
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "10px 12px",
+                  fontSize: "15px",
+                  fontWeight: "500",
+                  color: "#1a2e2d",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  borderRadius: "7px",
+                  textAlign: "left"
+                },
+                children: [link.label, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconChevron, {
+                  open: mobileServicesOpen
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                style: {
+                  maxHeight: mobileServicesOpen ? "300px" : "0",
+                  overflow: "hidden",
+                  transition: "max-height 0.3s ease"
+                },
+                children: link.dropdown.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                  href: item.href,
+                  style: {
+                    display: "block",
+                    padding: "9px 12px 9px 28px",
+                    fontSize: "14px",
+                    color: "#555",
+                    textDecoration: "none",
+                    borderRadius: "7px"
+                  },
+                  onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
+                  onMouseLeave: e => e.currentTarget.style.color = "#555",
+                  children: item.label
+                }, item.label))
+              })]
+            }, link.label) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: link.href,
+              style: {
+                display: "block",
+                padding: "10px 12px",
+                fontSize: "15px",
+                fontWeight: "500",
+                color: "#1a2e2d",
+                textDecoration: "none",
+                borderRadius: "7px"
+              },
+              onMouseEnter: e => e.currentTarget.style.color = "#6a9a9a",
+              onMouseLeave: e => e.currentTarget.style.color = "#1a2e2d",
+              children: link.label
+            }, link.label)), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+              href: "/contact",
+              style: {
+                display: "block",
+                marginTop: "8px",
+                padding: "12px",
+                backgroundColor: "#e8253a",
+                color: "#fff",
+                fontSize: "14px",
+                fontWeight: "600",
+                textDecoration: "none",
+                borderRadius: "7px",
+                textAlign: "center"
+              },
+              children: "Get a Free Quote"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "flex items-center gap-4 pt-4 mt-2",
+              style: {
+                borderTop: "1px solid #f0f0f0"
+              },
+              children: [{
+                href: "https://www.facebook.com/ARRoofingConstructions?mibextid=wwXIfr&mibextid=wwXIfr",
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconFacebook, {}),
+                label: "Facebook"
+              }, {
+                href: "https://www.instagram.com/arroofing_construction?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconInstagram, {}),
+                label: "Instagram"
+              }, {
+                href: "https://www.tiktok.com/@arroofing_construction?_r=1&_t=ZS-96w8DOpbhCq",
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconTikTok, {}),
+                label: "TikTok"
+              }, {
+                href: GMB_URL,
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconGoogle, {}),
+                label: "Google My Business"
+              }, {
+                href: BBB_URL,
+                icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(IconBBB, {}),
+                label: "Better Business Bureau"
+              }].map(({
+                href,
+                icon,
+                label
+              }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                href: href,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                "aria-label": label,
+                style: {
+                  color: "#666"
+                },
+                children: icon
+              }, label))
+            })]
+          })
+        })]
+      })]
+    })]
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);
+
+/***/ },
+
+/***/ "./src/scripts/Person.js"
+/*!*******************************!*\
+  !*** ./src/scripts/Person.js ***!
+  \*******************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class Person {
+  constructor(name) {
+    this.name = name;
+    this.greet();
+  }
+  greet() {
+    console.log(`Hello, my name is ${this.name}.`);
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Person);
+
+/***/ },
+
+/***/ "react"
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+(module) {
+
+module.exports = window["React"];
+
+/***/ },
+
+/***/ "react-dom/client"
+/*!***************************!*\
+  !*** external "ReactDOM" ***!
+  \***************************/
+(module) {
+
+module.exports = window["ReactDOM"];
+
+/***/ },
+
+/***/ "react/jsx-runtime"
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+(module) {
+
+module.exports = window["ReactJSXRuntime"];
+
+/***/ }
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		if (!(moduleId in __webpack_modules__)) {
+/******/ 			delete __webpack_module_cache__[moduleId];
+/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			e.code = 'MODULE_NOT_FOUND';
+/******/ 			throw e;
+/******/ 		}
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+(() => {
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "react-dom/client");
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom_client__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _scripts_Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/Navbar */ "./src/scripts/Navbar.js");
+/* harmony import */ var _scripts_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/Footer */ "./src/scripts/Footer.js");
+/* harmony import */ var _scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/ContactForm */ "./src/scripts/ContactForm.js");
+/* harmony import */ var _scripts_Person__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/Person */ "./src/scripts/Person.js");
+/* harmony import */ var _scripts_ExampleReactComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/ExampleReactComponent */ "./src/scripts/ExampleReactComponent.js");
+/* harmony import */ var _scripts_CertificateBadges__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scripts/CertificateBadges */ "./src/scripts/CertificateBadges.js");
+/* harmony import */ var _scripts_FinanceTab__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scripts/FinanceTab */ "./src/scripts/FinanceTab.js");
+/* harmony import */ var _scripts_CookieConsent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./scripts/CookieConsent */ "./src/scripts/CookieConsent.js");
+/* harmony import */ var _scripts_Lightbox__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./scripts/Lightbox */ "./src/scripts/Lightbox.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__);
+
+
+
+
+
+
+
+
+
+
+
+
+const person1 = new _scripts_Person__WEBPACK_IMPORTED_MODULE_5__["default"]("Brad");
+
+// Example component
+if (document.querySelector("#render-react-example-here")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#render-react-example-here")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_ExampleReactComponent__WEBPACK_IMPORTED_MODULE_6__["default"], {}));
+}
+
+// Navbar
+if (document.querySelector("#navbar")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#navbar")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {}));
+}
+
+// Footer
+if (document.querySelector("#footer")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#footer")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {}));
+}
+
+// Hero contact form (dark theme — inside the glassmorphism panel)
+if (document.querySelector("#hero-contact-form")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#hero-contact-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    theme: "dark",
+    title: "Get a Free Inspection",
+    redirectTo: "/thank-you/1/",
+    showTitle: true
+  }));
+}
+
+// Final CTA contact form (dark theme — inside the dark CTA section)
+if (document.querySelector("#final-contact-form")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#final-contact-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    theme: "dark",
+    title: "Send Us a Message",
+    redirectTo: "/thank-you/2/",
+    showTitle: true
+  }));
+}
+
+// Contact page form (light theme — inside white card)
+if (document.querySelector("#ct-react-form")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#ct-react-form")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_ContactForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    theme: "light",
+    title: "Get your free estimate today.",
+    redirectTo: "/contact/thank-you/3/",
+    showTitle: true
+  }));
+}
+
+// Floating certificate badges (etiqueta borde derecho, centrado)
+if (document.querySelector("#certificate-badges")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#certificate-badges")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_CertificateBadges__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    title: "Certifications"
+  }));
+}
+
+// Floating finance tab (borde derecho, debajo de Certifications)
+if (document.querySelector("#finance-tab")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#finance-tab")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_FinanceTab__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    title: "Finance"
+  }));
+}
+
+// Cookie consent (banner + modal de preferencias; el footer lo abre con "Cookie Settings")
+if (document.querySelector("#cookie-consent")) {
+  react_dom_client__WEBPACK_IMPORTED_MODULE_1___default().createRoot(document.querySelector("#cookie-consent")).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_scripts_CookieConsent__WEBPACK_IMPORTED_MODULE_9__["default"], {}));
+}
+
+// Lightbox para galerías (cualquier elemento con data-lightbox)
+(0,_scripts_Lightbox__WEBPACK_IMPORTED_MODULE_10__["default"])();
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

@@ -18,7 +18,7 @@ $company        = 'AR Roofing &amp; Construction';
 $site_domain    = 'arroofingus.com';
 $email          = 'info@arroofingus.com';
 $phone_display  = '(541) 645 0577';          // ⚠ confirmar 645 vs 675
-$phone_href     = '5416450577';              // ⚠ confirmar 645 vs 675
+$phone_href     = '5416450577';
 $address        = '403 Portway Ave #304, Hood River, OR 97031';
 $hero_bg_img    = '/wp-content/uploads/2026/06/Estampados_3_ARRC-scaled.png';
 /* ══════════════════════════════════════════════════════════════ */

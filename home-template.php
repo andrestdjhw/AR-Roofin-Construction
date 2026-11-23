@@ -1292,7 +1292,7 @@ $final_cta_bg_img         = '/wp-content/uploads/2026/06/Estampados_2_ARRC-scale
             Call 541-645-0577
           </a>
         </div>
-        <p class="ar-hero__phone-label">Available 24/7 for emergencies &nbsp;·&nbsp; <a href="tel:5416750577">541 645 0577</a></p>
+        <p class="ar-hero__phone-label">Available 24/7 for emergencies &nbsp;·&nbsp; <a href="tel:5416450577">541 645 0577</a></p>
       </div>
 
       <!-- Right: form (React ContactForm) -->
